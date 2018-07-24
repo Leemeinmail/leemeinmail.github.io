@@ -1,0 +1,18 @@
+.list-inline{
+	@extend %list-inline;
+	display:inline-block;
+	
+	&__item{}
+	
+	&__link{
+        color:$lightgrey;
+		letter-spacing: 1px;
+		text-transform:capitalize;
+		
+		&:after{
+			display:inline;
+			content:'-';
+			padding:0px 10px;
+		}
+	}
+}

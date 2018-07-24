@@ -1,0 +1,32 @@
+@mixin background-size($val){
+	-webkit-background-size:$val;
+	-o-background-size:$val;
+	-moz-background-size:$val;
+	background-size:$val;
+}
+
+@mixin opacity($r,$g,$b,$a){
+	background:rgba($r,$g,$b,$a);
+	background:rgb($r,$g,$b);
+	opacity:$a;
+	-moz-opacity:$a;
+}
+@mixin border-radius($a,$b,$c,$d){
+	-webkit-border-top-left-radius: $a;
+	   -moz-border-top-left-radius: $a;
+	        border-top-left-radius: $a;
+    -webkit-border-top-right-radius:$b;
+	   -moz-border-top-right-radius:$b;
+	        border-top-right-radius:$b;
+    -webkit-border-bottom-right-radius:$c;
+	   -moz-border-bottom-right-radius:$c;
+	        border-bottom-right-radius:$c;
+    -webkit-border-bottom-left-radius:$d;
+	   -moz-border-bottom-left-radius:$d;
+	        border-bottom-left-radius:$d;
+}
+@mixin transition($var){
+	-webkit-transition:$var;
+	   -moz-transition:$var;
+	     -o-transition:$var;
+}

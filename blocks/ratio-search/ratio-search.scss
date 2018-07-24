@@ -1,0 +1,27 @@
+.ratio-search{
+    &__btn, &__string>input{
+	    height:45px;
+	}
+    
+	&__btn{
+	    float:right;
+	    display:block;
+	    width:45px;
+    	background:url('blocks/ratio-search/search.png') no-repeat center center $white;
+	}
+	
+	&__string{
+	    overflow:hidden;
+	    
+		&>input{
+		    @extend %input;
+	        width:100%;
+			padding:10px;
+			border: 1px solid $grey;
+			background:$darkblue;
+			font-size:0.8rem;
+			color:$white;
+		}
+		
+	}
+}
