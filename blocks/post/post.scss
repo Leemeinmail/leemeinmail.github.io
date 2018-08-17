@@ -1,0 +1,33 @@
+.post{
+    background:$background-post;
+	padding:0px 15px;
+	
+    &__date,&__title,&__autor{
+	    display:block;
+		text-align:center;
+	}
+    &__title, &__autor{
+	    text-transform:uppercase;
+	}
+    &__head{}
+	&__date{}
+	&__title{
+	    font-size:2em;
+	    letter-spacing: 2px;
+		color:$darkblue;
+		@media(min-width:$mobile-xl){
+		     font-size:2.5em;
+		}
+		@media(min-width:$tablet){
+		     font-size:3em;
+		}
+		@media(min-width:$tablet-xl){
+		     font-size:5em;
+		}
+	}
+	&__img{
+	    @extend %img;
+	}
+	&__autor{}
+	&__body{}
+}

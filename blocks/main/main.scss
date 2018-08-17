@@ -1,7 +1,16 @@
 .main{
     @extend %grid;
     
+	@media(min-width:$mobile-m){
+	    max-width:$tablet-xl;
+		margin:0px auto;
+		
+	}
 	
+	&--post{
+	    padding-left:10px;
+		padding-right:10px;
+	}
 	
 	&__clm{
 	    @extend %grid__row;
@@ -27,7 +36,7 @@
 		}
 	}
 	
-	&__portfolio{
+	&__promo{
 	   display:block;
 	   text-decoration:none;
 	}

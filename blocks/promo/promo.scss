@@ -1,0 +1,56 @@
+.promo{
+    position:relative;
+	overflow:hidden;
+	
+	&::before, &::after{
+	    @include box-sizing(border-box);
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content:'';
+        width: 100%;
+        height: 100%;
+        @include transition (transform 0.5s);
+        @include transform-origin(center);
+		z-index:2;
+	}
+	
+	&::after{
+        border-top:12px solid $darkblue;
+        border-bottom:12px solid $darkblue;
+		@include transform (scale(0,1));
+	}
+	
+	&::before {
+       border-right:12px solid $darkblue;
+       border-left:12px solid $darkblue; 
+	   @include transform (scale(1,0));
+	}
+	
+	&:hover::before,
+	&:hover::after {
+      @include transform (scale(1,1)); 
+	}
+	
+	&__name{
+	    position:absolute;
+		top:60px; left:15%;
+		padding:12px 10px 9px 10px;
+		background:$darkblue;
+		text-transform:uppercase;
+		letter-spacing:2px;
+		font-family: Teko, sans-serif;
+		font-size:2em;
+		color:$white;
+		z-index:1;
+	}
+	&__img{
+		display:block;
+    	width:100%;
+		@include transition(transform 0.5s);
+	}
+	&:hover &__img{
+	    @include transform(scale(1.2));
+	}
+}
