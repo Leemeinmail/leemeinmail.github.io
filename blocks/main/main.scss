@@ -4,7 +4,6 @@
 	@media(min-width:$mobile-m){
 	    max-width:$tablet-xl;
 		margin:0px auto;
-		
 	}
 	
 	&--post{
@@ -16,7 +15,6 @@
 	    @extend %grid__row;
 		float:none;
         padding:0px 10px;
-		background:purple;
 		
 		@media(min-width:$tablet){
 		    float:left;

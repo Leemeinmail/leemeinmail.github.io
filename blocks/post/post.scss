@@ -1,33 +1,105 @@
 .post{
     background:$background-post;
-	padding:0px 15px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:70px;
 	
-    &__date,&__title,&__autor{
+    &__date,&__name,&__autor{
 	    display:block;
 		text-align:center;
 	}
-    &__title, &__autor{
+    &__title, &__autor, &__date{
 	    text-transform:uppercase;
 	}
+	
     &__head{}
-	&__date{}
-	&__title{
+	&__date{
+	    padding-top:20px;
+		padding-bottom:10px;
+		font-size: 1.3em;
+	    text-transform:capitalize;
+	}
+	&__name{
+	    padding-bottom:10px;
 	    font-size:2em;
 	    letter-spacing: 2px;
+		line-height:1;
 		color:$darkblue;
+		@media(min-width:$mobile-l){
+		    font-size:3em;
+		}
 		@media(min-width:$mobile-xl){
-		     font-size:2.5em;
+		    font-size:3.2em; 
 		}
 		@media(min-width:$tablet){
-		     font-size:3em;
+		    font-size:3.5em;
 		}
 		@media(min-width:$tablet-xl){
-		     font-size:5em;
+		    font-size:4em;
 		}
 	}
 	&__img{
 	    @extend %img;
+		
+		margin-top:25px;
+		margin-bottom:30px;
 	}
-	&__autor{}
-	&__body{}
+	&__autor{
+	    display:block;
+		text-decoration:none;
+	    font-size:1.4em;
+	    color: $lightgrey;
+	    line-height: 1.6em;
+        letter-spacing:0.2px;
+	    @media(min-width:$tablet){
+		    @include transition(color 0.2s ease-in-out);
+		    &:hover{
+		        color:$darkblue;
+		    }
+		}
+	}
+	&__body{
+	    text-align:justify;
+		@media(min-width:$mobile-l){
+		    padding-left:30px;
+			padding-right:30px;
+		}
+		@media(min-width:$tablet){
+		    padding-left:120px;
+			padding-right:120px;
+		}
+	}
+	
+	&__title{
+	    font-size:1.8em;
+	    color: #3F3F3F;
+	    letter-spacing:1px;
+	    text-transform:capitalize;
+	}
+	&__text, &__quote{
+	    margin-top:10px;
+		margin-bottom:10px;
+	    font-size:1.6em;
+	    letter-spacing:0.2px;
+		line-height:1.3;
+		color:$font-darkgrey;
+	}
+	&__mark{
+	    font-family: monospace;
+	}
+	&__quote{
+	    display:block;
+	    margin:0px 50px;
+	    padding-left:20px;
+	    border-left:3px solid #1c7791;
+	}
+	&__list{
+	    padding-top:10px;
+		padding-bottom:10px;
+		padding-left:50px;
+		padding-right:50px;
+	    list-style:inside;
+	    list-style-type:circle;
+		font-size:1.65em;
+	}
 }

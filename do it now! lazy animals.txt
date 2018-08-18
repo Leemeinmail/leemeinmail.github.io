@@ -1,0 +1,8 @@
+2. добавить метатеги для отображения в вк
+3. разделить шаблон на части
+
+я использовал 
+<article><time> transition transform calc
+
+может быть взять что то здесь
+https://www.zerotheme.com
