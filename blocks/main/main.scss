@@ -1,26 +1,22 @@
 .main{
+    padding-top:40px;
     @extend %grid;
     
 	@media(min-width:$mobile-m){
 	    max-width:$tablet-xl;
-		margin:0px auto;
-	}
+		margin:0px auto;}
 	
 	&--post{
 	    padding-left:10px;
-		padding-right:10px;
-	}
+		padding-right:10px;}
 	
 	&__clm{
 	    @extend %grid__row;
 		float:none;
         padding:0px 10px;
-		
 		@media(min-width:$tablet){
 		    float:left;
-			width:33.333333333333333333333333%;
-		}
-	}
+			width:33.333333333333333333333333%;}}
 	
 	&__item{
 	    width:100%;
@@ -28,14 +24,9 @@
 		margin:0px auto;
 	    background:red;
 		margin-bottom:30px;
-		
 		@media(min-width:$tablet){
-		    max-width:100%;
-		}
-	}
+		    max-width:100%;}}
 	
 	&__promo{
 	   display:block;
-	   text-decoration:none;
-	}
-}
+	   text-decoration:none;}}

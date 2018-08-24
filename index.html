@@ -67,46 +67,46 @@
 						</li>
 						
 						<li class='triple-menu__first-item'>
-						    <span class='triple-menu__link-drop triple-menu__arrow--bottom'>
+						    <span class='triple-menu__link-drop triple-menu__arrow-bottom'>
 							    categoryes
 							</span>
 							<ul class='triple-menu__second-list'>
 							    
 								<li class='triple-menu__second-item'>
-								    <span class='triple-menu__link-drop triple-menu__arrow--right'>item 1</span>
+								    <span class='triple-menu__link-drop triple-menu__arrow-right'>item 1</span>
 									<ul class='triple-menu__third-list' >
 									    <li class='triple-menu__third-item'>
-										    <span class='triple-menu__link'>sub item</span>
+										    <a href='single.html' class='triple-menu__link'>sub item</a>
 										</li>
 										<li class='triple-menu__third-item'>
-										    <a class='triple-menu__link' href='#'>sub item</a>
+										    <a href='single.html' class='triple-menu__link'>sub item</a>
 										</li>
 										<li class='triple-menu__third-item'>
-										    <a class='triple-menu__link' href='#'>sub item</a>
+										    <a href='single.html' class='triple-menu__link'>sub item</a>
 										</li><!-- end third-list -->
 									</ul>
 								</li>
 								
 								<li class='triple-menu__second-item'>
-								    <span class='triple-menu__link-drop triple-menu__arrow--right'>item 2</span>
+								    <span class='triple-menu__link-drop triple-menu__arrow-right'>item 2</span>
 									<ul class='triple-menu__third-list' >
 									    <li class='triple-menu__third-item'>
-										    <span class='triple-menu__link'>sub item</span>
+										    <a href='single.html' class='triple-menu__link'>sub item</a>
 										</li>
 										<li class='triple-menu__third-item'>
-										    <a class='triple-menu__link' href='#'>sub item</a>
+										    <a href='single.html' class='triple-menu__link'>sub item</a>
 										</li>
 										<li class='triple-menu__third-item'>
-										    <a class='triple-menu__link' href='#'>sub item</a>
+										    <a href='single.html' class='triple-menu__link'>sub item</a>
 										</li><!-- end third-list -->
 									</ul>
 								</li>
 								
 			                    <li class='triple-menu__second-item'>
-								    <span class='triple-menu__link-drop triple-menu__arrow--right'>item 3</span>
+								    <span class='triple-menu__link-drop triple-menu__arrow-right'>item 3</span>
 									<ul class='triple-menu__third-list' >
 									    <li class='triple-menu__third-item'>
-										    <span class='triple-menu__link'>sub item</span>
+										    <a href='single.html' class='triple-menu__link'>sub item</a>
 										</li>
 										<li class='triple-menu__third-item'>
 										    <a class='triple-menu__link' href='#'>sub item</a>
@@ -126,7 +126,7 @@
 						</li>
 						
 						<li class='triple-menu__first-item'>
-						    <a class='triple-menu__link' href='#'>blog</a>
+						    <a class='triple-menu__link' href='archive.html'>blog</a>
 						</li>
 						
 						<li class='triple-menu__first-item'> 
@@ -224,8 +224,8 @@
 	    <footer>
 		</footer>
 		<script>
-	    $('.double-menu__btn').click(function(){
-		    var menu =  $('.double-menu__body');
+	    $('.triple-menu__btn').click(function(){
+		    var menu =  $('triple-menu__body');
 			if (menu.is(':hidden')){
 			    menu.slideDown(400);
 			}
@@ -233,13 +233,10 @@
 				menu.slideUp(400);
 			}
 		});
-	    $('.double-menu__dropitem').click(function(){
-		    var menu =  $('.double-menu__sub');
-			if (menu.is(':hidden')){
-			    menu.slideDown(400);
-			}
-			else{
-				menu.slideUp(400);
+	    $(window).resize(function(){
+		    var w = $(document).width;
+			if(w>=800){
+			    $('.triple-menu__btn').display ='block';
 			}
 		});
 	</script>

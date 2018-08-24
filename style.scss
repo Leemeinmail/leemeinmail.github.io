@@ -1,4 +1,6 @@
 //base
+@charset 'utf-8';
+
 @import 'base/reset.scss';
 @import 'base/lib.scss';
 @import 'base/mixins.scss';
@@ -14,6 +16,7 @@
 @import 'blocks/blind/blind.scss';
 @import 'blocks/triple-menu/triple-menu.scss';
 @import 'blocks/post/post.scss';
+@import 'blocks/archive/archive.scss';
 
 
 

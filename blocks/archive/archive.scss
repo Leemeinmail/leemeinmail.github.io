@@ -1,0 +1,60 @@
+.archive{
+    padding-left:30px;
+	padding-right:30px;
+	
+    &__item{
+	    border-bottom:1px solid #e1e1e1;
+		&:last-child{
+		border:none;}}
+		
+	&__head{
+	    padding-top:30px;}
+	
+	&__date{
+	    text-transform:capitalize; 
+	    font-family: Georgia,serif;
+		font-size:17px;}
+	
+	&__autor, &__title{
+	    text-decoration:none;
+		letter-spacing: 1px;
+		@include transition(color 0.2s);}
+	
+	&__title{
+	    display:block;
+		color:$darkblue;
+		& > h1{
+		    font-size:2.3em;
+			font-weight:300;}
+		&:hover{
+		    color:$lightgrey;}
+		@media(min-width:$mobile-l){
+		    & > h1{font-size:3.2em;}}}
+			
+	&__img{
+	    @extend %img; 
+		margin-top:30px;}
+		
+	&__autor{
+	    text-transform:uppercase;
+		font-size:17px;
+		color:$grey;
+		&:hover{
+		    color:$darkblue;}}
+			
+	&__body{
+	    padding-top:10px;
+		padding-bottom:40px;}
+		
+	&__intro{
+	    font-size:1.5em;
+		margin-bottom:20px;}
+		
+	&__link{
+		text-decoration:none;
+		text-transform:capitalize;
+		font-size:1.28em;
+		color:$lightgrey;
+		@include transition(color 0.2s);
+		&:hover{
+		    color:$darkblue;}}}

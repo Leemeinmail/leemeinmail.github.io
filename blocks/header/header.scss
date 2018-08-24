@@ -1,53 +1,42 @@
 .header{
 	background:$darkblue;
 	padding-top:40px;
-	margin-bottom:70px;
+	padding-bottom:40px;
 	
 	&__top, &__nav{
 		width:100%;
 		min-width:$mobile-s;
 		max-width:$tablet;
-		margin:0px auto;
-	}
+		margin:0px auto;}
 	
 	&__top{
 		@extend %grid;
+		padding-top:20px;
+		padding-bottom:60px;
 		@media(min-width:$tablet-xl){
-		    max-width:$tablet-xl;	
-		}
-	}
+		    max-width:$tablet-xl;}}
 	
 	&__social, &__search{
 		@extend %grid__row;
 		float:none;
 		margin:0px auto;
-		
 		@media(min-width:$tablet){
-		    float:left;
-		}
-	}
+		    float:left;}}
 	
 	&__social{
 		padding-top:12.5px;
 		padding-left:10px;
 		text-align:center;
-		
 		@media(min-width:$tablet){
-	        width:66.666666666666666666666666%;
-		}
-		
+	        width:66.666666666666666666666666%;}
 		@media(min-width:$tablet-xl){
-		    text-align:left;
-	    }
-		
-	}
+		    text-align:left;}}
 	
 	&__search{
-		
+	    padding-top:20px;
 		@media(min-width:$tablet){
-	        width:33.333333333333333333333333%;
-		}
-	}
+		    padding-top:0px;
+	        width:33.333333333333333333333333%;}}
 	
 	&__search-item{
 		min-width:$mobile-s;
@@ -55,28 +44,22 @@
 		//отступы для 320
 	    padding:0px 10px;
 	    margin:0px auto;
-		
 		@media(min-width:$tablet){
 			padding:0px;
 			min-width:100%;
-			max-width:100%;
-		}
-	}
+			max-width:100%;}}
 	
 	&__logo{
 		display:block;
         width:300px;
 		height:120px;
-		margin:0px auto;
-	}
+		margin:0px auto;}
 	
 	&__img{
-		@extend %img;
-	}
+		@extend %img;}
 	
 	&__nav{
+	    padding-top:45px;
 		@media(min-width:$tablet-x){
-		    max-width:$tablet-x;	
-		}
-	}
+		    max-width:$tablet-x;}}
 }

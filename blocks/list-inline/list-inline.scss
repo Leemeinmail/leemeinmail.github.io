@@ -8,11 +8,14 @@
         color:$lightgrey;
 		letter-spacing: 1px;
 		text-transform:capitalize;
+		font-size:1.3em;
+		@include transition(color 0.2s);
 		
-		&:after{
+		&::after{
 			display:inline;
 			content:'-';
-			padding:0px 10px;
-		}
-	}
-}
+			padding:0px 10px;}
+			
+		&:hover{
+		    color:$white;}}}
+		
