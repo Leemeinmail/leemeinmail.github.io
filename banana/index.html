@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang='ru'>
+    <head>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <meta charset="UTF-8"/>
+	    <title>banana</title>
+	    <link rel="stylesheet" href="style.css"/>
+		<script src='base/jquery.js'></script>
+    </head>
+    
+	<body>
+	
+		<header class='header'></header>
+		
+		<div class='main'>
+		    
+			<div class='slider'>
+			    
+				<div class='slider__header'>
+				    <div class='slider__control'>
+					    <div class='slider__arrow slider__arrow--left'></div>
+					    <span class='slider__descr'>фото/видео</span>
+					    <div class='slider__arrow slider__arrow--right'></div>
+					</div>
+				</div>
+				
+				<div class='slider__body'>
+				    <ul class='slider__lenta'>
+					    <li class='slider__section'>
+						    <img src='1.jpg' class='slider__item'/>
+						</li>
+						<li class='slider__section'>
+						    <img src='2.jpg' class='slider__item'/>
+						</li>
+						<li class='slider__section'>
+						    <img src='3.jpg' class='slider__item'/>
+						</li>
+						<li class='slider__section'>
+						    <img src='4.jpg' class='slider__item'/>
+						</li>
+						<li class='slider__section'>
+						    <img src='5.jpg' class='slider__item'/>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- end main -->
+		
+	    <footer></footer>
+		<script>
+        $('document').ready(function(){
+		    //320 - 400
+			//400 - 600
+			//600 - 768
+			
+			//size
+		    var mobile = 320;
+			var mobileL = 400;
+			var mobileXL = 600;
+			var tablet = 768;
+			
+		    var maxElements = $('.slider__lenta').children().length;
+			var lenta = $('.slider__lenta');
+			var arrowLeft = $('.slider__arrow--left');
+			var arrowRight = $('.slider__arrow--right')
+			var currentElement = 1;
+
+			//при изменении окна выставляю на текущий элемент
+	        $(window).resize(function(){    
+				var sectionWidth = $('.slider__section').innerWidth();
+				var step = (currentElement * sectionWidth) - sectionWidth;
+                    step = - step;				
+			    lenta.animate({left:step + "px"},500,setTimeout(600));
+				
+			});
+		    
+
+
+			arrowLeft.click(function(){
+			    var time = performance.now();
+			    if(currentElement >= maxElements){
+				    lenta.animate({left:0 + "px"},500);
+					setTimeout(function (){currentElement = 1;},600);    
+				}
+				else{
+			        var sectionWidth = $('.slider__section').innerWidth();
+				    var coordinate = parseInt(lenta.css('left'));
+				    var step = coordinate - sectionWidth;
+                    lenta.animate({left:step + "px"},500);
+					setTimeout(function (){currentElement++;},600);   
+				}		
+			    time = performance.now() - time;
+                console.log('Время выполнения = ', time);
+			});
+			
+			arrowRight.click(function(){
+				var sectionWidth = $('.slider__section').innerWidth();
+				var coordinate = parseInt(lenta.css('left'));
+				var step = coordinate + sectionWidth;
+				if(step <= 0){
+				    lenta.animate({left:step + "px"},500);
+					setTimeout(function (){currentElement--;},600);
+				}
+			});
+			
+		});
+			
+			
+			
+			
+		</script>
+    </body>
+	
+</html>

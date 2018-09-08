@@ -9,6 +9,8 @@
 8. просмотреть внимательновсе что сделал. Разобраться с лишними обертками
 9. <time> не пропустил валидатор
 
+xxl xl l m s
+
 СЕМЬ РАЗ ОТМЕРЬ ОДИН РАЗ ОТРЕШЬ!!! ЕПТ
 
 я использовал 
@@ -16,6 +18,7 @@
 
 может быть взять что то здесь
 https://www.zerotheme.com
+https://dd.zerotheme.com/demo/zero555/zPainting/contact.html
 
 семантика
 https://medium.com/@stasonmars/

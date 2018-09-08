@@ -1,0 +1,25 @@
+%grid::after{
+	display:block;
+	content:'';
+	clear:both;
+}
+%grid__row{
+	float:left;
+}
+
+%btn{
+	outline:none;
+	display:block;
+	border:none;
+}
+
+%img{
+	display:block;
+	width:100%;
+	height:100%;
+}
+
+%list-inline{list-style-type:none; text-align:center;}
+%list-inline li{display:inline-block;margin-left:-4px;}
+%list-inline li:first-child{margin-left:0px;}
+%list-inline a{display:block; text-decoration:none;}

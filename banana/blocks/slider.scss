@@ -1,0 +1,64 @@
+//320 - 425 1
+//425 - 600 2
+.slider{
+    &__header{
+	    text-align:center;}
+    &__control{
+	    @extend %grid;
+		display:inline-block;
+		margin:0px auto;
+		background:green;}
+	&__arrow, &__descr{
+	    @extend %grid__row;}
+	&__arrow{
+		width:20px;
+		height:20px;
+		border-top:2px solid black;
+	    cursor:pointer;}
+	&__arrow:hover{
+		border-color:red;}
+    &__arrow--left{
+		border-left:2px solid black;
+		transform: rotate(-45deg);}			
+	&__arrow--right{
+		border-right:2px solid black;
+		transform: rotate(45deg);}
+	
+	&__descr{
+	    display:block;}
+	
+	&__body{
+	    width:320px;
+		margin:0px auto;
+	    overflow:hidden;
+		background:purple;
+		@media(min-width:400px){
+		    width:400px;}
+		@media(min-width:$mobile-xl){
+		    width:$mobile-xl;}
+		@media(min-width:$tablet){
+		    width:$tablet;}}
+			
+	&__lenta{
+	    @extend %grid;
+	    position:relative;
+		top:0px; left:0px;
+		list-style-type:none;
+		width:9999px;
+		background:gold;}
+		
+	&__section{
+	    @extend %grid__row;
+		width:320px;
+		height:150px;
+		padding:10px;
+		@media(min-width:400px){
+		    width:200px;
+			height:130px;}
+	    @media(min-width:$mobile-xl){
+		    width:200px;}
+		@media(min-width:$tablet){
+		    width:192px;}}
+			
+	&__item{
+	    @extend %img;}}

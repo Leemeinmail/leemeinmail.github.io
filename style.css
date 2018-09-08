@@ -6,13 +6,18 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.header__top::after, .main::after {
+.header__top::after, .main::after, .feedback--clearfix::after {
   display: block;
   content: '';
   clear: both; }
 
-.header__social, .header__search, .main__clm {
+.header__social, .header__search, .main__clm, .feedback__clm {
   float: left; }
+
+.feedback__btn {
+  outline: none;
+  display: block;
+  border: none; }
 
 .header__img, .post__img, .archive__img {
   display: block;
@@ -30,7 +35,7 @@
     display: block;
     text-decoration: none; }
 
-.ratio-search__string > input {
+.ratio-search__string > input, .feedback__elem, .feedback__textarea, .feedback__btn {
   display: block;
   border: none;
   outline: none; }
@@ -44,7 +49,7 @@
 .header {
   background: #131313;
   padding-top: 40px;
-  padding-bottom: 40px; }
+  padding-bottom: 30px; }
   .header__top, .header__nav {
     width: 100%;
     min-width: 320px;
@@ -623,3 +628,58 @@
     transition: color 0.2s; }
     .archive__link:hover {
       color: #131313; }
+
+.feedback {
+  background: #f6f6f6;
+  padding-top: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 30px; }
+  .feedback--clearfix {
+    padding-top: 20px;
+    padding-bottom: 30px; }
+  .feedback__clm {
+    width: 33.333333333333333%;
+    padding-left: 10px; }
+  .feedback__clm:first-child {
+    padding-left: 0px; }
+  .feedback__title-xl {
+    display: block;
+    font-size: 3.8em;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 1.2; }
+  .feedback__elem, .feedback__textarea, .feedback__btn {
+    border: 1px solid #d1d1d1; }
+  .feedback__elem {
+    width: 100%;
+    padding-top: 23px;
+    padding-left: 23px;
+    padding-bottom: 23px;
+    padding-right: 23px;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #686868; }
+  .feedback__textarea {
+    width: 100%;
+    height: 250px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    color: red;
+    text-transform: capitalize; }
+  .feedback__btn {
+    width: 140px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-bottom: 20px;
+    margin-right: auto;
+    padding: 15px;
+    background: #575756;
+    text-transform: capitalize;
+    font-family: arial;
+    font-weight: 400;
+    font-size: 1.1em;
+    color: #fff;
+    cursor: pointer; }

@@ -1,37 +1,29 @@
 %grid::after{
 	display:block;
 	content:'';
-	clear:both;
-}
+	clear:both;}
+	
 %grid__row{
-	float:left;
-}
+	float:left;}
 
 %btn{
 	outline:none;
 	display:block;
-	border:none;
-}
+	border:none;}
 
 %img{
 	display:block;
 	width:100%;
-	height:100%;
-}
+	height:100%;}
 
 %list-inline{
     list-style-type:none; 
-    
     & li{display:inline-block;margin-left:-4px;}	
-	
 	& li:first-child{margin-left:0px;}
-	
-	& a{display:block; text-decoration:none;}
-}
+	& a{display:block; text-decoration:none;}}
 
 %input{
     display:block;
     border:none;
-	outline:none;
-}
+	outline:none;}
 

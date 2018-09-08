@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang='en' class='page-theme'>
+    <head>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <meta charset="UTF-8"/>
+	    <title>zAnimals</title>
+	    <link rel="stylesheet" href="style.css"/>
+		<script src='base/jquery.js'></script>
+    </head>
+    <body>
+		<header class='header' >
+		    <div class='header__top'>
+		        <div class='header__social'>
+				    <ul class='list-inline'>
+					    <li class='list-inline__item' >
+						    <a class='list-inline__link' href='#'>facebook</a>
+						</li>
+						<li class='list-inline__item' >
+						    <a class='list-inline__link' href='#'>instagram</a>
+						</li>
+						<li class='list-inline__item' >
+						    <a class='list-inline__link' href='#'>twitter</a>
+						</li>
+						<li class='list-inline__item' >
+						    <a class='list-inline__link' href='#'>google +</a>
+						</li>
+						<li class='list-inline__item' >
+						    <a class='list-inline__link' href='#'>pinterest</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class='header__search'>
+				    <div class='header__search-item'>
+					    <form class='ratio-search' name='ratio-search' action='search.php' method='get' >
+					        <a href='#' class='ratio-search__btn'></a>
+					            <div class='ratio-search__string'>
+						            <input type='text' placeholder='Search' name='ratio-search__quiry'/>
+						        </div>
+				        </form>
+					</div>
+				    
+				</div>
+				
+		    </div>
+			
+		    <a href='index.html' class='header__logo'>
+			    <img class='header__img' alt='descr' src='blocks/header/header__logo.png'/>
+			</a>
+			
+		    <nav class='header__nav'>
+				<ul class='triple-menu'>
+				
+				<li class='triple-menu__btn'>
+				    <span class='triple-menu__name'>menu</span>
+				</li><!-- end triple-btn -->
+				
+				<li class='triple-menu__body'>
+				    <ul class='triple-menu__first-list'>
+					    
+						<li class='triple-menu__first-item'>
+						    <a class='triple-menu__link ' href='index.html'>
+							    <span>home</span>
+							</a>
+						</li>
+						
+						<li class='triple-menu__first-item'>
+						    <span class='triple-menu__link-drop triple-menu__arrow-bottom'>
+							    categoryes
+							</span>
+							<ul class='triple-menu__second-list'>
+							    
+								<li class='triple-menu__second-item'>
+								    <span class='triple-menu__link-drop triple-menu__arrow-right'>item 1</span>
+									<ul class='triple-menu__third-list' >
+									    <li class='triple-menu__third-item'>
+										    <a href='single.html' class='triple-menu__link'>sub item</a>
+										</li>
+										<li class='triple-menu__third-item'>
+										    <a href='single.html' class='triple-menu__link'>sub item</a>
+										</li>
+										<li class='triple-menu__third-item'>
+										    <a href='single.html' class='triple-menu__link'>sub item</a>
+										</li><!-- end third-list -->
+									</ul>
+								</li>
+								
+								<li class='triple-menu__second-item'>
+								    <span class='triple-menu__link-drop triple-menu__arrow-right'>item 2</span>
+									<ul class='triple-menu__third-list' >
+									    <li class='triple-menu__third-item'>
+										    <a href='single.html' class='triple-menu__link'>sub item</a>
+										</li>
+										<li class='triple-menu__third-item'>
+										    <a href='single.html' class='triple-menu__link'>sub item</a>
+										</li>
+										<li class='triple-menu__third-item'>
+										    <a href='single.html' class='triple-menu__link'>sub item</a>
+										</li><!-- end third-list -->
+									</ul>
+								</li>
+								
+			                    <li class='triple-menu__second-item'>
+								    <span class='triple-menu__link-drop triple-menu__arrow-right'>item 3</span>
+									<ul class='triple-menu__third-list' >
+									    <li class='triple-menu__third-item'>
+										    <a href='single.html' class='triple-menu__link'>sub item</a>
+										</li>
+										<li class='triple-menu__third-item'>
+										    <a class='triple-menu__link' href='#'>sub item</a>
+										</li>
+										<li class='triple-menu__third-item'>
+										    <a class='triple-menu__link' href='#'>sub item</a>
+										</li><!-- end third-list -->
+									</ul>
+								</li>
+								
+							</ul><!-- end second-list -->
+							
+						</li><!-- end first-drop-->
+						
+						<li class='triple-menu__first-item'>
+						    <a class='triple-menu__link' href='single.html'>about</a>
+						</li>
+						
+						<li class='triple-menu__first-item'>
+						    <a class='triple-menu__link' href='archive.html'>blog</a>
+						</li>
+						
+						<li class='triple-menu__first-item'> 
+						    <a class='triple-menu__link' href='#'>contacts</a>
+						</li>
+						
+					</ul><!-- end first-list -->
+					
+				</li><!-- end triple-body -->
+				
+			</ul><!-- end triple-menu -->
+			</nav>
+			
+		</header>
+		
+		<div class='main'>
+		    <div class='map'>
+			</div>
+			<form class='feedback' name='feedback' 
+			      action='feedback.php' method='get'>
+				
+				<span class='feedback__title-xl' >contact form</span>
+				
+				<div class='feedback--clearfix'> 
+				    
+					<div class='feedback__clm'>
+					    <input  type='name' name='name' value='enter name' 
+					            class ='feedback__elem' />
+					</div>
+				    
+					<div class='feedback__clm'>
+					    <input type='email' name='email' value='enter email'
+				               class ='feedback__elem'/>
+					</div>
+				
+				    <div class='feedback__clm'>
+					    <input type='text' name='subject' value='enter subject'
+					           class ='feedback__elem'/>
+					</div>
+				
+				</div>
+				
+				<textarea name='message' placeholder="message" 
+				          class='feedback__textarea'></textarea>
+			        
+                <input type='submit' name='feedback__btn' value='submit'
+					   class ='feedback__btn'/>					
+		    </form>
+	    </div>
+		
+	    <footer>
+		</footer>
+    </body>
+	<script>
+	    $('.triple-menu__btn').click(function(){
+		    var menu =  $('triple-menu__body');
+			if (menu.is(':hidden')){
+			    menu.slideDown(400);
+			}
+			else{
+				menu.slideUp(400);
+			}
+		});
+	    $(window).resize(function(){
+		    var w = $(document).width;
+			if(w>=800){
+			    $('.triple-menu__btn').display ='block';
+				alert(555);
+			}
+		});
+	</script>
+</html>
