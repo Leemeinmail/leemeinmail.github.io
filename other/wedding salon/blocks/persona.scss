@@ -1,0 +1,50 @@
+.persona{
+	margin-top:50px;
+	margin-bottom:50px;
+	padding-top:20px;
+	padding-left:10px;
+	padding-bottom:20px;
+	padding-right:10px;
+    background:$yellow-light;
+	@media(min-width:$mobile-xl){
+		position:relative;
+		padding-top:20px;
+		padding-left:15px;
+		padding-bottom:20px;}
+	@media(min-width:$tablet){
+		padding-top:30px;
+		padding-left:50px;
+		padding-bottom:30px;}
+    
+	&__foto{
+	    width:200px;
+		height:200px;
+		margin:0px auto;
+		@media(min-width:$mobile-xl){
+		    position:absolute;
+			top:-webkit-calc((100% - 180px) / 2); left:70%;
+			top:-moz-calc((100% - 180px) / 2); left:70%;
+			top: calc((100% - 180px) / 2); left:70%;
+			width:30%;}
+		@media(min-width:$tablet){
+			top:-webkit-calc((100% - 200px) / 2);
+			top:-moz-calc((100% - 200px) / 2);
+			top:calc((100% - 200px) / 2);}}
+	&__img{
+	    @extend %img;
+		border:5px solid #ffec3b;
+		@include border-radius(50%,50%,50%,50%);
+		@media(min-width:$mobile-xl){
+			width:180px;
+			height:180px;
+			margin:0px auto;}
+		@media(min-width:$tablet){
+		    width:200px;
+			height:200px;}}
+	&__descr{
+	    display:block;
+		text-align:justify;
+		padding-top:20px;
+	    @media(min-width:$mobile-xl){
+		    padding-top:0px;
+		    width:70%;}}}

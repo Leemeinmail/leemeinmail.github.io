@@ -1,0 +1,11 @@
+.portfolio{
+    padding-top:10px;
+	padding-bottom:10px;
+	background:$yellow;
+	&__link{
+	    display:block;
+		text-decoration:none;
+		text-align:center;
+		text-transform:capitalize;
+		font-size:1.4em;
+		color:$balck;}}

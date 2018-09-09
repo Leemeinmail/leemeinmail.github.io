@@ -1,0 +1,18 @@
+.contacts{
+    margin-top:20px;
+	margin-bottom:20px;
+    position:relative;
+    background:url('img/rose.png') no-repeat;
+	@include background-size(cover);
+	
+	&__shadow{
+	    padding-bottom:20px;
+		background:rgba(0,0,0,0.4);}
+	&__text{
+	    display:block;
+		padding-top:10px;
+		text-align:center;
+		color:$white;}
+	&__bold{
+	    font-size:1.1em;
+		font-weight:600;}}

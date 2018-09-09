@@ -42,5 +42,21 @@
 	   -moz-transform-origin:$var;
 	    -ms-transform-origin:$var;
 	     -o-transform-origin:$var;
-		    transform-origin:$var;
-}
+		    transform-origin:$var;}
+			
+@mixin display-flex(){
+    display: flex;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;}
+
+@mixin flex-direction($var){
+    flex-direction:$var;
+	-webkit-box-orient:$var;
+	-webkit-box-direction:$var;
+	-webkit-flex-direction:$var;
+	-ms-flex-direction:$var;}
+@mixin flex-wrap($var){
+    flex-wrap:$var;
+	-webkit-flex-wrap:$var;
+	-ms-flex-wrap:$var;}

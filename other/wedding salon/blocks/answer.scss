@@ -1,0 +1,32 @@
+.answer{
+    @include display-flex();
+    @include flex-direction(column);
+    @include align-items(center);
+	@media(min-width:$mobile-xl){
+	    @include flex-direction(row);
+		@include flex-wrap(no-wrap);}
+	@media(min-width:$tablet){
+	    max-width:$tablet;
+		margin:0px auto;}
+	&__item{
+	    margin-top:10px;
+        width: 70%;
+        height: 200px;
+		    @media(min-width:$mobile-x){
+	            margin:10px;}}
+	&__title{
+	    display: block;
+	    padding-top:10px;
+	    padding-right:7px;
+	    padding-bottom:10px;
+	    padding-left:7px;
+        background:$yellow;
+	    margin-bottom:10px;
+		text-align:center;
+	    line-height:1;
+	    color:$white;}
+	&__img-box{
+	    height:145px;}
+	&__img{
+	    @extend %img;
+		background:$balck; }}
