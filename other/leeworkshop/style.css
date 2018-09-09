@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*size*/
+/*color*/
+
+.page-theme{
+	font-family: 'PT Mono', monospace;
+	color:#ffff00;}
+
+html,body{
+	background:#000060;}
+
+.header{
+	padding-top:30px;}
+    .header__title{
+		padding-top:10px;
+		padding-bottom:10px;
+		display:block;
+		text-align:center;
+		text-transform:uppercase;
+		letter-spacing:5px;
+		font-weight:600;}
+    .header__nav{
+		text-align:center;
+		margin-top:30px;
+		border-top:5px dashed #ffff00;
+		border-bottom:5px dashed #ffff00;}
+.navlist{
+	display:inline-block;
+	list-style-type:none;
+	text-align:center;}
+	.navlist__item{
+		display:inline-block;}
+	.navlist__link{
+		display:block;
+		padding:10px 15px;
+		text-decoration:none;
+		text-transform:uppercase;
+		color:#ffff00;}
+.main{
+	width:100%;
+	max-width:960px;
+	margin:0px auto;}
+.section{
+	margin-top:30px;}
+	.section__title{
+		padding-top:10px;
+		padding-bottom:10px;
+		text-align:center;
+		text-transform:uppercase;
+		font-size:1.5em;}
