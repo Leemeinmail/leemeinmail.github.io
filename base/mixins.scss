@@ -45,10 +45,9 @@
 		    transform-origin:$var;}
 			
 @mixin display-flex(){
-    display: flex;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;}
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;}
 
 @mixin flex-direction($var){
     flex-direction:$var;
