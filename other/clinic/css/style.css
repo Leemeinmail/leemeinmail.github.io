@@ -15,7 +15,7 @@
 
 .page-theme{
 	font-family: 'Calibri', sans-serif;
-	font-family: 'ProximaNova-light', sans-serif;
+	font-family: 'ProximaNova-Regular', sans-serif;
 	font-size:14px;}	
 
 .header{} 
@@ -105,7 +105,7 @@
                            display:flex;
                     max-width:750px;
 					margin:0px auto;}}
-			@media(min-width:960px){
+			@media(min-width:1024px){
 				.nav-menu__list{
 					display:-webkit-box;
                     display:-ms-flexbox;
@@ -156,7 +156,7 @@
 				left:50%;
 				margin-left:-375px;
 				padding-bottom:20px;}}
-		@media(min-width:960px){
+		@media(min-width:1024px){
 			.single-slider__control{
 				width:960px;
 				left:50%;
@@ -184,7 +184,7 @@
 					padding-bottom:120px;
 					background:url('../img/slider-topbg750.png')no-repeat;
 					background-size:cover;}}
-			@media(min-width:960px){
+			@media(min-width:1024px){
 				.single-slider__item{
 					padding-top:120px;
 					padding-bottom:120px;
@@ -205,4 +205,121 @@
 				        margin:0px auto;
 						font-size:1.7em;}}
 	
-.service{}
+.service{
+	display:-webkit-box;
+    display:-ms-flexbox;
+           display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+       -ms-flex-direction:column;
+           flex-direction:column;
+	   -webkit-box-align: center;
+          -ms-flex-align: center;
+             align-items: center;
+	padding-top:10px;
+	padding-right:15px;
+	padding-left:15px;
+	padding-bottom:40px;}
+	@media(min-width:1024px){
+		.service{
+            max-width:1200px;
+			margin:0px auto;
+			-webkit-box-orient:horizontal;
+             -webkit-box-direction:normal;
+                   -ms-flex-direction:row;
+                       flex-direction:row;
+			   -webkit-box-align: stretch;
+                  -ms-flex-align: stretch;
+                     align-items: stretch; 
+           -webkit-box-pack: space-evenly;
+              -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;}}
+    .service__box{
+		max-width:320px;
+		margin-top:10px;
+		border:2px solid #00b7f4;}
+		@media(min-width:750px){
+			.service__box{
+				max-width:750px;}}
+		@media(min-width:1024px){
+			.service__box{
+				max-width:320px;}}
+	    .service__head{
+			padding-top:15px;
+			padding-right:45px;
+			padding-bottom:15px;
+			padding-left:45px;
+			background:#00b7f4;
+			text-align:center;
+			text-transform:uppercase;
+			line-height:1.4;
+			font-size:1.6em;
+			color:#fff;}
+		@media(min-width:1024px){
+			.service__head{
+				font-size:1.8em;}}
+	    .service__body{}
+		    .service__list{
+				padding-top:10px;
+				padding-bottom:10px;
+			    list-style-type:none;}
+			    .service__item{
+					position:relative;
+					margin-left:10px;
+					padding-left:15px;
+					line-height: 1.625;
+					font-size:1.14em;
+					color:#474747;}
+				@media(min-width:750px){
+					.service__item{
+						display:inline-block;
+						width:48%;}}
+				@media(min-width:1024px){
+					.service__item{
+						display:inline-block;
+						width:100%;}}
+			    .service__item::before{
+					display:inline-block;
+					content:'';
+					position:absolute;
+					top:50%;left:0px;
+					margin-top:-4px;
+					width:6px;
+					height:9px;
+					background:url('../img/marker.png');
+					color:#00b7f4;}
+.description{
+	padding-right:15px;
+	padding-bottom:20px;
+	padding-left:15px;
+	background:#f9f9f9;}
+    .description__title, .description__text{
+		display:block;
+		max-width:750px;
+		margin:0px auto;
+		color:#474747;}	
+	@media(min-width:1024px){
+		.description__title, .description__text{
+		    max-width:1200px;}}
+    .description__title{
+		padding-top:20px;
+		padding-bottom:20px;
+		text-transform:capitalize;
+		line-height: 1.25;
+		text-align:center;
+		font-family:'ProximaNova-Semibold',sans-serif;
+	    font-size:1.7em;}	
+	@media(min-width:750px){
+		.description__title{
+			line-height: 1.733;
+		    text-align:center;
+			font-size:1.85em;}}
+    .description__text{
+		line-height: 1.733;
+		text-align:justify;
+		color:#474747;}	
+    @media(min-width:750px){
+		.description__text{
+			text-align:center;
+			line-height: 1.444;
+			font-size:1.28em;}}		
