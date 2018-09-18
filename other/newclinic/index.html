@@ -333,6 +333,101 @@
 				</div><!-- end body -->
 			</div><!-- end feedback -->
 			
+			<div class='reviews'>
+			    <span class='reviews__title'>
+				    Отзывы о лечении в Да-Clinic
+				</span>
+				<div class='reviews__body' id='reviews__body'>
+				    
+					<div class='reviews__item'>
+					    <p class='reviews__text'>
+						    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				            Aliquam eu lorem tortor. Duis porttitor libero ante, vel
+				            condimentum libero ultrices sollicitudin. Proin ligula neque,
+				            fringilla et commodo a, mollis vitae mauris. Maecenas vel tempus
+				            nibh. Sed vitae ex semper ipsum mollis venenatis ut vitae ex. 
+				            Donec eleifend rhoncus mi, at luctus dolor euismod sed. 
+				            Maecenas metus nunc, rutrum sit amet porttitor eu, varius 
+				            sit amet sapien.Integer eget dolor massa. Sed mauris erat, 
+				            suscipit sed nibh et, sodales faucibus tellus. Pellentesque erat
+				            mauris, dapibus eu lorem in, dictum dignissim purus. Nulla a dolor
+				            vitae nisi varius commodo eu blandit lorem
+						</p>
+					</div>
+					
+					<div class='reviews__item'>
+					    <p class='reviews__text'>
+						    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				            Aliquam eu lorem tortor. Duis porttitor libero ante, vel
+				            condimentum libero ultrices sollicitudin. Proin ligula neque,
+				            fringilla et commodo a, mollis vitae mauris. Maecenas vel tempus
+				            nibh. Sed vitae ex semper ipsum mollis venenatis ut vitae ex. 
+				            Donec eleifend rhoncus mi, at luctus dolor euismod sed. 
+				            Maecenas metus nunc, rutrum sit amet porttitor eu, varius 
+				            sit amet sapien.Integer eget dolor massa. Sed mauris erat, 
+				            suscipit sed nibh et, sodales faucibus tellus. Pellentesque erat
+				            mauris, dapibus eu lorem in, dictum dignissim purus. Nulla a dolor
+				            vitae nisi varius commodo eu blandit lorem
+						</p>
+					</div>
+					
+					<div class='reviews__item'>
+					    <p class='reviews__text'>
+						    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				            Aliquam eu lorem tortor. Duis porttitor libero ante, vel
+				            condimentum libero ultrices sollicitudin. Proin ligula neque,
+				            fringilla et commodo a, mollis vitae mauris. Maecenas vel tempus
+				            nibh. Sed vitae ex semper ipsum mollis venenatis ut vitae ex. 
+				            Donec eleifend rhoncus mi, at luctus dolor euismod sed. 
+				            Maecenas metus nunc, rutrum sit amet porttitor eu, varius 
+				            sit amet sapien.Integer eget dolor massa. Sed mauris erat, 
+				            suscipit sed nibh et, sodales faucibus tellus. Pellentesque erat
+				            mauris, dapibus eu lorem in, dictum dignissim purus. Nulla a dolor
+				            vitae nisi varius commodo eu blandit lorem
+						</p>
+					</div>
+					
+					<div class='reviews__item'>
+					    <p class='reviews__text'>
+						    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				            Aliquam eu lorem tortor. Duis porttitor libero ante, vel
+				            condimentum libero ultrices sollicitudin. Proin ligula neque,
+				            fringilla et commodo a, mollis vitae mauris. Maecenas vel tempus
+				            nibh. Sed vitae ex semper ipsum mollis venenatis ut vitae ex. 
+				            Donec eleifend rhoncus mi, at luctus dolor euismod sed. 
+				            Maecenas metus nunc, rutrum sit amet porttitor eu, varius 
+				            sit amet sapien.Integer eget dolor massa. Sed mauris erat, 
+				            suscipit sed nibh et, sodales faucibus tellus. Pellentesque erat
+				            mauris, dapibus eu lorem in, dictum dignissim purus. Nulla a dolor
+				            vitae nisi varius commodo eu blandit lorem
+						</p>
+					</div>
+					
+					<div class='reviews__item'>
+					    <p class='reviews__text'>
+						    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				            Aliquam eu lorem tortor. Duis porttitor libero ante, vel
+				            condimentum libero ultrices sollicitudin. Proin ligula neque,
+				            fringilla et commodo a, mollis vitae mauris. Maecenas vel tempus
+				            nibh. Sed vitae ex semper ipsum mollis venenatis ut vitae ex. 
+				            Donec eleifend rhoncus mi, at luctus dolor euismod sed. 
+				            Maecenas metus nunc, rutrum sit amet porttitor eu, varius 
+				            sit amet sapien.Integer eget dolor massa. Sed mauris erat, 
+				            suscipit sed nibh et, sodales faucibus tellus. Pellentesque erat
+				            mauris, dapibus eu lorem in, dictum dignissim purus. Nulla a dolor
+				            vitae nisi varius commodo eu blandit lorem
+						</p>
+					</div>
+					
+				</div><!-- end reviews__body -->
+				
+				<div class='reviews__control'>
+				    <div class='reviews__arrow-left'></div>
+					<div class='reviews__arrow-right'></div>
+				</div>
+				
+			</div><!-- end reviews -->
+			
 		</div><!-- end main -->
 		
 	    <footer></footer><!-- end footer -->
@@ -359,7 +454,7 @@
 				nextArrow: '.personal__arrow-right',
 				slidesToShow:1,
                 slidesToScroll:1,
-				responsive: [
+				responsive:[
 				    
 					{
 				        breakpoint:560,
@@ -374,7 +469,23 @@
 						    slidesToShow:3
 						}
 				    }
-				],
+				]
+			});
+			$('#reviews__body').slick({
+			    mobileFirst:true,
+                prevArrow: '.reviews__arrow-left',
+				nextArrow: '.reviews__arrow-right',
+				slidesToShow:1,
+				responsive: [
+				    
+					{
+				        breakpoint:750,
+						settings:{
+						    slidesToShow:2,
+							slidesToScroll:1
+						}
+				    }
+				]
 			});
 			
 			var navMenuBtn = 0;
