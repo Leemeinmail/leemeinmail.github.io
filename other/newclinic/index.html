@@ -185,6 +185,7 @@
 					    Клиника и реабилитация в одном здании
 					</span>
 				</div>
+				
 				<div class='advantages__descr'>
 				    <div class='advantages__item'>
 					    <img src='img/secure-shield.png'/>
@@ -214,9 +215,100 @@
 						    Медицинское обследование
 						<span>
 					</div>
-				</div>
-			</div>
+					
+				</div><!-- end advantages__descr-->
+			</div><!-- end advantages__wr-->
 			</div><!-- end advantages -->
+			
+		    <div class='personal'>
+			    
+				<span class='personal__title'>
+				    наши специалисты
+				</span>
+				
+				<p class='personal__descr'>
+				    наши врачи - это опытные психологи, которые могут 
+					замотивировать больного на лечение ипациент захочет
+					продолжить путь изличения самостоятельно. Не пытайтесь
+					отстраться от проблемы, иначе она поглотит вас еще больше
+					и еще сильнее
+				</p>
+				
+				<div class='personal__slider'>
+				    
+					<div class='personal__slider-body' id='personal__slider-body'>
+					    
+						<div class='personal__item'>
+						    <img src='img/imnotsupermane.png' alt='наши специалисты'/>
+							<span class='personal__name'>
+							    Иванов Иван Иванович
+							</span>
+							<span class='personal__profession'>
+							    врач-реаниматолог, нарколог, психиатр, трансфузиолог
+							</span>
+						</div>
+						
+						<div class='personal__item'>
+						    <img src='img/imnotsupermane.png' alt='наши специалисты'/>
+							<span class='personal__name'>
+							    Иванов Иван Иванович
+							</span>
+							<span class='personal__profession'>
+							    врач-реаниматолог, нарколог, психиатр, трансфузиолог
+							</span>
+						</div>
+						
+						<div class='personal__item'>
+						    <img src='img/imnotsupermane.png' alt='наши специалисты'/>
+							<span class='personal__name'>
+							    Иванов Иван Иванович
+							</span>
+							<span class='personal__profession'>
+							    врач-реаниматолог, нарколог, психиатр, трансфузиолог
+							</span>
+						</div>
+						
+						<div class='personal__item'>
+						    <img src='img/imnotsupermane.png' alt='наши специалисты'/>
+							<span class='personal__name'>
+							    Иванов Иван Иванович
+							</span>
+							<span class='personal__profession'>
+							    врач-реаниматолог, нарколог, психиатр, трансфузиолог
+							</span>
+						</div>
+						
+						<div class='personal__item'>
+						    <img src='img/imnotsupermane.png' alt='наши специалисты'/>
+							<span class='personal__name'>
+							    Иванов Иван Иванович
+							</span>
+							<span class='personal__profession'>
+							    врач-реаниматолог, нарколог, психиатр, трансфузиолог
+							</span>
+						</div>
+						
+						
+						<div class='personal__item'>
+						    <img src='img/imnotsupermane.png' alt='наши специалисты'/>
+							<span class='personal__name'>
+							    Иванов Иван Иванович
+							</span>
+							<span class='personal__profession'>
+							    врач-реаниматолог, нарколог, психиатр, трансфузиолог
+							</span>
+						</div>
+						
+					</div><!-- end personal-slider__body -->
+					
+					<div class='personal__control'>
+					    <div class='personal__arrow-left'></div>
+                        <div class='personal__arrow-right'></div>						
+					</div>
+					
+				</div><!-- end personal-slider -->
+				
+			</div>
 			
 		</div><!-- end main -->
 		
@@ -237,6 +329,29 @@
 			$('#single-slider__body').slick({
                 prevArrow: '.single-slider__arrow-left',
 				nextArrow: '.single-slider__arrow-right'
+			});
+			$('#personal__slider-body').slick({
+			    mobileFirst:true,
+                prevArrow: '.personal__arrow-left',
+				nextArrow: '.personal__arrow-right',
+				slidesToShow:1,
+                slidesToScroll:1,
+				responsive: [
+				    
+					{
+				        breakpoint:560,
+						settings:{
+						    slidesToShow:2
+						}
+				    },
+					
+					{
+				        breakpoint:750,
+						settings:{
+						    slidesToShow:3
+						}
+				    }
+				],
 			});
 			
 			var navMenuBtn = 0;
