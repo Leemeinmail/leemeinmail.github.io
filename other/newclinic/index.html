@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang='ru' class='page-theme'>
+<html lang='ru' class='page__theme'>
     <head>
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	    <meta charset="UTF-8"/>
-	    <title>title</title>
-	    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+	    <title>Clinic</title>
 		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"/>
 		<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		
 		<script src="js/jquery/jquery-3.3.1.js"></script>
 		<script src="js/jquery/jquery-ui.min.js"></script>
 		<script src="js/jquery/jquery-migrate.js"></script>
@@ -17,7 +18,39 @@
     
 	<body>
 		<header class='header'>
-		    <div class='header__top'></div><!-- end header__top -->
+		    <div class='header__top'>
+			    
+				<div class='header__item'>
+                    <div class='logo'>
+					    лого
+					</div>					
+				</div>
+				
+				<div class='header__item'>
+					<span class='phone' >+7(988)45 445 45</span>
+					<span class='work' >круглосуточно</span>
+			
+                    <button class='btn btn__bg-1 header__btn' >
+					    Бесплатная консультация
+					</button>					
+				</div>
+				
+				<div class='header__item'>
+				    <div class='adress'>
+					    <span class='adress__city' >
+						    г.Пермь, ул.Ленина д.25
+						</span>
+						<span class='adress__email' >
+						    clinica@mail.com
+						</span>
+						<button class='btn btn__bg-2 header__btn'>
+						    Услуги и цены
+						</button>
+					</div>
+				</div>
+			
+			</div><!-- end header__top -->
+			
 			<nav class='header__nav' >
 			    
 				<ul class='nav-menu'>
@@ -50,6 +83,7 @@
 				</ul><!-- nav-menu -->
 				
 			</nav>
+			</div><!-- end header -->
 		</header><!-- end header -->
 	
 		<div class='main'>
@@ -326,7 +360,7 @@
 					    <label for="name" class='feedback__label' >Ваше имя:</label>
                         <input type="text" class="feedback__input" name="name"/>
 						<label for="phone" class='feedback__label' >Номер телефона:</label>
-                        <input type="number" class="feedback__input" name="phone"/>
+                        <input type="text" class="feedback__input" name="phone"/>
 						<input type="button" class="feedback__btn" value='Заказать звонок'/>
 					</form>
 				</div><!-- end body -->
