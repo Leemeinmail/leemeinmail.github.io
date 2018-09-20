@@ -1,0 +1,149 @@
+@font-face{
+	font-family: "ProximaNova-Light";
+	src: url("fonts/ProximaNova-Light.ttf");}
+@font-face{
+	font-family: "ProximaNova-Regular";
+	src: url("fonts/ProximaNova-Regular.ttf");}
+@font-face{
+	font-family: "ProximaNova-Semibold";
+	src: url("fonts/ProximaNova-Semibold.ttf");}
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+}
+body {
+    background: darkblue;
+	font-family: "ProximaNova-Regular";
+	font-size:14px;
+}
+	
+/*применил свои стили поверх, потому что вдруг придеться еще раз применять
+  в jqery-ui.css убрал padding'и что бы не юзать импотант.(стили библиотеки
+  применяются как я понял уже после загрузки страницы, тк их подключают
+  чере js, они перекр кастомные
+  закоментил 140 строку)
+    
+*/	
+.new{
+	padding-top:100px;
+	padding-bottom:100px;
+	background:green;
+	max-width:750px;
+	margin:0px auto;}
+	@media(min-width:1100px){
+		.new{
+			max-width:1200px;
+	        margin:0px auto;}}
+
+.accord-tabs__icon{
+	display:none;
+	width:100px;
+	height:auto;}
+    @media(min-width:750px){
+		.accord-tabs__icon{
+			display:block;}}	
+			
+.ui-tabs, .ui-tabs-panel, .ui-tabs-nav{
+	display:flex;
+}
+.ui-tabs{
+	padding-top:10px;
+	padding-bottom:10px;
+	background:white;}	
+	
+	.ui-tabs-nav{
+		width:30%;
+		align-self:center;
+		flex-direction:column;}
+        
+		.ui-tabs-nav li{
+			position:relative;}
+    	    
+            .ui-tabs-nav li a{
+				padding:5px 15px;
+				font-size:16px;
+				line-height:1.2;
+			    color:blue;}				
+		
+	.ui-tabs-panel{
+		margin-right:15px;
+		margin-left:40px;
+		padding-top:20px;
+		padding-right:10px;
+		padding-bottom:20px;
+		padding-left:10px;
+		border:1px solid #41c9f6;
+		border-radius:30px;
+		line-height: 1.667;}	
+	.accord-tabs__card p{
+		height:200px;
+		overflow:hidden;}
+	.accord-tabs__card a{
+		display:block;
+		text-align:center;
+		font-size:1.14em;
+		color:#7fdbf9;}
+
+#tab0,#tab1,#tab2,#tab3{
+	position:relative;}
+	
+#tab0:before, #tab0:after,
+#tab1:before, #tab1:after,
+#tab2:before, #tab2:after,
+#tab3:before, #tab3:after{
+	position:absolute;
+    right:100%;
+	content:'';}
+	
+#tab0:before, #tab1:before,
+#tab2:before, #tab3:before{
+	border:20px solid transparent;
+	border-right-color:#41c9f6;}
+
+#tab0:after, #tab1:after,
+#tab2:after, #tab3:after{
+	border:18px solid transparent;
+	border-right-color:#fff;}
+	
+#tab0:before{
+	top:65px;}	
+#tab0:after{
+	top:67px;}	
+	
+#tab1:before{
+	top:93px;}
+#tab1:after{
+	top:95px;}
+	
+#tab2:before{
+	top:127px;}
+#tab2:after{
+	top:129px;}
+	
+#tab3:before{
+	top:157px;}
+#tab3:after{
+	top:159px;}
+		
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
