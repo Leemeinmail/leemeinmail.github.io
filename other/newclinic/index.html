@@ -5,13 +5,13 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	    <meta charset="UTF-8"/>
 	    <title>Clinic</title>
-		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
 		<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		
 		<script src="js/jquery/jquery-3.3.1.js"></script>
-		<script src="js/jquery/jquery-ui.min.js"></script>
+		<script src="js/jquery/jquery-ui.js"></script>
 		<script src="js/jquery/jquery-migrate.js"></script>
 		<script src="js/slick/slick.js"></script>
     </head>
@@ -37,10 +37,10 @@
 				
 				<div class='header__item'>
 				    <div class='adress'>
-					    <span class='adress__city' >
+					    <span class='city adress__city' >
 						    г.Пермь, ул.Ленина д.25
 						</span>
-						<span class='adress__email' >
+						<span class='email adress__email' >
 						    clinica@mail.com
 						</span>
 						<button class='btn btn__bg-2 header__btn'>
@@ -51,7 +51,7 @@
 			
 			</div><!-- end header__top -->
 			
-			<nav class='header__nav' >
+			<nav class='header__nav ' >
 			    
 				<ul class='nav-menu'>
 					<li class='nav-menu__btn' id='nav-menu__btn'>
@@ -87,6 +87,7 @@
 		</header><!-- end header -->
 	
 		<div class='main'>
+		
 		    <div class='single-slider'>
 			    <div class='single-slider__control'>
 				    <div class='single-slider__arrow-left'></div>
@@ -120,86 +121,93 @@
 				</div>
 			</div>
 			
-			<div class='service'>
+			
+			<div class='main-section'>
+			    <div class='service'>
 			    
-				<div class='service__box'>
-				    <div class='service__head'>
-					    <span>лечение алкоголизма</span>
-					</div>
-					<div class='service__body'>
-					    <ul class='service__list'>
-						    <li class='service__item'>мотивация на лечение</li>
-							<li class='service__item'>вывод из запоя</li>
-							<li class='service__item'>детоксикация при алкоголизме</li>
-							<li class='service__item'>кодирование от алкоголизма</li>
-							<li class='service__item'>реабилитация алкоголиков</li>
-							<li class='service__item'>массаж</li>
-							<li class='service__item'>плазмообмен</li>
-							<li class='service__item'>озонотерапия</li>
-							<li class='service__item'>быстрое выведение из запоя</li>
-							<li class='service__item'>медикаментозная терапия</li>
-							<li class='service__item'>принудительный вывод из запоя</li>
-						</ul>
-					</div><!-- end service__body -->
-				</div><!-- end service__box -->
+				    <div class='service__box'>
+				        <div class='service__head'>
+					        <span>лечение алкоголизма</span>
+					    </div>
+					    <div class='service__body'>
+					        <ul class='service__list'>
+						        <li class='service__item'>мотивация на лечение</li>
+							    <li class='service__item'>вывод из запоя</li>
+							    <li class='service__item'>детоксикация при алкоголизме</li>
+							    <li class='service__item'>кодирование от алкоголизма</li>
+							    <li class='service__item'>реабилитация алкоголиков</li>
+							    <li class='service__item'>массаж</li>
+							    <li class='service__item'>плазмообмен</li>
+							    <li class='service__item'>озонотерапия</li>
+							    <li class='service__item'>быстрое выведение из запоя</li>
+							    <li class='service__item'>медикаментозная терапия</li>
+							    <li class='service__item'>принудительный вывод из запоя</li>
+						    </ul>
+					    </div><!-- end service__body -->
+				    </div><!-- end service__box -->
 				
-				<div class='service__box'>
-				    <div class='service__head'>
-					    <span>лечение наркомании</span>
-					</div>
-					<div class='service__body'>
-					    <ul class='service__list'>
-						    <li class='service__item'>принудительное лечение</li>
-							<li class='service__item'>снятие ломки</li>
-							<li class='service__item'>убод</li>
-							<li class='service__item'>детоксикация при наркомании</li>
-							<li class='service__item'>скрининг тест на вещества</li>
-							<li class='service__item'>влок</li>
-							<li class='service__item'>лечение от спайса</li>
-							<li class='service__item'>медикаментозная терапия</li>
-							<li class='service__item'>лечение гепатита с</li>
-						</ul>
-					</div><!-- end service__body -->
-				</div><!-- end service__box -->
+				    <div class='service__box'>
+				        <div class='service__head'>
+					        <span>лечение наркомании</span>
+					    </div>
+					    <div class='service__body'>
+					        <ul class='service__list'>
+						        <li class='service__item'>принудительное лечение</li>
+							    <li class='service__item'>снятие ломки</li>
+							    <li class='service__item'>убод</li>
+							    <li class='service__item'>детоксикация при наркомании</li>
+							    <li class='service__item'>скрининг тест на вещества</li>
+							    <li class='service__item'>влок</li>
+							    <li class='service__item'>лечение от спайса</li>
+							    <li class='service__item'>медикаментозная терапия</li>
+							    <li class='service__item'>лечение гепатита с</li>
+						    </ul>
+					    </div><!-- end service__body -->
+				    </div><!-- end service__box -->
 				
-				<div class='service__box'>
-				    <div class='service__head'>
-					    <span>реабилитация</span>
-					</div>
-					<div class='service__body'>
-					    <ul class='service__list'>
-						    <li class='service__item'>программа реабилитации</li>
-							<li class='service__item'>реабилитация при алкогольной зависимости</li>
-							<li class='service__item'>реабилитация при наркомании</li>
-							<li class='service__item'>работа с психологом</li>
-							<li class='service__item'>индивидуальная программа</li>
-							<li class='service__item'>социальное сопровождение</li>
-							<li class='service__item'>плазмообмен</li>
-							<li class='service__item'>постреабилитационная адаптация</li>
-						</ul>
-					</div><!-- end service__body -->
-				</div><!-- end service__box -->
+				    <div class='service__box'>
+				        <div class='service__head'>
+					        <span>реабилитация</span>
+					    </div>
+					    <div class='service__body'>
+					        <ul class='service__list'>
+						        <li class='service__item'>программа реабилитации</li>
+							    <li class='service__item'>реабилитация при алкогольной зависимости</li>
+							    <li class='service__item'>реабилитация при наркомании</li>
+							    <li class='service__item'>работа с психологом</li>
+							    <li class='service__item'>индивидуальная программа</li>
+							    <li class='service__item'>социальное сопровождение</li>
+							    <li class='service__item'>плазмообмен</li>
+							    <li class='service__item'>постреабилитационная адаптация</li>
+						    </ul>
+					    </div><!-- end service__body -->
+				    </div><!-- end service__box -->
 				
-			</div><!-- end service -->
+			    </div><!-- end service -->
+			</div><!-- end main-section -->
 			
 			<div class='description'>
-			    <span class='description__title' >наркологическая помощь в Перми</span>
-				<p class='description__text'>
-				   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				   Aliquam eu lorem tortor. Duis porttitor libero ante, vel
-				   condimentum libero ultrices sollicitudin. Proin ligula neque,
-				   fringilla et commodo a, mollis vitae mauris. Maecenas vel tempus
-				   nibh. Sed vitae ex semper ipsum mollis venenatis ut vitae ex. 
-				   Donec eleifend rhoncus mi, at luctus dolor euismod sed. 
-				   Maecenas metus nunc, rutrum sit amet porttitor eu, varius 
-				   sit amet sapien.Integer eget dolor massa. Sed mauris erat, 
-				   suscipit sed nibh et, sodales faucibus tellus. Pellentesque erat
-				   mauris, dapibus eu lorem in, dictum dignissim purus. Nulla a dolor
-				   vitae nisi varius commodo eu blandit lorem. Nullam eget magna eget 
-				   dolor placerat tincidunt. In mattis rhoncus lectus non convallis. 
-				   Fusce a viverra risus. Vivamus mattis vel felis a feugiat. Suspendisse
-				   quis convallis nisl, quis efficitur nisi. Vivamus id tristique ante.
-				</p>
+			
+			    <div class='main-section'>
+			        <span class='description__title' >наркологическая помощь в Перми</span>
+				    <p class='description__text'>
+				        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				        Aliquam eu lorem tortor. Duis porttitor libero ante, vel
+				        condimentum libero ultrices sollicitudin. Proin ligula neque,
+				        fringilla et commodo a, mollis vitae mauris. Maecenas vel tempus
+				        nibh. Sed vitae ex semper ipsum mollis venenatis ut vitae ex. 
+				        Donec eleifend rhoncus mi, at luctus dolor euismod sed. 
+				        Maecenas metus nunc, rutrum sit amet porttitor eu, varius 
+				        sit amet sapien.Integer eget dolor massa. Sed mauris erat, 
+				        suscipit sed nibh et, sodales faucibus tellus. Pellentesque erat
+				        mauris, dapibus eu lorem in, dictum dignissim purus. Nulla a dolor
+				        vitae nisi varius commodo eu blandit lorem. Nullam eget magna eget 
+				        dolor placerat tincidunt. In mattis rhoncus lectus non convallis. 
+				        Fusce a viverra risus. Vivamus mattis vel felis a feugiat. Suspendisse
+				        quis convallis nisl, quis efficitur nisi. Vivamus id tristique ante.
+				    </p>
+				</div><!-- end main-section -->
+				
 			</div><!-- end description -->
 			
 		    <div class='advantages'>
@@ -254,96 +262,165 @@
 			</div><!-- end advantages -->
 			
 		    <div class='personal'>
-			    
-				<span class='personal__title'>
-				    наши специалисты
-				</span>
+			    <div class='main-section personal__body'>
+				    <span class='personal__title'>
+				        наши специалисты
+				    </span>
 				
-				<p class='personal__descr'>
-				    наши врачи - это опытные психологи, которые могут 
-					замотивировать больного на лечение ипациент захочет
-					продолжить путь изличения самостоятельно. Не пытайтесь
-					отстраться от проблемы, иначе она поглотит вас еще больше
-					и еще сильнее
-				</p>
+				    <p class='personal__descr'>
+				        наши врачи - это опытные психологи, которые могут 
+					    замотивировать больного на лечение ипациент захочет
+					    продолжить путь изличения самостоятельно. Не пытайтесь
+					    отстраться от проблемы, иначе она поглотит вас еще больше
+					    и еще сильнее
+				    </p>
 				
-				<div class='personal__slider'>
 				    
-					<div class='personal__slider-body' id='personal__slider-body'>
+					    <div class='personal__slider' id='personal__slider'>
 					    
-						<div class='personal__item'>
-						    <img src='img/imnotsupermane.png' alt='наши специалисты'/>
-							<span class='personal__name'>
-							    Иванов Иван Иванович
-							</span>
-							<span class='personal__profession'>
-							    врач-реаниматолог, нарколог, психиатр, трансфузиолог
-							</span>
-						</div>
+						    <div class='personal__item'>
+						        <img src='img/imnotsupermane.png' alt='наши специалисты'/>
+							    <span class='personal__name'>
+							        Иванов Иван Иванович
+							    </span>
+							    <span class='personal__profession'>
+							        врач-реаниматолог, нарколог, психиатр, трансфузиолог
+							    </span>
+						    </div>
 						
-						<div class='personal__item'>
-						    <img src='img/imnotsupermane.png' alt='наши специалисты'/>
-							<span class='personal__name'>
-							    Иванов Иван Иванович
-							</span>
-							<span class='personal__profession'>
-							    врач-реаниматолог, нарколог, психиатр, трансфузиолог
-							</span>
-						</div>
+						    <div class='personal__item'>
+						        <img src='img/imnotsupermane.png' alt='наши специалисты'/>
+							    <span class='personal__name'>
+							        Иванов Иван Иванович
+							    </span>
+							    <span class='personal__profession'>
+							        врач-реаниматолог, нарколог, психиатр, трансфузиолог
+							    </span>
+						    </div>
+							
+							<div class='personal__item'>
+						        <img src='img/imnotsupermane.png' alt='наши специалисты'/>
+							    <span class='personal__name'>
+							        Иванов Иван Иванович
+							    </span>
+							    <span class='personal__profession'>
+							        врач-реаниматолог, нарколог, психиатр, трансфузиолог
+							    </span>
+						    </div>
+							
+							<div class='personal__item'>
+						        <img src='img/imnotsupermane.png' alt='наши специалисты'/>
+							    <span class='personal__name'>
+							        Иванов Иван Иванович
+							    </span>
+							    <span class='personal__profession'>
+							        врач-реаниматолог, нарколог, психиатр, трансфузиолог
+							    </span>
+						    </div>
 						
-						<div class='personal__item'>
-						    <img src='img/imnotsupermane.png' alt='наши специалисты'/>
-							<span class='personal__name'>
-							    Иванов Иван Иванович
-							</span>
-							<span class='personal__profession'>
-							    врач-реаниматолог, нарколог, психиатр, трансфузиолог
-							</span>
-						</div>
-						
-						<div class='personal__item'>
-						    <img src='img/imnotsupermane.png' alt='наши специалисты'/>
-							<span class='personal__name'>
-							    Иванов Иван Иванович
-							</span>
-							<span class='personal__profession'>
-							    врач-реаниматолог, нарколог, психиатр, трансфузиолог
-							</span>
-						</div>
-						
-						<div class='personal__item'>
-						    <img src='img/imnotsupermane.png' alt='наши специалисты'/>
-							<span class='personal__name'>
-							    Иванов Иван Иванович
-							</span>
-							<span class='personal__profession'>
-							    врач-реаниматолог, нарколог, психиатр, трансфузиолог
-							</span>
-						</div>
-						
-						
-						<div class='personal__item'>
-						    <img src='img/imnotsupermane.png' alt='наши специалисты'/>
-							<span class='personal__name'>
-							    Иванов Иван Иванович
-							</span>
-							<span class='personal__profession'>
-							    врач-реаниматолог, нарколог, психиатр, трансфузиолог
-							</span>
-						</div>
-						
-					</div><!-- end personal-slider__body -->
+					    </div><!-- end personal-slider -->
 					
-					<div class='personal__control'>
-					    <div class='personal__arrow-left'></div>
-                        <div class='personal__arrow-right'></div>						
-					</div>
+					    <div class='personal__control'>
+					        <div class='personal__arrow-left'></div>
+                            <div class='personal__arrow-right'></div>						
+					    </div>
 					
-				</div><!-- end personal-slider -->
-				
+				</div><!-- main-section -->
 			</div><!-- end personal -->
 			
-			<div class='steps'></div><!-- end steps -->
+			<div class='step'>
+		        <div class='step__wr'>
+			        <span class='step__title'>этапы лечения от зависимости</span>
+			    
+				    <div class='accord-tabs' id ='accord-tabs'>
+				    
+				        <div id='tab0' class='tab0' >
+					    
+					        <div class='accord-tabs__card' >
+					            <p>
+				                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+						            Aliquam eu lorem tortor. Duis porttitor libero ante, vel 
+						            condimentum libero ultrices sollicitudin. Proin ligula neque,
+						        fringilla et commodo a, mollis vitae mauris. Maecenas vel 
+						        tempus nibh. Sed vitae ex semper ipsum mollis venenatis ut
+						        vitae ex. Donec eleifend rhoncus mi, at luctus dolor 
+						        euismod sed. Maecenas metus nunc, rutrum sit amet porttitor 
+						        eu, varius sit amet sapien.
+						    </p>
+						    <a href='#'>подробнее...</a>
+				        </div> 
+					    <div class='accord-tabs__icon'>
+					        <img src='img/puzzle.png'/ alt=''>
+					    </div>
+					
+					</div>
+                    
+				    <div id='tab1' class='tab1'>
+					    
+					    <div class='accord-tabs__card' >
+					        <p>
+				                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+						        Aliquam eu lorem tortor. Duis porttitor libero ante, vel 
+						        condimentum libero ultrices sollicitudin. Proin ligula neque,
+						        fringilla et commodo a, mollis vitae mauris. Maecenas vel 
+						        tempus nibh. Sed vitae ex semper ipsum mollis venenatis ut
+						        vitae ex. Donec eleifend rhoncus mi, at luctus dolor 
+						        euismod sed. Maecenas metus nunc, rutrum sit amet porttitor 
+						        eu, varius sit amet sapien.
+						    </p>
+						    <a href='#'>подробнее...</a>
+				        </div> 
+					    <div class='accord-tabs__icon'>
+					        <img src='img/heart.png'/ alt=''>
+					    </div>
+					
+					</div>
+					
+					<div id='tab2' class='tab2'>
+					    
+					    <div class='accord-tabs__card' >
+					        <p>
+				                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+						        Aliquam eu lorem tortor. Duis porttitor libero ante, vel 
+						        condimentum libero ultrices sollicitudin. Proin ligula neque,
+						        fringilla et commodo a, mollis vitae mauris. Maecenas vel 
+						        tempus nibh. Sed vitae ex semper ipsum mollis venenatis ut
+						        vitae ex. Donec eleifend rhoncus mi, at luctus dolor 
+						        euismod sed. Maecenas metus nunc, rutrum sit amet porttitor 
+						        eu, varius sit amet sapien.
+						    </p>
+						    <a href='#'>подробнее...</a>
+				        </div> 
+					    <div class='accord-tabs__icon'>
+					        <img src='img/transfusion.png'/ alt=''>
+					    </div>
+					
+					</div>
+					
+					<div id='tab3' class='tab3' >
+					    
+					    <div class='accord-tabs__card' >
+					        <p>
+				                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+						        Aliquam eu lorem tortor. Duis porttitor libero ante, vel 
+						        condimentum libero ultrices sollicitudin. Proin ligula neque,
+						        fringilla et commodo a, mollis vitae mauris. Maecenas vel 
+						        tempus nibh. Sed vitae ex semper ipsum mollis venenatis ut
+						        vitae ex. Donec eleifend rhoncus mi, at luctus dolor 
+						        euismod sed. Maecenas metus nunc, rutrum sit amet porttitor 
+						        eu, varius sit amet sapien.
+						    </p>
+						    <a href='#'>подробнее...</a>
+				        </div> 
+					    <div class='accord-tabs__icon'>
+					        <img src='img/nurse.png'/ alt=''>
+					    </div>
+					
+					</div>
+					
+				</div><!-- end accord-tabs -->  
+			</div><!-- end step wr -->
+		</div><!-- end step  -->
 			
 			<div class='feedback'>
 			    <div class='feedback__body'>
@@ -463,25 +540,128 @@
 			
 		</div><!-- end main -->
 		
-	    <footer></footer><!-- end footer -->
+	    <footer class='footer' >
+		    <div class='footer__wr main-section'>
+			    
+				<div class=' footer__logo'>
+				    <div class='logo'>лого</div>
+				</div>    
+					 
+				<div class='footer__phone'>
+				    <span class='phone phone--color-type1' >+7(988)45 445 45</span>
+				    <span class='work' >круглосуточно</span>
+				</div>
+				<div class='footer__email'>
+				    <span class='email email--color-type1' >
+					    clinica@mail.com
+				    </span>
+				</div>
+				<div class='footer__adress'>
+				    
+					<span class='city city--color-type1' >
+					    г.Пермь, ул.Ленина д.25
+				    </span>
+					
+					<span class='email email--color-type1 footer__e' >
+					    clinica@mail.com
+				    </span>
+					
+				</div>
+				
+			</div>
+		</footer><!-- end footer -->
 		
     </body><!-- end body -->
 	<script>
-	    $(document).ready(function(){
+	    
+		var el = $('#accord-tabs');
+		var title = ["обследование",
+		             "детоксикация",
+					 "восстановление организма",
+		             "реабилитация"];
+		
+		function createList(title){
+		    var ul = $("<ul id='tabs-list'></ul>");
+			$.each(title,function(index,value){
+			    var t = $("<li><a href='#tab"+index+"'>"+value+"</a></li>").appendTo(ul);
+			});
+			return ul;
+		}
+		
+		function addTabs(el,title){
+		    var list = createList(title);
+			list.prependTo(el);
+			$(el).tabs();
+		}
+		
+		function removeTabs(el){
+		    $(el).tabs("destroy");
+			$(el).children('#tabs-list').remove();
+		}
+		
+		function addAccordion(el,title){
+		    $.each(title,function(index,value){
+			    var el = "#tab"+index;
+				$(el).before("<h1 id='accordion-title'  ><a href='#' class='accord-tabs__title'>"+value+"</a></span></h1>");
+			});
+			$(el).accordion({
+			    heightStyle: "content",
+				collapsible: "true",
+				active:"1"
+			});
+		}
+		
+		function removeAccordion(el){
+		    $(el).accordion("destroy");
+			$(el).children('#accordion-title').remove();
+		}
+		
+		function installStepWiget(el,title){
+		    var width = $(window).width();
+			if(width > 750){
+			    addTabs(el,title);
+			}
+			else{
+			    addAccordion(el,title);
+			}
+		}
+		
+		function resizeStepWiget(el){
+		    var width = $(document).width();	
+			if(width > 750){
+				var init = typeof $(el).data("ui-accordion");
+				if(init != "undefined"){
+                    removeAccordion(el);
+					addTabs(el,title);
+				}
+			}
+            else{
+			    var init = typeof $(el).data("ui-tabs");
+				if(init != "undefined" ){
+					removeTabs(el);
+					addAccordion(el,title);
+				}   
+			}
+		}
+		
+		$(document).ready(function(){
 			var mobile = 320;
 			var tablet = 750;
-			var desktop = 960;
+			var desktop = 1100;
 			var thisWindow = $(window);
 			var navMenuBody = $('#nav-menu__body');
+			
+			installStepWiget(el,title);
+			
 			thisWindow.resize(function(){ 
-			    
+			    resizeStepWiget(el);
 			});
             
 			$('#single-slider__body').slick({
                 prevArrow: '.single-slider__arrow-left',
 				nextArrow: '.single-slider__arrow-right'
 			});
-			$('#personal__slider-body').slick({
+			$('#personal__slider').slick({
 			    mobileFirst:true,
                 prevArrow: '.personal__arrow-left',
 				nextArrow: '.personal__arrow-right',
@@ -497,13 +677,14 @@
 				    },
 					
 					{
-				        breakpoint:750,
+				        breakpoint:tablet,
 						settings:{
 						    slidesToShow:3
 						}
 				    }
 				]
 			});
+			
 			$('#reviews__body').slick({
 			    mobileFirst:true,
                 prevArrow: '.reviews__arrow-left',
@@ -512,7 +693,7 @@
 				responsive: [
 				    
 					{
-				        breakpoint:750,
+				        breakpoint:tablet,
 						settings:{
 						    slidesToShow:2,
 							slidesToScroll:1
