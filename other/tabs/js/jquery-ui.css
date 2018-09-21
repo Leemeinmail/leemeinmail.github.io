@@ -92,13 +92,9 @@
 .ui-accordion .ui-accordion-header {
 	display: block;
 	cursor: pointer;
-	position: relative;
-	margin: 2px 0 0 0;
-	padding: .5em .5em .5em .7em;
-	font-size: 100%;
-}
+	position: relative;}
+
 .ui-accordion .ui-accordion-content {
-	padding: 1em 2.2em;
 	border-top: 0;
 	overflow: auto;
 }
@@ -117,7 +113,6 @@
 	top: 0;
 	/*border-bottom-width: 0;*/
 	padding: 0;
-	white-space: nowrap;
 }
 .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
 	float: left;
