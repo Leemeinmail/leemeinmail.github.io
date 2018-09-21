@@ -1,19 +1,15 @@
 <!DOCTYPE html>
-<html lang='ru' class='page__theme'>
+<html lang='ru' class='page' x-ms-format-detection='none'> <!-- определение номеров телефона в ei -->
     <head>
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	    <meta charset="UTF-8"/>
 	    <title>Clinic</title>
-		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
-		<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
-		<link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="extern/jquery/jquery-ui.css"/>
+		<link rel="stylesheet" type="text/css" href="extern/slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="extern/slick/slick-theme.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
-		
-		<script src="js/jquery/jquery-3.3.1.js"></script>
-		<script src="js/jquery/jquery-ui.js"></script>
-		<script src="js/jquery/jquery-migrate.js"></script>
-		<script src="js/slick/slick.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/accord-tabs.css"/>
     </head>
     
 	<body>
@@ -83,113 +79,119 @@
 				</ul><!-- nav-menu -->
 				
 			</nav>
-			</div><!-- end header -->
+			
 		</header><!-- end header -->
 	
 		<div class='main'>
 		
 		    <div class='single-slider'>
-			    <div class='single-slider__control'>
+			    
+				<div class='single-slider__body' id='single-slider__body'>
+				    
+					<div class='single-slider__item'>
+					    <span class='single-slider__descr'>
+						    из каждых 100 человек обратившихся к нам
+							по поводу наркомании, алкоголизма или 
+							таксикомании, 90 человек вышли из стен клиники
+							свободными от зависимости
+						</span>
+					</div>
+					
+					<div class='single-slider__item'>
+					    <span class='single-slider__descr'>
+						    из каждых 100 человек обратившихся к нам
+							по поводу наркомании, алкоголизма или 
+							таксикомании, 90 человек вышли из стен клиники
+							свободными от зависимости
+						</span>
+					</div>
+					
+					<div class='single-slider__item'>
+					    <span class='single-slider__descr'>
+						    из каждых 100 человек обратившихся к нам
+							по поводу наркомании, алкоголизма или 
+							таксикомании, 90 человек вышли из стен клиники
+							свободными от зависимости
+						</span>
+					</div>
+				
+				</div>
+			    
+				<div class='single-slider__control'>
 				    <div class='single-slider__arrow-left'></div>
 					<div class='single-slider__arrow-right'></div>
 				</div>
-				<div class='single-slider__body' id='single-slider__body'>
-				    <div class='single-slider__item'>
-					    <span class='single-slider__descr'>
-						    из каждых 100 человек обратившихся к нам
-							по поводу наркомании, алкоголизма или 
-							таксикомании, 90 человек вышли из стен клиники
-							свободными от зависимости
-						</span>
-					</div>
-					<div class='single-slider__item'>
-					    <span class='single-slider__descr'>
-						    из каждых 100 человек обратившихся к нам
-							по поводу наркомании, алкоголизма или 
-							таксикомании, 90 человек вышли из стен клиники
-							свободными от зависимости
-						</span>
-					</div>
-					<div class='single-slider__item'>
-					    <span class='single-slider__descr'>
-						    из каждых 100 человек обратившихся к нам
-							по поводу наркомании, алкоголизма или 
-							таксикомании, 90 человек вышли из стен клиники
-							свободными от зависимости
-						</span>
-					</div>
-				</div>
-			</div>
+				
+			</div><!-- end  single-slider-->
 			
 			
-			<div class='main-section'>
-			    <div class='service'>
+			<div class='service main-section'>
 			    
-				    <div class='service__box'>
-				        <div class='service__head'>
-					        <span>лечение алкоголизма</span>
-					    </div>
-					    <div class='service__body'>
-					        <ul class='service__list'>
-						        <li class='service__item'>мотивация на лечение</li>
-							    <li class='service__item'>вывод из запоя</li>
-							    <li class='service__item'>детоксикация при алкоголизме</li>
-							    <li class='service__item'>кодирование от алкоголизма</li>
-							    <li class='service__item'>реабилитация алкоголиков</li>
-							    <li class='service__item'>массаж</li>
-							    <li class='service__item'>плазмообмен</li>
-							    <li class='service__item'>озонотерапия</li>
-							    <li class='service__item'>быстрое выведение из запоя</li>
-							    <li class='service__item'>медикаментозная терапия</li>
-							    <li class='service__item'>принудительный вывод из запоя</li>
-						    </ul>
-					    </div><!-- end service__body -->
-				    </div><!-- end service__box -->
+				<div class='service__box'>
+				    <div class='service__head'>
+					    <span>лечение алкоголизма</span>
+					</div>
+					    
+				    <div class='service__body'>
+					    <ul class='service__list'>
+						    <li class='service__item'>мотивация на лечение</li>
+							<li class='service__item'>вывод из запоя</li>
+							<li class='service__item'>детоксикация при алкоголизме</li>
+							<li class='service__item'>кодирование от алкоголизма</li>
+							<li class='service__item'>реабилитация алкоголиков</li>
+						    <li class='service__item'>массаж</li>
+							<li class='service__item'>плазмообмен</li>
+							<li class='service__item'>озонотерапия</li>
+							<li class='service__item'>быстрое выведение из запоя</li>
+							<li class='service__item'>медикаментозная терапия</li>
+							<li class='service__item'>принудительный вывод из запоя</li>
+						</ul>
+					</div><!-- end service__body -->
+				</div><!-- end service__box -->
 				
-				    <div class='service__box'>
-				        <div class='service__head'>
-					        <span>лечение наркомании</span>
-					    </div>
-					    <div class='service__body'>
-					        <ul class='service__list'>
-						        <li class='service__item'>принудительное лечение</li>
-							    <li class='service__item'>снятие ломки</li>
-							    <li class='service__item'>убод</li>
-							    <li class='service__item'>детоксикация при наркомании</li>
-							    <li class='service__item'>скрининг тест на вещества</li>
-							    <li class='service__item'>влок</li>
-							    <li class='service__item'>лечение от спайса</li>
-							    <li class='service__item'>медикаментозная терапия</li>
-							    <li class='service__item'>лечение гепатита с</li>
-						    </ul>
-					    </div><!-- end service__body -->
-				    </div><!-- end service__box -->
+				<div class='service__box'>
+				    <div class='service__head'>
+					    <span>лечение наркомании</span>
+					</div>
+					<div class='service__body'>
+					    <ul class='service__list'>
+						    <li class='service__item'>принудительное лечение</li>
+							<li class='service__item'>снятие ломки</li>
+							<li class='service__item service__item--uppercase'>убод</li>
+							<li class='service__item'>детоксикация при наркомании</li>
+							<li class='service__item'>скрининг тест на вещества</li>
+							<li class='service__item service__item--uppercase'>влок</li>
+							<li class='service__item'>лечение от спайса</li>
+							<li class='service__item'>медикаментозная терапия</li>
+							<li class='service__item'>лечение гепатита с</li>
+						</ul>
+					</div><!-- end service__body -->
+				</div><!-- end service__box -->
 				
-				    <div class='service__box'>
+				<div class='service__box'>
 				        <div class='service__head'>
 					        <span>реабилитация</span>
 					    </div>
-					    <div class='service__body'>
-					        <ul class='service__list'>
-						        <li class='service__item'>программа реабилитации</li>
-							    <li class='service__item'>реабилитация при алкогольной зависимости</li>
-							    <li class='service__item'>реабилитация при наркомании</li>
-							    <li class='service__item'>работа с психологом</li>
-							    <li class='service__item'>индивидуальная программа</li>
-							    <li class='service__item'>социальное сопровождение</li>
-							    <li class='service__item'>плазмообмен</li>
-							    <li class='service__item'>постреабилитационная адаптация</li>
-						    </ul>
-					    </div><!-- end service__body -->
-				    </div><!-- end service__box -->
+					<div class='service__body'>
+					    <ul class='service__list'>
+						    <li class='service__item'>программа реабилитации</li>
+							<li class='service__item'>реабилитация при алкогольной зависимости</li>
+							<li class='service__item'>реабилитация при наркомании</li>
+							<li class='service__item'>работа с психологом</li>
+							<li class='service__item'>индивидуальная программа</li>
+							<li class='service__item'>социальное сопровождение</li>
+							<li class='service__item'>плазмообмен</li>
+							<li class='service__item'>постреабилитационная адаптация</li>
+						</ul>
+					</div><!-- end service__body -->
+				</div><!-- end service__box -->
 				
-			    </div><!-- end service -->
-			</div><!-- end main-section -->
+			</div><!-- end service -->
 			
 			<div class='description'>
 			
 			    <div class='main-section'>
-			        <span class='description__title' >наркологическая помощь в Перми</span>
+			        <span class='description__title page__title' >наркологическая помощь в Перми</span>
 				    <p class='description__text'>
 				        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 				        Aliquam eu lorem tortor. Duis porttitor libero ante, vel
@@ -211,59 +213,66 @@
 			</div><!-- end description -->
 			
 		    <div class='advantages'>
-			    <span class='advantages__title' >
+			    <span class='advantages__title page__title' >
 				    Почему выбирают нашу клинику?
 				</span>
-			<div class='advantages__wr'>
+				
+			    <div class='advantages__body main-section'>
 				
 				
-				<div class='advantages__logo'>
-				    <img src='img/hospital.png' class='advantages__icon' alt=''>
-					<span class='advantages__text advantages__text--blue' >
-					    Комплексное решение проблем:
-					</span>
-					<span class='advantages__text' >
-					    Клиника и реабилитация в одном здании
-					</span>
-				</div>
+				    <div class='advantages__logo'>
+				        <img src='img/hospital.png' class='advantages__icon' alt=''>
+					    <span class='advantages__text advantages__text--blue' >
+					        Комплексное решение проблем:
+					    </span>
+					    <span class='advantages__text' >
+					        Клиника и реабилитация в одном здании
+					    </span>
+				    </div>
 				
-				<div class='advantages__descr'>
-				    <div class='advantages__item'>
-					    <img src='img/secure-shield.png'/>
-						<span>Полностью анонимно<span>
-					</div>
-					<div class='advantages__item'>
-					    <img src='img/doctor.png'/>
-						<span>Выезд врача на дом 24/7<span>
-					</div>
-					<div class='advantages__item'>
-					    <img src='img/ambulance.png'/>
-						<span>Возмлжна доставка с водителем<span>
-					</div>
-					<div class='advantages__item'>
-					    <img src='img/medical-history.png'/>
-						<span>Современные методы лечения<span>
-					</div>
-					<div class='advantages__item'>
-					    <img src='img/quality.png'/>
-						<span>Опыт работы больше 15 лет<span>
-					</div>
-					<div class='advantages__item'>
-					    <img src='img/secure-shield.png'/>
-						<span>
-						    сдача анализов
-							(гепатит, вич)
-						    Медицинское обследование
-						<span>
-					</div>
+				    <div class='advantages__descr'>
+				        
+						<div class='advantages__item'>
+					        <img src='img/secure-shield.png'/>
+					 	    <span>Полностью анонимно<span>
+					    </div>
+						
+					    <div class='advantages__item'>
+					       <img src='img/doctor.png'/>
+						   <span>Выезд врача на дом 24/7<span>
+					    </div>
+					    
+						<div class='advantages__item'>
+					        <img src='img/ambulance.png'/>
+						    <span>Возмлжна доставка с водителем<span>
+					    </div>
 					
-				</div><!-- end advantages__descr-->
-			</div><!-- end advantages__wr-->
+					    <div class='advantages__item'>
+					        <img src='img/medical-history.png'/>
+						    <span>Современные методы лечения<span>
+					    </div>
+						
+					    <div class='advantages__item'>
+					        <img src='img/quality.png'/>
+						    <span>Опыт работы больше 15 лет<span>
+					    </div>
+						
+					    <div class='advantages__item'>
+					        <img src='img/chemical.png'/>
+						    <span>
+						        сдача анализов
+							    (гепатит, вич)
+						        Медицинское обследование
+						    <span>
+					    </div>
+					
+				    </div><!-- end advantages__descr-->
+			    </div><!-- end advantages__wr-->
 			</div><!-- end advantages -->
 			
 		    <div class='personal'>
 			    <div class='main-section personal__body'>
-				    <span class='personal__title'>
+				    <span class='personal__title page__title'>
 				        наши специалисты
 				    </span>
 				
@@ -423,8 +432,9 @@
 		</div><!-- end step  -->
 			
 			<div class='feedback'>
-			    <div class='feedback__body'>
-				    <div class='feedback__descr'>
+			    <div class='feedback__body main-section'>
+				    
+					<div class='feedback__descr'>
 					    <span class='feedback__title' > 
                             Уговорим лечиться!
 						</span>
@@ -433,12 +443,13 @@
 							вашего родственника или друга пройти лечение от зависимости
 						</p>
 					</div>
+					
 					<form class='feedback__form' action='feedback__form.php' name='feedback__form' >
 					    <label for="name" class='feedback__label' >Ваше имя:</label>
                         <input type="text" class="feedback__input" name="name"/>
 						<label for="phone" class='feedback__label' >Номер телефона:</label>
                         <input type="text" class="feedback__input" name="phone"/>
-						<input type="button" class="feedback__btn" value='Заказать звонок'/>
+						<input type="button" class="btn btn__bg-1 feedback__btn" value='Заказать звонок'/>
 					</form>
 				</div><!-- end body -->
 			</div><!-- end feedback -->
@@ -572,95 +583,24 @@
 		</footer><!-- end footer -->
 		
     </body><!-- end body -->
+	<script src="extern/jquery/jquery-3.3.1.js"></script>
+	<script src="extern/jquery/jquery-ui.js"></script>
+	<script src="extern/jquery/jquery-migrate.js"></script>
+	<script src="extern/slick/slick.js"></script>
+	<script src="js/script.js"></script>
 	<script>
 	    
-		var el = $('#accord-tabs');
-		var title = ["обследование",
-		             "детоксикация",
-					 "восстановление организма",
-		             "реабилитация"];
 		
-		function createList(title){
-		    var ul = $("<ul id='tabs-list'></ul>");
-			$.each(title,function(index,value){
-			    var t = $("<li><a href='#tab"+index+"'>"+value+"</a></li>").appendTo(ul);
-			});
-			return ul;
-		}
-		
-		function addTabs(el,title){
-		    var list = createList(title);
-			list.prependTo(el);
-			$(el).tabs();
-		}
-		
-		function removeTabs(el){
-		    $(el).tabs("destroy");
-			$(el).children('#tabs-list').remove();
-		}
-		
-		function addAccordion(el,title){
-		    $.each(title,function(index,value){
-			    var el = "#tab"+index;
-				$(el).before("<h1 id='accordion-title'  ><a href='#' class='accord-tabs__title'>"+value+"</a></span></h1>");
-			});
-			$(el).accordion({
-			    heightStyle: "content",
-				collapsible: "true",
-				active:"1"
-			});
-		}
-		
-		function removeAccordion(el){
-		    $(el).accordion("destroy");
-			$(el).children('#accordion-title').remove();
-		}
-		
-		function installStepWiget(el,title){
-		    var width = $(window).width();
-			if(width > 750){
-			    addTabs(el,title);
-			}
-			else{
-			    addAccordion(el,title);
-			}
-		}
-		
-		function resizeStepWiget(el){
-		    var width = $(document).width();	
-			if(width > 750){
-				var init = typeof $(el).data("ui-accordion");
-				if(init != "undefined"){
-                    removeAccordion(el);
-					addTabs(el,title);
-				}
-			}
-            else{
-			    var init = typeof $(el).data("ui-tabs");
-				if(init != "undefined" ){
-					removeTabs(el);
-					addAccordion(el,title);
-				}   
-			}
-		}
 		
 		$(document).ready(function(){
-			var mobile = 320;
-			var tablet = 750;
-			var desktop = 1100;
-			var thisWindow = $(window);
-			var navMenuBody = $('#nav-menu__body');
 			
-			installStepWiget(el,title);
-			
-			thisWindow.resize(function(){ 
-			    resizeStepWiget(el);
-			});
+			installStepWiget(accordTabs,accordTabsTitle);
             
 			$('#single-slider__body').slick({
                 prevArrow: '.single-slider__arrow-left',
 				nextArrow: '.single-slider__arrow-right'
 			});
+			
 			$('#personal__slider').slick({
 			    mobileFirst:true,
                 prevArrow: '.personal__arrow-left',
@@ -702,25 +642,20 @@
 				]
 			});
 			
-			var navMenuBtn = 0;
-			$('#nav-menu__btn').click(function(){
-			    if(navMenuBtn == 0){
-					$('#nav-menu__btn').addClass('nav-menu__btn--active');
-					$('#nav-menu__icon').addClass('nav-menu__icon--active');
-					$('#nav-menu__name').addClass('nav-menu__name--active');
-					navMenuBody.removeClass('nav-menu__body--off');
-					navMenuBody.addClass('nav-menu__body--active');
-					navMenuBtn = 1;
+			
+			$(navMenuBtn).click(function(){
+			    if(navMenuState == 0){
+					navMenuState = showMenu(navMenuState);
 				}
 				else{
-					$('#nav-menu__btn').removeClass('nav-menu__btn--active');
-				    $('#nav-menu__icon').removeClass('nav-menu__icon--active');
-				    $('#nav-menu__name').removeClass('nav-menu__name--active');
-					navMenuBody.removeClass('nav-menu__body--active');
-					navMenuBody.addClass('nav-menu__body--off');
-					navMenuBtn = 0;
+				    navMenuState = hideMenu(navMenuState);
 				}
             });
+			
+			thisWindow.resize(function(){ 
+			    resizeStepWiget(accordTabs, accordTabsTitle);
+			});
+			
         });
 	</script>
 </html><!-- end html -->
