@@ -346,7 +346,7 @@
 				        <div id='tab0' class='tab0' >
 					    
 					        <div class='accord-tabs__card' >
-					            <p>
+					            <p class='accord-tabs__content' >
 				                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 						            Aliquam eu lorem tortor. Duis porttitor libero ante, vel 
 						            condimentum libero ultrices sollicitudin. Proin ligula neque,
@@ -359,7 +359,7 @@
 						    <a href='#'>подробнее...</a>
 				        </div> 
 					    <div class='accord-tabs__icon'>
-					        <img src='img/puzzle.png'/ alt=''>
+					        <img src='assets/theme/clinic/img/puzzle.png'/ alt=''>
 					    </div>
 					
 					</div>
@@ -367,7 +367,7 @@
 				    <div id='tab1' class='tab1'>
 					    
 					    <div class='accord-tabs__card' >
-					        <p>
+					        <p class='accord-tabs__content' >
 				                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 						        Aliquam eu lorem tortor. Duis porttitor libero ante, vel 
 						        condimentum libero ultrices sollicitudin. Proin ligula neque,
@@ -380,7 +380,7 @@
 						    <a href='#'>подробнее...</a>
 				        </div> 
 					    <div class='accord-tabs__icon'>
-					        <img src='img/heart.png'/ alt=''>
+					        <img src='assets/theme/clinic/img/heart.png'/ alt=''>
 					    </div>
 					
 					</div>
@@ -388,7 +388,7 @@
 					<div id='tab2' class='tab2'>
 					    
 					    <div class='accord-tabs__card' >
-					        <p>
+					        <p class='accord-tabs__content' >
 				                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 						        Aliquam eu lorem tortor. Duis porttitor libero ante, vel 
 						        condimentum libero ultrices sollicitudin. Proin ligula neque,
@@ -401,7 +401,7 @@
 						    <a href='#'>подробнее...</a>
 				        </div> 
 					    <div class='accord-tabs__icon'>
-					        <img src='img/transfusion.png'/ alt=''>
+					        <img src='assets/theme/clinic/img/transfusion.png'/ alt=''>
 					    </div>
 					
 					</div>
@@ -409,7 +409,7 @@
 					<div id='tab3' class='tab3' >
 					    
 					    <div class='accord-tabs__card' >
-					        <p>
+					        <p class='accord-tabs__content' >
 				                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 						        Aliquam eu lorem tortor. Duis porttitor libero ante, vel 
 						        condimentum libero ultrices sollicitudin. Proin ligula neque,
@@ -422,7 +422,7 @@
 						    <a href='#'>подробнее...</a>
 				        </div> 
 					    <div class='accord-tabs__icon'>
-					        <img src='img/nurse.png'/ alt=''>
+					        <img src='assets/theme/clinic/img/nurse.png'/ alt=''>
 					    </div>
 					
 					</div>
@@ -448,7 +448,7 @@
 					    <label for="name" class='feedback__label' >Ваше имя:</label>
                         <input type="text" class="feedback__input" name="name"/>
 						<label for="phone" class='feedback__label' >Номер телефона:</label>
-                        <input type="text" class="feedback__input" name="phone"/>
+                        <input type="text" class="feedback__input feedback__phone" name="phone" id='phone' placeholder='' />
 						<input type="button" class="btn btn__bg-1 feedback__btn" value='Заказать звонок'/>
 					</form>
 				</div><!-- end body -->
@@ -587,12 +587,15 @@
 	<script src="extern/jquery/jquery-ui.js"></script>
 	<script src="extern/jquery/jquery-migrate.js"></script>
 	<script src="extern/slick/slick.js"></script>
+	<script src="extern/maskedinput/jquery.maskedinput.min.js"></script>
 	<script src="js/script.js"></script>
+	
 	<script>
-	    
-		
-		
 		$(document).ready(function(){
+			
+			jQuery(function($){
+                $("#phone").mask("+7 (999) 999 99 99");
+			});
 			
 			installStepWiget(accordTabs,accordTabsTitle);
             

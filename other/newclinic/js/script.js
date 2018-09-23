@@ -21,11 +21,15 @@ function createList(title){
 		
 function addTabs(el,title){
 	var list = createList(title);
+	$('.accord-tabs__icon').css('display','block');
+	$('.accord-tabs__content').addClass('accord-tabs__content--tabs');
     list.prependTo(el);
 	$(el).tabs();
 }
 		
 function removeTabs(el){
+	$('.accord-tabs__icon').css('display','none');
+	$('.accord-tabs__content').removeClass('accord-tabs__content--tabs');
 	$(el).tabs("destroy");
 	$(el).children('#tabs-list').remove();
 }
@@ -33,23 +37,27 @@ function removeTabs(el){
 function addAccordion(el,title){
 	$.each(title,function(index,value){
 	    var el = "#tab"+index;
+		$('.accord-tabs__content').addClass('accord-tabs__content--accordion');
 	    $(el).before("<h1 id='accordion-title' >"+value+"</h1>");
     });
 	
 	$(el).accordion({
+		collapsible: "true",
 		heightStyle: "content",
-		active:"0"
+		activ:'0'
 	});
 }
 		
 function removeAccordion(el){
+	$('.accord-tabs__content').removeClass('accord-tabs__content--accordion');
     $(el).accordion("destroy");
 	$(el).children('#accordion-title').remove();
 }
 		
 function installStepWiget(el,title){
 	var width = $(window).width();
-	if(width > 749){
+	console.log(width);
+	if(width > tablet){
 		addTabs(el,title);
 	}
 	else{
@@ -62,10 +70,10 @@ function resizeStepWiget(el,title){
 	var initAccord = typeof $(el).data("ui-accordion");
 	var initTabs = typeof $(el).data("ui-tabs");
 	
-	if(initAccord != "undefined" && width > 749){
+	if(initAccord != "undefined" && width > tablet){
 		removeAccordion(el);
 		addTabs(el,title);
-	}else if(initTabs != "undefined" && width < 749){
+	}else if(initTabs != "undefined" && width < tablet){
 		removeTabs(el);
 		addAccordion(el,title);
 	}
@@ -77,7 +85,6 @@ function showMenu(navMenuState){
 	$(navMenuName).addClass('nav-menu__name--active');
 	$(navMenuBody).removeClass('nav-menu__body--off');
 	$(navMenuBody).addClass('nav-menu__body--active');
-	return navMenuState = 1;
 }
 
 function hideMenu(navMenuState){
@@ -86,5 +93,4 @@ function hideMenu(navMenuState){
 	$(navMenuName).removeClass('nav-menu__name--active');
 	$(navMenuBody).removeClass('nav-menu__body--active');
 	$(navMenuBody).addClass('nav-menu__body--off');
-	return navMenuState = 0;
 }
