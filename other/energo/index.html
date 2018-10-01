@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang='ru' class='page' x-ms-format-detection='none'> <!-- определение номеров телефона в ei -->
+    <head>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <meta charset="UTF-8"/>
+	    <title>энерго</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+    </head>
+    
+	<body>
+		<header class='header'>
+		    
+			<div id='header__contacts' class=' header__contacts header__hidden'  >
+			    <div class='contacts section'>
+				
+				    <div class='contacts__number'><span class='contacts__underline' >+7 (342) 27-37-033</span></div>
+			        <div class='contacts__btn'><span class='contacts__underline' >Заказать звонок</span></div>
+			 	    <div class='contacts__email'>
+				       E-mail: <span class='contacts__underline' >esp-perm@inbox.ru<span> 
+				    </div>
+				
+				</div>
+			</div><!-- end header__contacts -->
+			
+			<div class='section header__general'>
+			
+			    <div class='header__logo'>
+				    <a href ='#'><img src='img/logo.svg' /></a>
+				</div>
+				
+				<form action='' method='get' id='search-form' class='header__search'>
+				    <input id='searchValue' type='text' type='search' placeholder='Поиск по сайту'/>
+					<button id ='searchSend' type='submit'/>
+					    <img src='img/search.png' />
+					</button>
+					<span id ='searchShow' >
+					    <img src='img/search.png' />
+					</span>
+				</form>
+				
+				<div class='header__button' id='mobile-btn' >
+				    <div class='header__lines'></div>
+					<div class='header__lines'></div>
+					<div class='header__lines'></div>
+				</div>
+			
+			</div><!-- end form -->
+			
+			<nav id='header__nav' class='section header__nav header__hidden'>
+			    <ul class='menu-nav' >
+				    <li class='menu-nav__item'><a href='#' class='menu-nav__link'>О компании</a><li>
+					<li class='menu-nav__item'><a href='#' class='menu-nav__link'>Каталог</a><li>
+					<li class='menu-nav__item'><a href='#' class='menu-nav__link'>Контакты и реквизиты</a><li>
+					<li class='menu-nav__item'><a href='#' class='menu-nav__link'>Новости</a><li>
+					<li class='menu-nav__item'><a href='#' class='menu-nav__link'></a><li>
+				</ul>
+			</nav>
+			
+		</header><!-- end header -->
+	
+		<div class='main'></div><!-- end main -->
+		
+	    <footer class='footer' ></footer><!-- end footer -->
+		
+    </body><!-- end body -->
+	<script src="extern/jquery/jquery-3.3.1.js"></script>
+	<script src="js/script.js"></script>
+	
+	<script>
+	    //menu
+	    var mobileMenuBtn = $('#mobile-btn');
+		var headerContacts = $('#header__contacts');
+		var headerNav = $('#header__nav');
+        
+        //search
+		var searchShow = $('#searchShow');
+		var searchSend = $('#searchSend');
+		var headerLogo = $('.header__logo');
+		var searchForm = $('#search-form');
+		
+	    $(document).ready(function(){
+		    mobileMenuBtn.click(function(){
+			    headerContacts.toggleClass('header__hidden');
+				headerNav.toggleClass('header__hidden');
+			});
+			
+			searchShow.click(function(){
+				headerLogo.toggleClass('header__logo--hidden');
+			    searchForm.toggleClass('header__search--active');
+			});
+			searchSend.click(function(){
+				var winWidth = $('html, body').width();
+				if(winWidth < 768){
+				    if(!textInpute){
+					   var textInpute = $('#searchValue').val();
+					   headerLogo.toggleClass('header__logo--hidden');
+			           searchForm.toggleClass('header__search--active');
+					   return false;
+				    } else{
+				       return true;
+				    }
+				} else{
+				    return true;
+				}
+			    
+				
+			});
+			
+		});
+	</script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
