@@ -10,23 +10,11 @@
     
 	<body>
 		<header class='header'>
-		    
-			<div id='header__contacts' class=' header__contacts header__hidden'  >
-			    <div class='contacts section'>
-				
-				    <div class='contacts__number'><span class='underline' >+7 (342) 27-37-033</span></div>
-			        <div class='contacts__btn'><span class='underline' >Заказать звонок</span></div>
-			 	    <div class='contacts__email'>
-				       E-mail: <span class='underline' >esp-perm@inbox.ru<span> 
-				    </div>
-				
-				</div>
-			</div><!-- end header__contacts -->
 			
 			<div class='section header__general'>
 			
 			    <div class='header__logo'>
-				    <a href ='#'><img src='img/logo.svg' /></a>
+				    <a href ='#' class='logo' ><img src='img/logo.svg' /></a>
 				</div>
 				
 				<form action='' method='get' id='search-form' class='header__search'>
@@ -45,7 +33,19 @@
 					<div class='header__lines'></div>
 				</div>
 			
-			</div><!-- end form -->
+			</div><!-- end header__general -->
+			
+			<div id='header__contacts' class=' header__contacts header__hidden'  >
+			    
+				<div class='contacts section'>
+				    <div class='contacts__number'><span class='underline' >+7 (342) 27-37-033</span></div>
+			        <div class='contacts__btn'><span class='underline' >Заказать звонок</span></div>
+			 	    <div class='contacts__email'>
+				       E-mail: <span class='underline' >esp-perm@inbox.ru<span> 
+				    </div>
+				</div>
+				
+			</div><!-- end header__contacts -->
 			
 			<nav id='header__nav' class='section header__nav header__hidden'>
 			    <ul class='menu-nav' >
@@ -61,19 +61,26 @@
 	
 		<div class='main'>
 		    
-			<div class='main__background-img'></div>
+			<div class='main__title'>
+			    
+				<div class='section page-wrapper'>
+				    <span class='page-title'>
+			            <mark class='page-title--style-1' >Поставим</mark> и <mark class='page-title--style-2' >установим</mark>
+				        электротехническое оборудование<br> и материалы
+			        </span>
+				</div>
+				
+				
+			    <div class='main__background-img'>
+			        <div class='respons-height'></div>
+			    </div>
 			
-			<div class='section'>
-			    <span class='page-title'>
-			        <mark class='page-title--style-1' >Поставим</mark> и <mark class='page-title--style-2' >установим</mark>
-				        электротехническое оборудование и материалы
-			    </span>
 			</div>
 			
 			<div class='section production main__production'>
 			    
 				<div class='production__item'>
-				    <div class='production__img'>
+				    <div class='production__img '>
 					    <img src='img/kabel.png' alt=''/>
 					</div>
                     <div class='production__descr'>
@@ -102,17 +109,6 @@
 					    <img src='img/bolts.png' alt=''/>
 					</div>
                     <div class='production__descr'>
-					    <span class='underline' >Комплектные</span> 
-						<span class='underline' >трансформатор-ные</span>
-						<span class='underline' >подстанции</span>
-					</div>
-				</div>
-				
-				<div class='production__item'>
-				    <div class='production__img'>
-					    <img src='img/bolts.png' alt=''/>
-					</div>
-                    <div class='production__descr'>
 					    <span class='underline' >Комлектующие</span>
 						<span class='underline' >ЛЭП</span>
 					</div>
@@ -123,7 +119,6 @@
 					    <img src='img/bolts.png' alt=''/>
 					</div>
                     <div class='production__descr'>
-					  
 					    <span class='underline' >ЖБИ для</span>
 						<span class='underline' >гражданского</span>
 						<span class='underline' >строительства</span>
@@ -159,20 +154,104 @@
 					</div>
 				</div>
 				
+				<div class='production__item'>
+				    <div class='production__img'>
+					    <img src='img/bolts.png' alt=''/>
+					</div>
+                    <div class='production__descr'>
+					    <span class='underline' >Комплектные</span> 
+						<span class='underline' >трансформатор-ные</span>
+						<span class='underline' >подстанции</span>
+					</div>
+				</div>
+				
 			</div><!-- end main__production -->
 			
 			<div class='main__feedback'>
 			    <div class='feedback'>
 				
-				    <div class='feedback__logo'></div>
-				    <div class='feedback__descr'></div>
+				    <div class='feedback__logo'>
+					    <div class='feedback__img'>
+						    <img src='img/b.jpg' alt='' />
+						</div>
+						<div class='feedback__title--mobile'>Не нашли категорию или товар?</div>
+					</div>
+					
+				    <div class='feedback__descr'>
+					    <div class='feedback__text-box'>
+						    <span class='feedback__title'>Не нашли категорию или товар?</span>
+						    <span class='feedback__text-transfor' >Напишите нам на почту</span>
+							<a href='#' class='feedback__link' ><span class='underline'>esp-perm@inbox.ru</span></a>
+							<span class='feedback__text-block' >Или отправьте заявку</span>
+						</div>
+						<div class='feedback__text-box'>
+						    <span class='feedback__text-block  feedback__text-block--regular' >Мы найдем нужное или подберем аналогичное оборудование</span>
+						</div>
+					</div>
+				    
+					<div class='feedback__bottom'>
+					    <button class='feedback__btn'> <span>отправить</span> </button>    
+					</div>
+				    
 				
 			    </div><!-- end feedback -->
 			</div><!-- end main__feedback -->
 			
 		</div><!-- end main -->
 		
-	    <footer class='footer' ></footer><!-- end footer -->
+	    <footer class='footer section' >
+		    
+			<div class='footer__top'>
+			    
+				<div class='footer__contacts'>
+			        <div class='footer__title'>
+				       <span>связаться</span>
+				    </div>
+				    <div class='footer__text'>
+				        <span class='underline'>esp-perm@inbox.ru</span>
+				    </div>
+				    <div class='footer__text'>
+				       <span class='underline' >+7 (342) 27-37-033</span>
+				    </div>
+			    </div>
+			
+			    <div class='footer__contacts'>
+			        <div class='footer__title'>
+				       <span>посетить</span>
+				    </div>
+				    <div class='footer__text'>
+				        <span>Пермь</span>
+				    </div>
+				    <div class='footer__text'>
+				        <span>ул. Уральская 63, оф.27</span>
+				    </div>
+				    <div class='footer__text'>
+				        <span class='footer__uppercase' >тц</span> <span class='footer__quotes footer__uppercase' >гудвин</span>
+				    </div>
+			    </div>
+			
+			    <div class='footer__logo'>
+				    <div class='footer__img'>
+					    <img src='img/logo-white.svg' />
+					</div>
+			    </div>
+				
+			</div><!-- end footer__top -->
+				
+			<div class='footer__bottom'>
+				<div class='footer__made-by'>
+					<div class='footer__transform'><span>Cайт разработан</span></div>
+				    <span class='underline'>esp-perm@inbox.ru</span>
+				</div>
+					
+				<div class='footer__copyright'>
+					<span class='footer__uppercase' >©2015—2018</span> <span class='footer__quotes footer__uppercase'>ЭНЕРГОСТРОЙПЛЮС</span>
+			    </div>
+			</div><!-- end footer__bottom -->
+			
+			
+			
+		</footer><!-- end footer -->
 		
     </body><!-- end body -->
 	<script src="extern/jquery/jquery-3.3.1.js"></script>
