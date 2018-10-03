@@ -31,6 +31,7 @@
 				    <div class='header__lines'></div>
 					<div class='header__lines'></div>
 					<div class='header__lines'></div>
+					<img src='img/closed.svg' id='btnClosed' class='header__button-closed header__hidden' />
 				</div>
 			
 			</div><!-- end header__general -->
@@ -116,7 +117,7 @@
 				
 				<div class='production__item'>
 				    <div class='production__img'>
-					    <img src='img/bolts.png' alt=''/>
+					    <img src='img/beton.jpg' alt=''/>
 					</div>
                     <div class='production__descr'>
 					    <span class='underline' >ЖБИ для</span>
@@ -127,7 +128,7 @@
 				
 				<div class='production__item'>
 				    <div class='production__img'>
-					    <img src='img/bolts.png' alt=''/>
+					    <img src='img/metobrab_17.jpg' alt=''/>
 					</div>
                     <div class='production__descr'>
 					    <span class='underline' >Металлоконст-рукции</span>
@@ -137,7 +138,7 @@
 				
 				<div class='production__item'>
 				    <div class='production__img'>
-					    <img src='img/bolts.png' alt=''/>
+					    <img src='img/electro-comp.jpg' alt=''/>
 					</div>
                     <div class='production__descr'>
 					    <span class='underline' >Электронные</span>
@@ -147,7 +148,7 @@
 				
 				<div class='production__item'>
 				    <div class='production__img'>
-					    <img src='img/bolts.png' alt=''/>
+					    <img src='img/izo.jpg' alt=''/>
 					</div>
                     <div class='production__descr'>
 					    <span class='underline' >Изоляторы</span>
@@ -156,7 +157,7 @@
 				
 				<div class='production__item'>
 				    <div class='production__img'>
-					    <img src='img/bolts.png' alt=''/>
+					    <img src='img/stancii.jpg' alt=''/>
 					</div>
                     <div class='production__descr'>
 					    <span class='underline' >Комплектные</span> 
@@ -273,6 +274,8 @@
 		    mobileMenuBtn.click(function(){
 			    headerContacts.toggleClass('header__hidden');
 				headerNav.toggleClass('header__hidden');
+				$('.header__lines').toggleClass('header__hidden');
+				$('#btnClosed').toggleClass('header__hidden');
 			});
 			
 			searchShow.click(function(){
