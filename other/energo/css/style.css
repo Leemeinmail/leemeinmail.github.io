@@ -1298,7 +1298,10 @@ mark{
 				padding-left:5px;}
 				
 			.table__item{
-				font-size:14px;}
+				font-size:13px;}
+			@media(min-width:768px){
+				.table__item{
+				    font-size:14px;}}
 				
 			.table__header td{
 				padding-top:8px;
