@@ -18,8 +18,8 @@
 				</div>
 				
 				<form action='' method='get' id='search-form' class='header__search'>
-				    <input id='searchValue' type='text' type='search' placeholder='Поиск по сайту'/>
-					<button id ='searchSend' type='submit'/>
+				    <input id='searchValue' type='search' placeholder='Поиск по сайту'/>
+					<button id ='searchSend' type='submit'>
 					    <img src='img/search.png' />
 					</button>
 					<span id ='searchShow' >
@@ -65,7 +65,7 @@
 			<div class='main__title'>
 			    <div class='bread-crumbs section'>
 				    <span class='bread-crumbs__item' ><a href='index.html'>Главная</a></span>
-					<span class='bread-crumbs__item' ><a href='index2.html'>Кабельно-проводниковая продукция</a></span>
+					<span class='bread-crumbs__item' ><a href='product.html'>Кабельно-проводниковая продукция</a></span>
 				</div>
 				<div class='main__background-img main__background-img--absolute'>
 			        <div class='respons-height'></div>
@@ -97,7 +97,7 @@
 			    
 				<div class='product-grid'>
 		             
-			        <div class='product-grid__item' >
+			        <div class='product-grid__item productMenu' >
 						
 					    <div class='product-grid__wr'>
 		                    <div class='product-grid__logo'>
@@ -105,11 +105,11 @@
 			                </div>
 			    
 				            <div class='product-grid__descr ' >
-			                  <span class='underline productMenuBtn product-grid__arrow' >Кабели</span>
+			                  <span class='underline product-grid__arrow productMenuBtn'>Кабели</span>
 			                </div>
 			            </div>
 			
-			            <div class='product-grid__menu productMenuHide' >
+			            <div class='product-grid__menu productMenuHide productMenuBtn'>
 			                <ul>
 							    <li><a href=''><span class='underline'>Кабели силовые с изоляцией из СПЭ</span></a></li>
 								<li><a href=''><span class='underline'>С ПВХ изоляцией</a></li>
@@ -135,7 +135,7 @@
 					</div><!-- end product-item -->
 					
 					
-					<div class='product-grid__item' >
+					<div class='product-grid__item productMenu' >
 						
 					    <div class='product-grid__wr'>
 		                    <div class='product-grid__logo'>
@@ -143,11 +143,11 @@
 			                </div>
 			    
 				            <div class='product-grid__descr ' >
-			                  <span class='underline productMenuBtn product-grid__arrow ' >Провода</span>
+			                  <span class='underline product-grid__arrow productMenuBtn' >Провода</span>
 			                </div>
 			            </div>
 			
-			            <div class='product-grid__menu productMenuHide' >
+			            <div class='product-grid__menu productMenuHide'>
 			                <ul>
 							    <li><a href=''><span class='underline'>Кабели силовые с изоляцией из СПЭ</span></a></li>
 								<li><a href=''><span class='underline'>С ПВХ изоляцией</a></li>
@@ -302,53 +302,10 @@
 	<script src="js/script.js"></script>
 	
 	<script>
-	    //menu
-	    var mobileMenuBtn = $('#mobile-btn');
-		var headerContacts = $('#header__contacts');
-		var headerNav = $('#header__nav');
-        
-        //search
-		var searchShow = $('#searchShow');
-		var searchSend = $('#searchSend');
-		var headerLogo = $('.header__logo');
-		var searchForm = $('#search-form');
-		
 	    $(document).ready(function(){
-		    mobileMenuBtn.click(function(){
-			    headerContacts.toggleClass('header__hidden');
-				headerNav.toggleClass('header__hidden');
-				$('.header__lines').toggleClass('header__hidden');
-				$('#btnClosed').toggleClass('header__hidden');
-			});
-			
-			searchShow.click(function(){
-				headerLogo.toggleClass('header__logo--hidden');
-			    searchForm.toggleClass('header__search--active');
-			});
-			searchSend.click(function(){
-				var winWidth = $('html, body').width();
-				if(winWidth < 768){
-				    if(!textInpute){
-					   var textInpute = $('#searchValue').val();
-					   headerLogo.toggleClass('header__logo--hidden');
-			           searchForm.toggleClass('header__search--active');
-					   return false;
-				    } else{
-				       return true;
-				    }
-				} else{
-				    return true;
-				}
-			    
-				
-			});
-			
-			$('.productMenuBtn').click(function(){
-			    $('.product-grid__menu').toggleClass('productMenuHide');
-				$('.shadow__item').toggleClass('shadow--hide');
-				$('.product-grid__arrow').toggleClass('product-grid__arrow--hide');
-			});
-			
+		    initMobileMenu(mobileMenuBtn,headerContacts,headerNav);
+		    initSearch(headerLogo,searchForm,searchSend);
+		    initProductMenu(productMenu);
 		});
 	</script>
 
