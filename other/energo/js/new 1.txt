@@ -1,0 +1,48 @@
+if(activ != 1){
+				bufferContainer = $(this);
+				if(bufferContainer != activContainer || activContainer === 0 ){
+					if (el.hasClass('productMenuBtn')){
+					    $(this).children('.product-grid__menu').removeClass('productMenuHide');
+					    $(this).children('.product-grid__menu').addClass('productMenuVisible');
+						$('.shadow__item').toggleClass('shadow--hide');
+				    }
+				}else if(bufferContainer === activContainer){
+					$(this).children('.product-grid__menu').addClass('productMenuHide');
+					$(this).children('.product-grid__menu').removeClass('productMenuVisible');
+			        $('.shadow__item').toggleClass('shadow--hide');
+				}
+				
+			  
+			} else{
+				if (el.hasClass('productMenuBtn')) {
+			        
+			        activ = 0;
+		        }	
+			}
+			
+var el = $(event.target);
+		var current
+		bufferContainer = $(this).children('.product-grid__menu');
+		
+		if(activContainer != 0){
+			
+		}
+		
+		if(bufferContainer != activContainer && activContainer != 0){
+			console.log('1');
+			activContainer.children('.product-grid__menu').toggleClass('productMenuHide');
+			bufferContainer.children('.product-grid__menu').toggleClass('productMenuHide');
+			activContainer = $(this);
+		}
+		
+		if(bufferContainer == activContainer){
+			console.log('2');
+		    activContainer.children('.product-grid__menu').toggleClass('productMenuHide');
+			activContainer = 0;	
+		}
+		
+		if(activContainer == 0){
+			console.log('3');
+			activContainer = bufferContainer;
+		    activContainer.children('.product-grid__menu').toggleClass('productMenuHide');
+		}

@@ -1188,6 +1188,8 @@ mark{
 		
 		.productMenuHide{
 			display:none;}
+		.productMenuVisible{
+			display:block;}
 		
 		.product-grid__menu{
 			position:relative;
