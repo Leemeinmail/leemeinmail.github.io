@@ -645,6 +645,7 @@ mark{
 		display:-webkit-box;
         display:-ms-flexbox;
                display:flex;
+	    text-decoration:none;
 		overflow:hidden;}
 		
 	    .production__item--reverse{
@@ -1269,8 +1270,14 @@ mark{
 				
 			.table__header{
 				vertical-align:top;
-				font-size: 16px;
-                font-weight: bold;}	
+				font-size: 14px;
+                font-weight: bold;}
+            @media(min-width:1024px){
+				.table__header{
+					font-size: 15px;}}				
+			@media(min-width:1200px){
+				.table__header{
+					font-size: 16px;}}
 			
 			.table__row{
 				background:#fff;
@@ -1289,6 +1296,9 @@ mark{
 				padding-right:5px;
 				padding-bottom:8px;
 				padding-left:5px;}
+				
+			.table__item{
+				font-size:14px;}
 				
 			.table__header td{
 				padding-top:8px;
