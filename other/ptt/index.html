@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang='ru' class='page' x-ms-format-detection='none'> <!-- определение номеров телефона в ei -->
+    <head>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <meta charset="UTF-8"/>
+	    <title>ptt</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="extern/jquery-3.3.1.js"></script>
+    </head>
+    
+	<body>
+	   
+		<header>
+		</header>
+	
+		<div class='content-on-main'>
+		    <div class='container'>
+			
+			    <ul class='breadcrumb' >
+		            <li><a href='' >Главная</a></li>
+			        <li><a href='' >Корзина</a></li>
+		        </ul>
+				
+			    <div class='mains-title'>Корзина</div> 
+		        	
+			    <div class='personal-basket flex'>
+				
+				    <div class='product-in-basket'>
+					   
+					   <div class='product-in-basket__item'> 
+							<div class='shopping-card flex'>
+								<div class='shopping-card__logo'>
+								    <img src='img/holodos.png' alt=''>
+								</div>
+								
+								<div class='shopping-card__descr'>
+								    
+									<span class='shopping-card__name'>холодильник индезит e8976</span>
+									<span class='shopping-card__id'>код товара</span>
+									
+									<div class='shopping-card__controls'>
+									    <div class='shopping-card__counter product-counter'>
+										    <span class='product-counter__more' ></span>
+											<div class='product-counter__number'><span>2</span></div>
+											<span class='product-counter__less' ></span>
+										</div>
+										<div class='shopping-card__price' >
+										    <span class='rub' >54000</span>
+										</div>
+									</div>
+									
+									<div class='shopping-card__drop'></div>
+									
+								</div>
+							</div><!-- end shopping-card -->	
+						</div><!-- end product-in-basket__item -->
+						
+					</div> <!-- end product-in-basket -->
+					
+				    <div class='basket-order-form'>
+					    <form class='checkout-order' name='formOrder' action='#' > 
+						    
+							<div class='checkout-order__title'>
+							    <span> оформление заказа </span>
+							</div>
+							
+							<div class='checkout-order__personal-data'>
+							    <div class='checkout-order__title checkout-order__title--small'>
+							        <span> получатель </span>
+							    </div>
+								<input type='text' name='customerName' placeholder='Ваше имя'/>
+								<input type='text' name='customerName' placeholder='Email'/>
+								<input type='text' name='customerName' placeholder='Номер телефона'/>
+								<input type='text' name='customerName' placeholder='Адрес доставки'/>
+							</div>
+							
+							<div class='checkout-order__delivery'>
+							    
+								<div class='checkout-order__title checkout-order__title--small'>
+							        <span> доставка </span>
+								</div>
+								
+									<div class='delivery-method checkout-order__body '>
+					                    <input type='radio' name='delivery' id='selfDelivery'/>
+									    <label for='selfDelivery' class="">
+										    <span class='delivery-method__name'>самовывоз</span>
+											<span class='delivery-method__descr'>сегодня</span>
+											<span class='delivery-method__price'>0<span class='rub'></span></span>
+										</label>
+										
+					                    <input type='radio' name='delivery' id='courierDelivery' checked="checked"/>
+									    <label for='courierDelivery' class="">
+										    <span class='delivery-method__name'>курьером</span>
+											<span class='delivery-method__descr'>завтра<span class='delivery-method__date' >12.12</span></span>
+											<span class='delivery-method__price'>0<span class='rub'></span></span>
+										</label>
+										
+					                    <input type='radio' name='delivery' id='courierDeliveryOther'/>
+									    <label for='courierDeliveryOther' class="">
+										    <span class='delivery-method__name'>курьером</span>
+											<span class='delivery-method__descr'>завтра</span>
+											<span class='delivery-method__price'>0<span class='rub'></span></span>
+										</label>
+									</div>
+							    
+							</div><!-- checkout-order__delivery -->
+							
+							<div class='checkout-order__payment'>
+							    
+								<div class='checkout-order__title checkout-order__title--small'>
+							        <span> оплата </span>
+								</div>
+								
+								<p>
+								    доступна оплата наличными и картой при получении заказа
+								</p>
+								
+							</div><!-- checkout-order__payment -->
+							
+							<div class='checkout-order__total bill'>
+								<span class='bill__title'>товары
+								    <span class='bill__title--small' >(без учета стоимости доставки)</span>
+								</span>
+								
+								<div class='bill__total'>
+								    <span class='rub' >517 945</span>
+								</div>
+							</div>
+							
+							<input class='checkout-order__btn order-btn' type='submit' name='' value='Сделать заказ' />
+							
+						</form>
+					</div> <!-- end basket-order-form --> 
+				
+				</div><!-- end personal-basket -->
+				  
+			</div><!-- end container -->
+		</div><!-- end container-on-main -->
+		
+	    <footer class='footer' >
+		</footer>
+		
+    </body><!-- end body -->
+
+</html><!-- end html -->
