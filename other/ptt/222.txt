@@ -1,1 +1,153 @@
-шрифты, в шаблоне указан segorUi
+.Общество_с_ограниченной_ответственностью__ПЕРМТ {
+  font-size: 15px;
+  font-family: "Montserrat";
+  color: rgb(0, 0, 0);
+  line-height: 1.6;
+  position: absolute;
+  left: 14.25px;
+  top: 655.534px;
+  width: 287px;
+  height: 879px;
+  z-index: 13;
+}
+
+._13_03_2018_ {
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: rgb(0, 0, 0);
+  line-height: 1.5;
+  text-align: left;
+  position: absolute;
+  left: 13px;
+  top: 553.703px;
+  width: 77px;
+  height: 12px;
+  z-index: 8;
+}
+
+
+.Сообщение_о_проведении_внеочередного_собрания_ {
+  font-size: 20px;
+  font-family: "Montserrat";
+  color: rgb(26, 35, 102);
+  font-weight: bold;
+  line-height: 1.4;
+  text-align: left;
+  position: absolute;
+  left: 16px;
+  top: 593.379px;
+  width: 285px;
+  height: 48px;
+  z-index: 7;
+}
+
+
+.Общество_с_ограниченной_ответственностью__ПЕРМТ {
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: rgb(0, 0, 0);
+  line-height: 1.5;
+  position: absolute;
+  left: 15.328px;
+  top: 714.703px;
+  width: 699px;
+  height: 665px;
+  z-index: 13;
+}
+.Общество_с_ограниченной_ответственностью__ПЕРМТ {
+  font-size: 15px;
+  font-family: "Montserrat";
+  color: rgb(0, 0, 0);
+  line-height: 1.6;
+  position: absolute;
+  left: 14.25px;
+  top: 655.534px;
+  width: 287px;
+  height: 879px;
+  z-index: 13;
+}
+.Общество_с_ограниченной_ответственностью__ПЕРМТ {
+  font-size: 18px;
+  font-family: "Montserrat";
+  color: rgb(0, 0, 0);
+  line-height: 1.333;
+  position: absolute;
+  left: 388px;
+  top: 887.041px;
+  width: 1095px;
+  height: 571px;
+  z-index: 13;
+}
+.Сообщение_о_проведении_внеочередного_собрания_ {
+  font-size: 24px;
+  font-family: "Montserrat";
+  color: rgb(26, 35, 102);
+  font-weight: bold;
+  line-height: 1.167;
+  text-align: left;
+  position: absolute;
+  left: 16px;
+  top: 663.051px;
+  z-index: 7;
+}
+
+.Скачать_сообщение_в_формате__doc {
+  font-size: 18px;
+  font-family: "Montserrat";
+  color: rgb(26, 35, 102);
+  font-weight: bold;
+  text-decoration: underline;
+  line-height: 1.333;
+  position: absolute;
+  left: 49px;
+  top: 1413.041px;
+  width: 348px;
+  height: 19px;
+  z-index: 10;
+}
+
+.Скачать_сообщение_в_формате__doc {
+  font-size: 20px;
+  font-family: "Montserrat";
+  color: rgb(26, 35, 102);
+  font-weight: bold;
+  text-decoration: underline;
+  line-height: 1.2;
+  position: absolute;
+  left: 428px;
+  top: 1497.379px;
+  width: 386px;
+  height: 21px;
+  z-index: 10;
+}
+
+._13_03_2018_ {
+  font-size: 20px;
+  font-family: "Montserrat";
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+  text-align: left;
+  position: absolute;
+  left: 15px;
+  top: 612.379px;
+  width: 95px;
+  height: 15px;
+  z-index: 8;
+}
+
+._13_03_2018_ {
+  font-size: 20px;
+  font-family: "Montserrat";
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+  text-align: left;
+  position: absolute;
+  left: 388px;
+  top: 784.379px;
+  width: 95px;
+  height: 15px;
+  z-index: 8;
+}
+
+
+
