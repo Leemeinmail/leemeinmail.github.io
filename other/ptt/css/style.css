@@ -3476,6 +3476,49 @@ input.hidden {
 		
 .request-call--hidden{
 	display:none;}
+	
+	.ptt-answer{
+		font-size:16px;
+		width:100%;
+		margin-top:3.684210526315789%;
+		padding:2.4em 15px;
+		background:#fff;
+		font-family: "Montserrat";
+		-webkit-box-sizing:border-box;
+                box-sizing:border-box;
+		background:url('../img/shoppingBasket.png')no-repeat /*#fff*/;
+		background-position:center center;}
+	@media(min-width:786px){
+		.ptt-answer{
+	        font-size:18px;}}
+		
+		.ptt-answer__title, .ptt-answer__descr{
+			max-width:350px;
+			margin:0 auto;
+			text-align:center;
+			display:block;}
+		@media(min-width:786px){
+			.ptt-answer__title, .ptt-answer__descr{
+				max-width:none;}}
+			
+	    .ptt-answer__title{
+			padding:0.25em 0;
+			font-size: 1.555555555555556em;
+			line-height: 1.333;
+			font-weight:bold;
+			color:#1e2872;}
+		@media(min-width:786px){
+			.ptt-answer__title{
+			    line-height: 1.1;}}
+		
+		.ptt-answer__descr{
+			font-size: 1em;
+			padding:0.3888888888888889em 0;
+			line-height:1.5;
+			color:#000;}
+		@media(min-width:786px){
+			.ptt-answer__descr{
+			    line-height:1;}}
    
 
 
