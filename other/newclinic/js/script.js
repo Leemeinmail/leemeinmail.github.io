@@ -85,6 +85,7 @@ function showMenu(navMenuState){
 	$(navMenuName).addClass('nav-menu__name--active');
 	$(navMenuBody).removeClass('nav-menu__body--off');
 	$(navMenuBody).addClass('nav-menu__body--active');
+	return navMenuState = 1;
 }
 
 function hideMenu(navMenuState){
@@ -93,4 +94,5 @@ function hideMenu(navMenuState){
 	$(navMenuName).removeClass('nav-menu__name--active');
 	$(navMenuBody).removeClass('nav-menu__body--active');
 	$(navMenuBody).addClass('nav-menu__body--off');
+	return navMenuState = 0;
 }
