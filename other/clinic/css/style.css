@@ -118,11 +118,7 @@
 		margin-left:-50px;
 		height:0px;
 		width:100px;
-		background:#00b7f4;;}	
-	.btn__bg-2:hover{
-		text-shadow: 0px 0px 1.5px;}
-	.btn__bg-2:hover::after{
-	    height:1px;}
+		background:#00b7f4;}	
 
 	.color-square{
 		border:2px solid #23c5fa;}	
