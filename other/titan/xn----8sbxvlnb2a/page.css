@@ -1,0 +1,168 @@
+@import "structure.css"/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/upload_modules/sys/design/structure.css*/;
+@import "content.css"/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/upload_modules/sys/design/content.css*/;
+@import "lk.css"/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/lk.css*/;
+@import url("news.css")/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/news.css*/;
+@import url("spoiler.css")/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/spoiler.css*/;
+@import url("structure-1.css")/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/structure.css*/;
+@import url("raleway.css")/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/raleway.css*/;
+@import url("tablet.css")/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/tablet.css*/;
+@import url("phones.css")/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/phones.css*/;
+
+@import "ptsans.css"/*tpa=http://webfonts.ru/import/ptsans.css*/;
+@import "lato.css"/*tpa=http://webfonts.ru/import/lato.css*/;
+@font-face {
+  font-family: 'OpenSans';
+  src: url('OpenSans.eot-#iefix')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/OpenSans/OpenSans.eot?#iefix*/ format('embedded-opentype'),  url('OpenSans.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/OpenSans/OpenSans.woff*/ format('woff'), url('OpenSans.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/OpenSans/OpenSans.ttf*/  format('truetype'), url('OpenSans.svg#OpenSans')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/OpenSans/OpenSans.svg#OpenSans*/ format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url('OpenSans-Bold.eot-#iefix')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/OpenSans-Bold/OpenSans-Bold.eot?#iefix*/ format('embedded-opentype'),  url('OpenSans-Bold.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/OpenSans-Bold/OpenSans-Bold.woff*/ format('woff'), url('OpenSans-Bold.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/OpenSans-Bold/OpenSans-Bold.ttf*/  format('truetype'), url('OpenSans-Bold.svg#OpenSans-Bold')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/OpenSans-Bold/OpenSans-Bold.svg#OpenSans-Bold*/ format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('fontawesome-webfont.eot-v=4.2.0')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/fontawesome-webfont.eot?v=4.2.0*/;
+  src: url('fontawesome-webfont.eot-#iefix&v=4.2.0')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/fontawesome-webfont.eot?#iefix&v=4.2.0*/ format('embedded-opentype'), url('fontawesome-webfont.woff-v=4.2.0')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/fontawesome-webfont.woff?v=4.2.0*/ format('woff'), url('fontawesome-webfont.ttf-v=4.2.0')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/fontawesome-webfont.ttf?v=4.2.0*/ format('truetype'), url('fontawesome-webfont.svg-v=4.2.0#fontawesomeregular')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular*/ format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr-Light';
+  src: url('HelveticaNeueCyr-Light.eot-#iefix')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/HelveticaNeueCyr-Light.eot?#iefix*/ format('embedded-opentype'),  url('HelveticaNeueCyr-Light.otf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/HelveticaNeueCyr-Light.otf*/  format('opentype'),
+	     url('HelveticaNeueCyr-Light.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/HelveticaNeueCyr-Light.woff*/ format('woff'), url('HelveticaNeueCyr-Light.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/HelveticaNeueCyr-Light.ttf*/  format('truetype'), url('HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light*/ format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr-Medium';
+  src: url('HelveticaNeueCyr-Medium.eot-#iefix')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/HelveticaNeueCyr-Medium.eot?#iefix*/ format('embedded-opentype'),  url('HelveticaNeueCyr-Medium.otf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/HelveticaNeueCyr-Medium.otf*/  format('opentype'),
+	     url('HelveticaNeueCyr-Medium.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/HelveticaNeueCyr-Medium.woff*/ format('woff'), url('HelveticaNeueCyr-Medium.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/HelveticaNeueCyr-Medium.ttf*/  format('truetype'), url('HelveticaNeueCyr-Medium.svg#HelveticaNeueCyr-Medium')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/HelveticaNeueCyr-Medium.svg#HelveticaNeueCyr-Medium*/ format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Calibri';
+  src: url('Calibri.eot-#iefix')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/Calibri.eot?#iefix*/ format('embedded-opentype'),  url('Calibri.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/Calibri.woff*/ format('woff'), url('Calibri.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/Calibri.ttf*/  format('truetype'), url('Calibri.svg#Calibri')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/Calibri.svg#Calibri*/ format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Calibri';
+  src: url('Calibri-Bold.eot-#iefix')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/Calibri-Bold.eot?#iefix*/ format('embedded-opentype'),  url('Calibri-Bold.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/Calibri-Bold.woff*/ format('woff'), url('Calibri-Bold.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/Calibri-Bold.ttf*/  format('truetype'), url('Calibri-Bold.svg#Calibri-Bold')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/Calibri-Bold.svg#Calibri-Bold*/ format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+	font-family:'NeoSansProBold';
+	src:url('neosanspro-bold-webfont.eot')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/neosanspro-bold-webfont.eot*/;
+	src:local('☺'),url('neosanspro-bold-webfont.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/neosanspro-bold-webfont.ttf*/ format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:'NeoSansProMedium';
+	src:url('neosanspro-medium-webfont.eot')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/neosanspro-medium-webfont.eot*/;
+	src:local('☺'),url('neosanspro-medium-webfont.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/neosanspro-medium-webfont.ttf*/ format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:'NeoSansProRegular';
+	src:url('neosanspro-regular-webfont.eot')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/neosanspro-regular-webfont.eot*/;
+	src:local('☺'),url('neosanspro-regular-webfont.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/neosanspro-regular-webfont.ttf*/ format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+  font-family: 'PFDinTextCondPro-Light';
+  src: url('PFDinTextCondPro-Light.eot-#iefix')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/PFDinTextCondPro-Light/PFDinTextCondPro-Light.eot?#iefix*/ format('embedded-opentype'),  url('PFDinTextCondPro-Light.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/PFDinTextCondPro-Light/PFDinTextCondPro-Light.woff*/ format('woff'), url('PFDinTextCondPro-Light.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/PFDinTextCondPro-Light/PFDinTextCondPro-Light.ttf*/  format('truetype'), url('PFDinTextCondPro-Light.svg#PFDinTextCondPro-Light')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/PFDinTextCondPro-Light/PFDinTextCondPro-Light.svg#PFDinTextCondPro-Light*/ format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes AJAX_IMAGE{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes AJAX_IMAGE{
+	0%{
+		-webkit-transform: rotate(0deg);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+
+.socicons a{
+	text-decoration:none;
+	margin-right:4px;
+	display:inline-block;
+	padding: 3px 4px;
+	border-radius: 3px;
+	font-size: 18px;
+	box-sizing: border-box;
+	width: 29px;
+	text-align: center;
+    border: 1px solid #CCCCCC;
+}
+.socicons a:hover{
+	color: #717C9C;
+}
+
+
+
+/*#cart-alpha{
+	display: block;
+	height: 14px;
+	width: 15px;
+	background: url('../images/cart.png') no-repeat;
+}*/
+
+/*Image*/
+
+.bi{
+	position:relative;
+	display:block;
+	/*border:5px solid #E4E4E4;*/
+	overflow:hidden;
+}
+
+.bi .blik{
+	position:absolute;
+	width:259px;
+	height:210px;
+	left:-259px;
+	bottom:0;
+	background:url(blick.png)/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/images/blick.png*/ no-repeat;
+}
+
+.bi img{
+	border: solid #FFF 1px;
+
+}
+
+.edit{
+cursor:move;
+outline:1px dashed #CCC;
+}
+
+.edit *{
+cursor:move;
+}
+
+
+/* Ajax rotate */
+.ajax_image{
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	-webkit-animation: AJAX_IMAGE 1s linear infinite;
+	animation: AJAX_IMAGE 1s linear infinite;
+}

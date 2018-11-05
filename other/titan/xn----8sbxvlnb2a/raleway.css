@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Thin'), local('Raleway-Thin'), url('ralewaythin.woff2')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaythin.woff2*/ format('woff2'), url('ralewaythin.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaythin.woff*/ format('woff'), url('ralewaythin.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaythin.ttf*/ format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Thin Italic'), local('Raleway-ThinItalic'), url('ralewaythinitalic.woff2')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaythinitalic.woff2*/ format('woff2'), url('ralewaythinitalic.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaythinitalic.woff*/ format('woff'), url('ralewaythinitalic.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaythinitalic.ttf*/ format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'), url('ralewayextralight.woff2')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayextralight.woff2*/ format('woff2'), url('ralewayextralight.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayextralight.woff*/ format('woff'), url('ralewayextralight.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayextralight.ttf*/ format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway ExtraLight Italic'), local('Raleway-ExtraLightItalic'), url('ralewayextralightitalic.woff2')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayextralightitalic.woff2*/ format('woff2'), url('ralewayextralightitalic.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayextralightitalic.woff*/ format('woff'), url('ralewayextralightitalic.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayextralightitalic.ttf*/ format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Light'), local('Raleway-Light'), url('ralewaylight.woff2')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaylight.woff2*/ format('woff2'), url('ralewaylight.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaylight.woff*/ format('woff'), url('ralewaylight.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaylight.ttf*/ format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Light Italic'), local('Raleway-LightItalic'), url('ralewaylightitalic.woff2')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaylightitalic.woff2*/ format('woff2'), url('ralewaylightitalic.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaylightitalic.woff*/ format('woff'), url('ralewaylightitalic.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaylightitalic.ttf*/ format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Regular'), local('Raleway-Regular'), url('ralewayregular.woff2')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayregular.woff2*/ format('woff2'), url('ralewayregular.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayregular.woff*/ format('woff'), url('ralewayregular.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayregular.ttf*/ format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Italic'), local('Raleway-Italic'), url('ralewayitalic.woff2')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayitalic.woff2*/ format('woff2'), url('ralewayitalic.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayitalic.woff*/ format('woff'), url('ralewayitalic.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayitalic.ttf*/ format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Medium'), local('Raleway-Medium'), url('ralewaymedium.woff2')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaymedium.woff2*/ format('woff2'), url('ralewaymedium.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaymedium.woff*/ format('woff'), url('ralewaymedium.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaymedium.ttf*/ format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Medium Italic'), local('Raleway-MediumItalic'), url('ralewaymediumitalic.woff2')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaymediumitalic.woff2*/ format('woff2'), url('ralewaymediumitalic.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaymediumitalic.woff*/ format('woff'), url('ralewaymediumitalic.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaymediumitalic.ttf*/ format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url('ralewaysemibold.woff2')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaysemibold.woff2*/ format('woff2'), url('ralewaysemibold.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaysemibold.woff*/ format('woff'), url('ralewaysemibold.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaysemibold.ttf*/ format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway SemiBold Italic'), local('Raleway-SemiBoldItalic'), url('ralewaysemibolditalic.woff2')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaysemibolditalic.woff2*/ format('woff2'), url('ralewaysemibolditalic.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaysemibolditalic.woff*/ format('woff'), url('ralewaysemibolditalic.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaysemibolditalic.ttf*/ format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Bold'), local('Raleway-Bold'), url('ralewaybold.woff2')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaybold.woff2*/ format('woff2'), url('ralewaybold.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaybold.woff*/ format('woff'), url('ralewaybold.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaybold.ttf*/ format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Bold Italic'), local('Raleway-BoldItalic'), url('ralewaybolditalic.woff2')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaybolditalic.woff2*/ format('woff2'), url('ralewaybolditalic.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaybolditalic.woff*/ format('woff'), url('ralewaybolditalic.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewaybolditalic.ttf*/ format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway ExtraBold'), local('Raleway-ExtraBold'), url('ralewayextrabold.woff2')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayextrabold.woff2*/ format('woff2'), url('ralewayextrabold.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayextrabold.woff*/ format('woff'), url('ralewayextrabold.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayextrabold.ttf*/ format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway ExtraBold Italic'), local('Raleway-ExtraBoldItalic'), url('ralewayextrabolditalic.woff2')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayextrabolditalic.woff2*/ format('woff2'), url('ralewayextrabolditalic.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayextrabolditalic.woff*/ format('woff'), url('ralewayextrabolditalic.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayextrabolditalic.ttf*/ format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Black'), local('Raleway-Black'), url('ralewayblack.woff2')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayblack.woff2*/ format('woff2'), url('ralewayblack.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayblack.woff*/ format('woff'), url('ralewayblack.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayblack.ttf*/ format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Black Italic'), local('Raleway-BlackItalic'), url('ralewayblackitalic.woff2')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayblackitalic.woff2*/ format('woff2'), url('ralewayblackitalic.woff')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayblackitalic.woff*/ format('woff'), url('ralewayblackitalic.ttf')/*tpa=http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font/raleway/ralewayblackitalic.ttf*/ format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}

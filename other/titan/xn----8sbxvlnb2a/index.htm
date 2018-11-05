@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html class="" lang="ru">
+<head>
+	<script type="text/javascript" src="jquery.min.js" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/jquery/jquery.min.js"></script><script type="text/javascript" src="jquery-migrate-1.2.1.min.js" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/jquery/jquery-migrate-1.2.1.min.js"></script><link href="jquery-ui.css" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/jquery-ul/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css"><script type="text/javascript" src="jquery-ui.min.js" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/jquery-ul/jquery-ui.min.js"></script><script type="text/javascript" src="window.js" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/window.js"></script><script type="text/javascript" src="jquery.form.js" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/jquery/jquery.form.js"></script><script src="cart_min.js" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/sys/modules/cart/themes/base/js/cart_min.js"></script>
+<script src="in_array.js" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/php/in_array.js"></script>
+<script src="str_replace.js" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/php/str_replace.js"></script>
+<script src="number_format.js" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/php/number_format.js"></script>
+<script src="cart.js" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/cart.js"></script>
+<script src="jquery.cookie.js" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/jquery/jquery.cookie.js"></script><link rel="stylesheet" href="cart.css" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/sys/modules/cart/themes/base/css/cart.css">
+<link rel="stylesheet" href="search.css" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/sys/modules/search/theme/base/css/search.css">
+<link rel="stylesheet" href="widget-global.css" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/sys/modules/widget/theme/base/css/widget-global.css">	<!-[if IE]><script src="html5.js" tppabs="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+	<title>Реабилитационный центр «ТИТАН» Пермь, лечение наркомании, алкоголизма,  реабилитация наркоманов, алкоголиков в Перми</title>
+	
+	<meta name="cmsmagazine" content="d939b98a50c9db28b4a8cf3a2017dfd4">
+	<meta name="description" content="В реабилитационном центре «ТИТАН» г. Пермь Вам помогут избавиться от наркотической, игровой и алкогольной зависимости. В основу успешной работы положена авторская методика доктора Вагина и 12-шаговая программа."><meta name="keywords" content="рц-титан.рф реабилитационный центр Титан Пермь">	<!-- Favicon -->
+	<link rel="icon" href="favicon.ico" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload_modules/sys/design/favicon.ico" type="image/x-icon">
+
+	<!-- material -->
+	<link rel="stylesheet" href="materialize.min.css" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/jquery/materialize/css/materialize.min.css" media="screen,projection">
+	<script src="materialize.min.js" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/jquery/materialize/js/materialize.min.js"></script>
+	<link href="icon-family=Material+Icons.css" tppabs="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- font-awesome -->
+	<link rel="stylesheet" href="font-awesome.min.css" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/font-awesome.min.css">
+
+	<!-- base CSS -->
+	<link rel="stylesheet" href="std.css" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/std.css">
+	<link rel="stylesheet" href="page.css" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/page.css">
+	<link rel="stylesheet" href="menu.css" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/menu.css">
+
+	<!-- print -->
+	<link rel="stylesheet" media="print" href="print.css" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/print.css">
+
+	<!-- animation -->
+	<link rel="stylesheet" href="animate.css" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/themes/default/css/animate.css">
+	<script src="wow.min.js" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/jquery/wow.min.js"></script>
+	
+
+	<!-- link menu -->
+	
+
+	<!-- Slick slider -->
+	<link rel="stylesheet" href="slick.css" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/jquery/slick/slick.css">
+	<link rel="stylesheet" href="slick-theme.css" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/jquery/slick/slick-theme.css">
+	<script src="slick.min.js" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/jquery/slick/slick.min.js"></script>
+
+	<!-- script -->
+	<link rel="stylesheet" href="jquery.fancybox.css" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/fancybox/jquery.fancybox.css">
+	<script src="jquery.fancybox.pack.js" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/fancybox/jquery.fancybox.pack.js"></script>
+	<script src="jquery.scrollTo-min.js" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/jquery/jquery.scrollTo-min.js"></script> 
+	<script src="jquery.mask.min.js" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/js/jquery/jquery.mask.min.js"></script>
+
+	<!-- google fonts -->
+	<link rel="stylesheet" href="css-family=Poiret+One-PT+Sans+Narrow-400,700-Oranienbaum-Lobster-Ubuntu+Condensed-Open+Sans+Condensed-300,700-Cuprum-400,700&subset=latin,cyrillic-ext,cyrillic.css" tppabs="http://fonts.googleapis.com/css?family=Poiret+One|PT+Sans+Narrow:400,700|Oranienbaum|Lobster|Ubuntu+Condensed|Open+Sans+Condensed:300,700|Cuprum:400,700&subset=latin,cyrillic-ext,cyrillic">
+
+
+	<!-- additional js -->
+		
+
+
+<script type="text/javascript">
+$(function(){
+
+});
+
+
+
+</script>
+
+
+	<script src="load.js" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/themes/default/js/load.js"></script>
+	<link rel="stylesheet" href="style.css" >
+</head>
+<body>
+				
+	
+			<meta name="yandex-verification" content="a5d1d3f769b488b7" />
+
+
+
+<ul class="side-nav" id="mobile-demo">
+ 	<li><a href="index.htm" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/" class=" sel open active">Главная</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/about-us  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/about-us%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/about-us" class="">РЦ «ТИТАН»</a></li><li class="no-padding" > <ul class="collapsible collapsible-accordion"><li><a href="#!" class="dir collapsible-header"data-activates="dropdown3">Зависимости<i class="mdi-navigation-arrow-drop-down"></i></a><div class="collapsible-body"><ul><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according-abuse  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according-abuse%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according-abuse" class="dir">От наркотиков</a><ul><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/page/stadii-narkoticheskoi-zavisimosti  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/page/stadii-narkoticheskoi-zavisimosti%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/page/stadii-narkoticheskoi-zavisimosti" class="">Стадии наркотической зависимости</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/page/60  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/page/60%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/page/60" class="">Как определить наркотическую зависимость</a></li></ul></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according/alcohol-addiction  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according/alcohol-addiction%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according/alcohol-addiction" class="">От алкоголя</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according/gambling-addiction  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according/gambling-addiction%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according/gambling-addiction" class="">От игровой зависимости</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according/the-spice-addiction  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according/the-spice-addiction%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according/the-spice-addiction" class="">От спайсов/солей</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according/teen-addiction  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according/teen-addiction%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according/teen-addiction" class="">Подростковая зависимость</a></li></ul></div></li></ul></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/price  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/price%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/price" class="">Стоимость</a></li><li class="no-padding" > <ul class="collapsible collapsible-accordion"><li><a href="#!" class="dir collapsible-header"data-activates="dropdown5">Фото-галерея<i class="mdi-navigation-arrow-drop-down"></i></a><div class="collapsible-body"><ul><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/home  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/home%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/home" class="">Интерьер Центра</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/office-center  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/office-center%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/office-center" class="">Офис Центра</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/bath-centre  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/bath-centre%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/bath-centre" class="">Баня</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/post-treatment-program-at-the-center  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/post-treatment-program-at-the-center%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/post-treatment-program-at-the-center" class="">Постлечебная программа</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/individual-and-group-work  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/individual-and-group-work%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/individual-and-group-work" class="">Индивидуальная и групповая работа</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/life-in-the-center  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/life-in-the-center%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/life-in-the-center" class="">Жизнь в Центре</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/institute  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/institute%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/institute" class="dir">Общественная деятельность</a><ul><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/institute  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/institute%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/institute" class="">Институт</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/school-32  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/school-32%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/school-32" class="">Школа 32</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/kudymkar  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/kudymkar%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/kudymkar" class="">Кудымкар</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/performance-in-school  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/performance-in-school%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/performance-in-school" class="">Выступление в школе</a></li></ul></li></ul></div></li></ul></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/contacts  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/contacts%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/contacts" class="">Контакты</a></li></ul>
+<nav id="nav_wrapp"  class=" scrollspy">
+	<div>
+		<div class="container" id="navbar"> 
+			<div class="nav-wrapper">
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<div class="cart_icon_wrapp right">
+					<div class="cart_min  dn"><span id="cart_count"></span><div class="cart_min_but waves-effect"><a class="cart_min_more_link" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/cart/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Pro\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/cart/%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/cart/" title="Корзина" id="cart-alpha"><i class="material-icons">shopping_cart</i></a></div><div class="cart_min_more z-depth-1 "><div class="progress"><div class="indeterminate"></div></div></div></div>				</div>
+				<ul class="right hide-on-med-and-down menu">
+				<li><a href="index.htm" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/" class=" sel open">Главная</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/about-us  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/about-us%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/about-us" class="">РЦ «ТИТАН»</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according" class="dir dropdown-button  "data-activates="dropdown3">Зависимости<i class="material-icons right">arrow_drop_down</i></a><ul id="dropdown3" class="dropdown-content"><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according-abuse  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according-abuse%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according-abuse" class="dir">От наркотиков</a><ul><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/page/stadii-narkoticheskoi-zavisimosti  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/page/stadii-narkoticheskoi-zavisimosti%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/page/stadii-narkoticheskoi-zavisimosti" class="">Стадии наркотической зависимости</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/page/60  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/page/60%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/page/60" class="">Как определить наркотическую зависимость</a></li></ul></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according/alcohol-addiction  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according/alcohol-addiction%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according/alcohol-addiction" class="">От алкоголя</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according/gambling-addiction  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according/gambling-addiction%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according/gambling-addiction" class="">От игровой зависимости</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according/the-spice-addiction  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according/the-spice-addiction%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according/the-spice-addiction" class="">От спайсов/солей</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according/teen-addiction  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according/teen-addiction%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according/teen-addiction" class="">Подростковая зависимость</a></li></ul></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/price  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/price%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/price" class="">Стоимость</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery" class="dir dropdown-button  "data-activates="dropdown5">Фото-галерея<i class="material-icons right">arrow_drop_down</i></a><ul id="dropdown5" class="dropdown-content"><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/home  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/home%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/home" class="">Интерьер Центра</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/office-center  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/office-center%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/office-center" class="">Офис Центра</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/bath-centre  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/bath-centre%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/bath-centre" class="">Баня</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/post-treatment-program-at-the-center  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/post-treatment-program-at-the-center%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/post-treatment-program-at-the-center" class="">Постлечебная программа</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/individual-and-group-work  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/individual-and-group-work%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/individual-and-group-work" class="">Индивидуальная и групповая работа</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/life-in-the-center  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/life-in-the-center%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/life-in-the-center" class="">Жизнь в Центре</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/institute  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/institute%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/institute" class="dir">Общественная деятельность</a><ul><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/institute  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/institute%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/institute" class="">Институт</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/school-32  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/school-32%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/school-32" class="">Школа 32</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/kudymkar  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/kudymkar%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/kudymkar" class="">Кудымкар</a></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/performance-in-school  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/performance-in-school%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery/social-activities/performance-in-school" class="">Выступление в школе</a></li></ul></li></ul></li><li><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/contacts  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/contacts%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/contacts" class="">Контакты</a></li>				</ul>
+			</div>
+		</div> 
+	</div>
+</nav>
+
+		
+<div class="container section" id="head1">
+    <div class="row">
+    	<div class="col s12 m3 l2 valign-wrapper va-header">
+							<div class="valign center-align" style="width:100%;">
+					<a href="index.htm" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/">
+						<img src="logo.png" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload_modules/sys/design/logo.png">
+					</a>
+				</div>
+				<!-- <a href="/" class="company brand-logo" style="background:url('/upload_modules/sys/design/logo.png');width:105px;height:130px;"></a> -->
+							      	</div>
+      	<div class="col s12 m5 l3 valign-wrapper va-header">
+      		<div class="valign center-align" style="width:100%;">
+      	 		<div class="slogan">Реабилитационный центр в Перми для зависимых от алкоголя, наркотиков, азартных игр </div>
+      		</div>
+      	</div>
+      	<div class="col s12 m4 l3 valign-wrapper va-header">
+      		<div class="valign center-align" style="width:100%;">
+      			<a href="#form3" id="btncallme" class="fancybox_form btn waves-effect header_button ">Задать вопрос</a>
+      		</div>
+      	</div>
+      	<div class="right col s12 m12 offset-m1 l4 valign-wrapper va-header hide-on-med-and-down">
+      		<div class="valign center-align" style="width:100%;text-align: right;">
+	      	 	<span class="tel">
+	      	 		<span class="cod_city">+7 (342) </span>288-01-41  Консультация Бесплатно Анонимно	      	 	</span>
+      			 <div class="socicons">
+      				<a target="_blank" href="#Youtube" title="YouTube" class="icon-yt"><i class="fa fa-youtube"></i></a><a target="_blank" href="#Instagram" title="Instagram" class="icon-gp"><i class="fa fa-instagram"></i></a><a target="_blank" href="javascript:if(confirm(%27https://www.facebook.com/groups/445861512418883/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://www.facebook.com/groups/445861512418883/%27" tppabs="https://www.facebook.com/groups/445861512418883/" title="Facebook" class="icon-fb"><i class="fa fa-facebook"></i></a><a target="_blank" href="javascript:if(confirm(%27http://vkontakte.ru/club20504818  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://vkontakte.ru/club20504818%27" tppabs="http://vkontakte.ru/club20504818" title="Вконтакте" class="icon-vk"><i class="fa fa-vk"></i></a><a target="_blank" href="#Vkontakte" title="Twitter" class="icon-tw"><i class="fa fa-twitter"></i></a>      			</div>
+      		</div>
+      	</div>
+	</div>
+</div>
+<a href="#" class="toper"></a>
+
+<div id='homePageSlider' class='home-page-slider'>
+			    
+			        
+					<div class='home-page-slider__item'>
+				        <div class='ttn-director home-page-slider__el'>
+					        
+							<div class='ttn-director__photo'>
+						        <img src='img/urij-vagin.png' class=''/>
+						    </div>
+							
+						    <div class='ttn-director__descr'>
+							
+						        <div class='ttn-director__title home-page-slider__title' >центр помощи юрия вагина</div>
+								
+								<div class='ttn-director__prof' >
+								    Юрий Вагин, ведущий специалист по зависимому
+									поведению в России, опыт работы 28 лет.
+								</div>
+								
+								<div class='ttn-director__intro' >
+								    В реабилитационном центре «Титан» применяется авторская техника Юрия Вагина «БЛОК». 
+									Эта техника осуществляется после завершения реабилитационного 
+									курса и направлена на профилактику «срыва» и укреплению силы воли.
+								</div>
+								
+						    </div>
+					    </div><!-- end director -->
+                    </div><!-- end slider-item -->
+				
+				    <div class='home-page-slider__item'>
+				        <div class='ttn-services home-page-slider__el'>
+						    <div class='ttn-services__box'>
+						    <div class='ttn-services__content'>
+								<span class='ttn-services__title home-page-slider__title'>в нашем центре:</span>
+								<ul class='ttn-services__list' >
+									<li>Сотрудничество с ведущим специалистом по зависимому поведению Ю.Р. Вагиным (опыт 28 лет)</li>
+									<li>Медицинское обследование и сопровождение</li>
+									<li>Социальная адаптация после реабилитации</li>
+									<li>Комфортабельные условия пребывания</li>
+									<li>Бесплатные группы для созависимых</li>
+									<li>Анонимность</li>
+								</ul>
+							</div>	
+							</div>
+						</div>
+				    </div>
+					
+			   
+				
+			</div><!-- end slider -->
+               <script>
+	    $('#homePageSlider').slick({
+		    arrows : false,
+			dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true
+		});
+	</script>
+
+<style>
+	.h {text-align: center;}
+</style>
+						<main id="main" class="container section">
+				<div class="row">
+					<div class="col s12 m3 l3" id="left"><div class="block vmenu"><div class="h">Разделы сайта</div><p><li class=""><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/the-program-12-steps  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/the-program-12-steps%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/the-program-12-steps">Программа "12 шагов"</a></li><li class=""><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/page/63  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/page/63%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/page/63">Истории жизни наших пациентов</a></li><li class=""><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/recovery-time  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/recovery-time%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/recovery-time">Срок реабилитации</a></li><li class=""><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/the-cost-of-rehabilitation  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/the-cost-of-rehabilitation%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/the-cost-of-rehabilitation">Стоимость реабилитации</a></li><li class=""><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/post-program  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/post-program%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/post-program">Постлечебная программа</a></li><li class=""><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/free-program-for-relatives  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/free-program-for-relatives%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/free-program-for-relatives">Бесплатная программа для родственников</a></li><li class="dir"><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/page/62  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/page/62%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/page/62">Индивидуальные консультации родственников</a></li><li class=""><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/avtorskaya-the-concept-of-yuris-vagina-prevention-of-relapse  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/avtorskaya-the-concept-of-yuris-vagina-prevention-of-relapse%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/avtorskaya-the-concept-of-yuris-vagina-prevention-of-relapse">Авторская концепция Юрия Вагина  "Профилактика срыва"</a></li><li class=""><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/page/58  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/page/58%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/page/58">Интересные заметки Юрия Вагина</a></li><li class=""><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/day-mode  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/day-mode%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/day-mode">Режим дня</a></li><li class=""><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/specialists-of-the-center  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/specialists-of-the-center%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/specialists-of-the-center">Специалисты центра</a></li><li class=""><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/collaboration  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/collaboration%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/collaboration">Сотрудничество</a></li><li class="dir"><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/video  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/video%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/video">Видео</a></li><li class=""><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/questions  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/questions%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/questions">Вопрос-ответ</a></li><li class=""><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/news  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/news%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/news">Новости</a></li><li class=""><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/articles  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/articles%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/articles">Статьи</a></li><li class=""><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/review  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/review%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/review">Отзывы</a></li></p>
+</div></div>					<div id="content" class="col s12 m12 l9">
+									<div class="block">
+<div class="h">Анонимный реабилитационный центр «ТИТАН»</div><div class="row two-col">
+<div class="col s12 m6 col-1">
+<p style="text-align:justify"><span style="font-size:22px"><strong>Наш центр реабилитации создан в 2010 году для помощи людям, желающим избавиться от психологической зависимости от наркотиков, алкоголя, других психоактивных веществ и игровой зависимости.</strong></span></p>
+
+<p style="text-align:justify">В основу работы положена программа, сочетающия лучшие элементы 12-шаговой программы и авторскую концепцию профилактики саморазрушающего поведения Юрия Вагина, разработанную в 2001 году.</p>
+
+<p style="text-align:justify">За 7 лет работы в Перми Реабилитационного центра &laquo;ТИТАН&raquo; прошли реабилитацию 350 человек, из них 80%, а это 280 человек, прошедших полный курс реабилитации, не возвращаются к приему психоактивных веществ в течение как минимум года напрерывного наблюдения.</p>
+
+<p style="text-align:justify">После прохождения реабилитационного этапа мы предлагаем постреабилитационную программу, включая помощь в трудоустройстве. Все это способствует устойчивому выздоровлению и возвращению к полноценной жизни в социуме. Стоимость курса и что в него включено смотрите <a href="javascript:if(confirm(%27http://рц-титан.рф/price  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://рц-титан.рф/price%27" tppabs="http://рц-титан.рф/price">здесь</a>.</p>
+</div>
+
+<div class="col s12 m6 col-2">
+<p><iframe height="400" src="WsP7O6JjKk4" tppabs="https://www.youtube.com/embed/WsP7O6JjKk4" width="600"></iframe></p>
+</div>
+</div>
+
+<p>&nbsp;</p>
+	</div>
+					</div>
+									</div>
+			</main>
+			<div class="section" id="bottom"><div  class="block ">
+								
+								<div class="container">
+								<div class="row"><div class="col s12"><div class="h">ВАШ БЛИЗКИЙ ЗАВИСИМ</div><div class="row four-col">
+<div class="col s12 m3 col-1">
+<p style="text-align:center"><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according/alcohol-addiction  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according/alcohol-addiction%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according/alcohol-addiction" style="background-color:rgb(255, 255, 255); font-size:24px; text-align:center"><img alt="" src="______________________.png" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload/image/______________________.png" style="width:120px" /></a></p>
+
+<p style="text-align:center"><strong style="text-align:center"><span style="font-size:24px"><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according/alcohol-addiction  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according/alcohol-addiction%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according/alcohol-addiction" style="background-color:rgb(255, 255, 255); color:rgb(48, 69, 134)">От алкоголя</a></span></strong></p>
+</div>
+
+<div class="col s12 m3 col-2">
+<p style="padding:0px; text-align:center"><span style="font-size:24px"><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according-abuse  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according-abuse%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according-abuse"><img alt="" src="__________________________.png" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload/image/__________________________.png" style="width:120px" /></a></span></p>
+
+<p style="padding:0px; text-align:center"><strong><span style="font-size:24px"><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according-abuse  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according-abuse%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according-abuse" style="color:rgb(48, 69, 134)">От наркотиков</a></span></strong></p>
+</div>
+
+<div class="col s12 m3 col-3">
+<p style="text-align:center"><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according/gambling-addiction  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according/gambling-addiction%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according/gambling-addiction" style="background-color:rgb(255, 255, 255); font-size:24px; text-align:center"><img alt="" src="______________(1).png" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload/image/______________%281%29.png" style="width:120px" /></a></p>
+
+<p style="text-align:center"><strong style="text-align:center"><span style="font-size:24px"><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according/gambling-addiction  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according/gambling-addiction%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according/gambling-addiction" style="background-color:rgb(255, 255, 255); color:rgb(48, 69, 134)">От азартных игр</a></span></strong></p>
+</div>
+
+<div class="col s12 m3 col-4">
+<p style="text-align:center"><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according/the-spice-addiction  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according/the-spice-addiction%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according/the-spice-addiction" style="background-color:rgb(255, 255, 255); font-size:24px; text-align:center"><img alt="" src="__________________.png" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload/image/__________________.png" style="width:120px" /></a></p>
+
+<p style="text-align:center"><strong style="text-align:center"><span style="font-size:24px"><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according/the-spice-addiction  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according/the-spice-addiction%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according/the-spice-addiction" style="background-color:rgb(255, 255, 255); color:rgb(48, 69, 134)">От спайсов/солей</a></span></strong></p>
+</div>
+</div>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><span style="font-size:24px"><a class="h" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according/teen-addiction  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according/teen-addiction%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according/teen-addiction" style="text-decoration:none;">Подростковая зависимость</a></span></p>
+
+<p style="text-align: center;"><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according/teen-addiction  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according/teen-addiction%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according/teen-addiction"><img alt="" src="________________________(2).png" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload/image/________________________(2).png" style="display:inline-block; height:auto; max-width:100%; width:120px" /></a></p>
+
+<p>&nbsp;</p>
+</div></div></div></div><div  class="block ">
+								
+								<div class="container">
+								<div class="row"><div class="col s12"><div class="h">Специалисты РЦ «ТИТАН»</div><div class="row four-col">
+<div class="col s12 m3 col-1">
+<h3 style="text-align:center"><img alt="" class="worker" src="00170(1).jpg" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload/image/00170%281%29.jpg" style="width:250px" /></h3>
+
+<h3 style="text-align:center">Клобуков Д.А.</h3>
+</div>
+
+<div class="col s12 m3 col-2">
+<h3 style="text-align:center"><img alt="" class="worker" src="DSC_0004.jpg" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload/image/DSC_0004.jpg" style="width:250px" /></h3>
+
+<h3 style="text-align:center">Швалев С.А.</h3>
+</div>
+
+<div class="col s12 m3 col-3">
+<h3 style="text-align:center"><img alt="" class="worker" src="__________.jpg" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload/image/__________.jpg" style="width:250px" /></h3>
+
+<h3 style="text-align:center">Вагин Ю.Р.</h3>
+</div>
+
+<div class="col s12 m3 col-4">
+<h3 style="text-align:center"><img alt="" class="worker" src="____________(4).jpg" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload/image/____________%284%29.jpg" style="width:240px" /></h3>
+
+<h3 style="text-align:center">Димухаметов Р.И.</h3>
+</div>
+</div>
+
+<p><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/specialists-of-the-center  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/specialists-of-the-center%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/specialists-of-the-center">Все специалисты&gt;&gt;</a></p>
+</div></div></div></div><div  class="block first_block ">
+								
+								<div class="container">
+								<div class="row"><div class="col s12"><div class="row three-col">
+<div class="col s12 m4 col-1">
+<h3 style="text-align:center"><strong>Свидетельство о регистрации центра</strong></h3>
+
+<p style="text-align:center"><a class="gallery" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/upload/image/________-__________________________________________.jpg  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/upload/image/________-__________________________________________.jpg%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload/image/________-__________________________________________.jpg"><img alt="" src="________-__________________________________________.jpg" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload/image/________-__________________________________________.jpg" style="width: 162px; height: 222px;" /></a></p>
+</div>
+
+<div class="col s12 m4 col-2">
+<h3 style="text-align:center"><strong>Член Наркологической гильдии</strong></h3>
+
+<p style="text-align:center"><a class="gallery" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/upload/image/__________________________.jpg  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/upload/image/__________________________.jpg%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload/image/__________________________.jpg"><img alt="" src="__________________________.jpg" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload/image/__________________________.jpg" style="width:300px" /></a></p>
+</div>
+
+<div class="col s12 m4 col-3">
+<h3 style="text-align:center"><strong>Отзывы</strong></h3>
+
+<p><div class="row"><div class="news_node col s12 m12 l12"><h3>Николай</h3><blockquote class="news_text"><p>&nbsp;Меня зовут Коля, мне 36 лет, из них и 13 лет употреблял наркотики. Пробовал многое, но ничего не получалось.....</p>
+</blockquote><a class="blockquote news_more" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/news/83  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/news/83%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/news/83">Подробнее</a></div></div><div class="archive"><a href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/review  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/review%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/review">Все отзывы>></a></div></p>
+</div>
+</div>
+
+<p>&nbsp;</p>
+</div></div></div></div><div  class="block ">
+								
+								<div class="container">
+								<div class="row"><div class="col s12"><div class="h">Наши партнеры</div><p><ul class="slick-gallery11"><li><a class="gallery link_par" href="javascript:if(confirm(%27http://perm.zoon.ru/medical/klinika_doktora_dybalya_/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://perm.zoon.ru/medical/klinika_doktora_dybalya_/%27" tppabs="http://perm.zoon.ru/medical/klinika_doktora_dybalya_/" rel="sg11" target="_blank"><img alt="" class="responsive-img" src="16852.jpg" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload_modules/cache/image/16852.jpg"></a></li><li><a class="gallery link_par" href="javascript:if(confirm(%27http://pcdv.ru/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://pcdv.ru/%27" tppabs="http://pcdv.ru/" rel="sg11" target="_blank"><img alt="" class="responsive-img" src="16853.png" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload_modules/cache/image/16853.png"></a></li><li><a class="gallery link_par" href="javascript:if(confirm(%27http://nng.com.ru/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://nng.com.ru/%27" tppabs="http://nng.com.ru/" rel="sg11" target="_blank"><img alt="" class="responsive-img" src="16854.png" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload_modules/cache/image/16854.png"></a></li><li><a class="gallery link_par" href="javascript:if(confirm(%27http://gmuond.ru/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://gmuond.ru/%27" tppabs="http://gmuond.ru/" rel="sg11" target="_blank"><img alt="" class="responsive-img" src="16855.jpg" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload_modules/cache/image/16855.jpg"></a></li><li><a class="gallery link_par" href="javascript:if(confirm(%27http://aids-centr.perm.ru/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://aids-centr.perm.ru/%27" tppabs="http://aids-centr.perm.ru/" rel="sg11" target="_blank"><img alt="" class="responsive-img" src="16856.png" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload_modules/cache/image/16856.png"></a></li><li><a class="gallery link_par" href="javascript:if(confirm(%27http://tubdisp.medicalperm.ru/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://tubdisp.medicalperm.ru/%27" tppabs="http://tubdisp.medicalperm.ru/" rel="sg11" target="_blank"><img alt="" class="responsive-img" src="16857.png" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/upload_modules/cache/image/16857.png"></a></li></ul>
+	<script>
+	$('.slick-gallery11').slick({
+	  infinite: true,
+	  speed: 300,
+	  slidesToShow: 5,
+	  slidesToScroll: 5,
+	  dots: false,
+	  responsive: [
+	    {
+	      breakpoint: 1024,
+	      settings: {
+	        slidesToShow: 3,
+	        slidesToScroll: 3,
+	        infinite: true,
+	        dots: true
+	      }
+	    },
+	    {
+	      breakpoint: 600,
+	      settings: {
+	        slidesToShow: 2,
+	        slidesToScroll: 2
+	      }
+	    },
+	    {
+	      breakpoint: 480,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1
+	      }
+	    }
+	  ]
+	});
+	</script><div class="clear"></div></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</div></div></div></div></div>			
+<footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col s12 m6 l6">
+                <h5 class="white-text">Контакты</h5>
+                 <div class="row">
+					
+										<div></div>
+                 </div>
+              </div>
+              <div class="col s12 m6 l4 offset-l2">
+                <ul class="footer_menu">
+			    	<li class=" sel"><a class=" sel" href="index.htm" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/">Главная</a></li><li class=""><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/about-us  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/about-us%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/about-us">РЦ «ТИТАН»</a></li><li class="dir"><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/according  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/according%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/according">Зависимости</a></li><li class=""><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/price  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/price%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/price">Стоимость</a></li><li class="dir"><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/photo-gallery">Фото-галерея</a></li><li class=""><a class="" href="javascript:if(confirm(%27http://xn----8sbxvlnb2a.xn--p1ai/contacts  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://xn----8sbxvlnb2a.xn--p1ai/contacts%27" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/contacts">Контакты</a></li>                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            	<div class="row">
+	            <span class="copyright col l3">© Реабилитационный Центр «ТИТАН»</span>				<div class="contacts col l6">
+				    <div class="row">
+					<div  class='col s12'>Адрес: 614000, г. Пермь, ул. Пионерская, 2</div>					<div class='col s12'>Телефон: +7 (342) 288-01-41</div>					<div class="col s12">E-mail: <a href="mailto:rc.titan@mail.ru">rc.titan@mail.ru</a></div>					</div>
+				</div>
+
+	            <div class="web col l3">
+	            <script type="text/javascript" src="openapi.js-147.js" tppabs="http://vk.com/js/api/openapi.js?147"></script>
+	            
+	            <script type="text/javascript" src="openapi.js-150.js" tppabs="http://vk.com/js/api/openapi.js?150"></script>
+
+<!-- VK Widget -->
+<div id="vk_groups"></div>
+<script type="text/javascript">
+VK.Widgets.Group("vk_groups", {mode: 3}, 20504818);
+</script>
+
+	         <!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "2930425", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="counter-id=2930425;js=na.gif" tppabs="http://top-fwz1.mail.ru/counter?id=2930425;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+
+<!-- Rating@Mail.ru logo -->
+<a href="javascript:if(confirm(%27https://top.mail.ru/jump?from=2930425  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://top.mail.ru/jump?from=2930425%27" tppabs="https://top.mail.ru/jump?from=2930425">
+<img src="counter2-id=2930425;t=479;l=1.gif" tppabs="http://top-fwz1.mail.ru/counter?id=2930425;t=479;l=1" 
+style="border:0;" height="31" width="88" alt="Рейтинг@Mail.ru" /></a>
+<!-- //Rating@Mail.ru logo -->
+
+
+
+					<div><a href="javascript:if(confirm(%27https://x10.ru/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://x10.ru/%27" tppabs="https://x10.ru/" target="_blank">Создание сайта:</a> X10</div>
+				</div>
+            	</div>
+            </div>
+          </div>
+</footer>
+<div id="modal" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect btn-flat ">Закрыть</a>
+    </div>
+</div>
+
+<script>
+	$(document).ready(function() { 
+   		// bind form using ajaxForm 
+   			$('#jsonFormsys').ajaxForm({
+   			    // dataType identifies the expected content type of the server response 
+   			    dataType:  'json', 
+   			    // success identifies the function to invoke when the server response 
+   			    // has been received 
+   			    success:   processJson 
+   			}); 
+		});
+</script> 
+<link rel="stylesheet" href="phone.css" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/sys/modules/callform/phone.css">
+<link rel="stylesheet" href="formstyle.css" tppabs="http://xn----8sbxvlnb2a.xn--p1ai/sys/modules/callform/formstyle.css">
+<script> 
+		function processJson(data,datainfo,sdg,form) {
+   			f=form;
+   			// console.log(data);
+		    if(data.stat=="ok"){
+		    			$('.error').addClass("dn");
+						f.find(".pinfo").text("");
+						f.find("input[type='text'],textarea").val("");
+						f.find(".pinfo.ok").text(data.message);
+						$(f.parent().parent().parent().parent().parent().parent()).addClass('rollOut animated');
+
+						setTimeout(function(){
+							f.closest(".fancybox-wrap").find("a.fancybox-close").click();
+							$(f.parent().parent().parent()).removeClass('rollOut animated');
+							$.fancybox.open([
+							    {
+							        href : '#success'
+							    }  
+							], {
+							    padding : 0,
+							    autoSize: true,
+        						openEffect: 'elastic',
+        						closeEffect: 'elastic',
+        						 tpl: {
+        						 	closeBtn : '<a title="Close" class="fancybox-item fancybox-close image-only-box close_form" href="javascript:;"></a>',
+        						    wrap     : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin fancybox-skin-form"><div class="fancybox-outer"><div class="fancybox-inner fancybox-inner-hidden"></div></div></div></div>',
+        						},
+							});
+						},1000);
+						
+						// Metrika
+						if (data.form == 3) // Задать вопрос
+						{
+							yaCounter45016120.reachGoal('callback_all_success');
+						}
+						else if (data.form == 5) // Сотрудничество
+						{
+							yaCounter45016120.reachGoal('callback_partner_success');
+						}
+						
+					}else{
+						f.find(".pinfo").text("");
+						for(i=0;i<data.error.length;i++){
+							$('[name='+data.error[i].name+']',f).val("");
+							$('[name='+data.error[i].name+']',f).next().removeClass("dn");
+							$('[name='+data.error[i].name+']',f).next().text(data.error[i].value);
+						}
+			} 
+		}
+        $(document).ready(function() { 
+        	// Кнопка "Телефон"
+        	$('.cbh-phone').draggable();
+			$('.cbh-phone').hover(function(){
+	   		    $(this).addClass('cbh-hover');
+	   		},function(){
+	   		    $(this).removeClass('cbh-hover');
+	   		});
+	   		// Всплывание формы
+	 		$('.fancybox_form').fancybox({
+	   		    padding: 0,
+	   		    fitToView: true,
+	   		    autoSize: true,
+	   		    openEffect: 'elastic',
+	   		    closeEffect: 'elastic',
+	   		    helpers: {
+	   		        overlay: {
+	   		            locked: false
+	   		        }
+	   		    },
+	   		    tpl: {
+	   		        closeBtn : '<a title="Close" class="fancybox-item fancybox-close image-only-box close_form" href="javascript:;"></a>',
+	   		        wrap     : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin fancybox-skin-form"><div class="fancybox-outer"><div class="fancybox-inner fancybox-inner-hidden"></div></div></div></div>',
+	   		    },
+	
+	   		    afterShow: function(){
+	   		        $(".focuser").focus();
+	   		    },
+	   		    beforeShow: function(){
+	   		       $('#wrapper ').addClass('blur');
+	
+	   		    },
+	   		    afterClose: function(){
+	   		        $('#wrapper').removeClass('blur');
+	   		    }
+	   		});
+
+   			
+		});
+	</script> 
+<script>
+	$(document).ready(function() { 
+   		// bind form using ajaxForm 
+   			$('#jsonFormsuccess').ajaxForm({
+   			    // dataType identifies the expected content type of the server response 
+   			    dataType:  'json', 
+   			    // success identifies the function to invoke when the server response 
+   			    // has been received 
+   			    success:   processJson 
+   			}); 
+		});
+</script> 
+	<div id="success" class="row pinfo ok dn">
+		<div class="col s12">
+        	<h3>Ваша заявка отправлена</h3>
+    		<div style="text-align: center;">
+    		    Мы свяжемся с Вами в рабочее время с 9.00 до 18.00
+    		</div>
+    	</div>
+	</div>
+<script>
+	$(document).ready(function() { 
+   		// bind form using ajaxForm 
+   			$('#jsonForm2').ajaxForm({
+   			    // dataType identifies the expected content type of the server response 
+   			    dataType:  'json', 
+   			    // success identifies the function to invoke when the server response 
+   			    // has been received 
+   			    success:   processJson 
+   			}); 
+		});
+</script> 
+<div class="aform dn" id="form2">
+	<div class="f_overlay" >
+		<div class="col1">
+			<form id="jsonForm2" enctype="multipart/form-data" action="http://xn----8sbxvlnb2a.xn--p1ai/sys/modules/callform/ajax.php" method="post">
+				
+					<h3>Закажите звонок</h3>
+
+					<div class=" col s12">
+						<label for="jsonForm2_name">Имя *</label>
+						<input class="fi" name="name" required placeholder="Как к вам обращаться" id="jsonForm2_name" type="text" >
+						<span class="dn errzs "></span>
+					</div>
+					<div class=" col s12">
+						<label for="jsonForm2_tel">Ваш телефон *</label>
+						<input class="fi ptel" name="phone" required placeholder="Куда перезвонить" id="jsonForm2_tel" type="text" >
+						<span class="dn errzs "></span>
+					</div>
+					<div class=" col s12 center-align">
+						<input class="submit_form_button" type="submit" value="Заказать звонок" />
+						<input  type="hidden" name="formheader" value="Заказали обратный звонок" />
+						<input  type="hidden" class="ip" name="ip" value="5.140.89.91" />
+						<input  type="hidden" name="page_title" value="Главная" />
+						<input type="hidden" name="form_number" value="2" />
+						<input  type="hidden" name="link" value="http://xn----8sbxvlnb2a.xn--p1ai/" />
+					</div>
+
+			    
+			</form>
+		</div>
+		
+		
+	</div>
+	
+</div>
+<script>
+	$(document).ready(function() { 
+   		// bind form using ajaxForm 
+   			$('#jsonForm3').ajaxForm({
+   			    // dataType identifies the expected content type of the server response 
+   			    dataType:  'json', 
+   			    // success identifies the function to invoke when the server response 
+   			    // has been received 
+   			    success:   processJson 
+   			}); 
+		});
+</script> 
+<div class="aform dn" id="form3">
+	<div class="f_overlay" >
+		<div class="col1">
+			<form id="jsonForm3" enctype="multipart/form-data" action="http://xn----8sbxvlnb2a.xn--p1ai/sys/modules/callform/ajax.php" method="post">
+				<h3>Задать вопрос</h3>
+
+				<div class=" col s12">
+						<label for="jsonForm3_name">Имя *</label>
+						<input class="fi" name="name" required placeholder="Как к вам обращаться" id="jsonForm3_name" type="text" >
+						<span class="dn errzs "></span>
+				</div>
+				<div class=" col s12">
+						<label for="jsonForm3_email">Ваш E-mail *</label>
+						<input class="fi" name="email" required placeholder="Ваш E-mail" id="jsonForm3_email" type="text" >
+						<span class="dn errzs "></span>
+				</div>
+				<div class=" col s12">
+					<label for="jsonForm3_tel">Ваш телефон *</label>
+					<input class="fi ptel" name="phone" required placeholder="Куда перезвонить" id="jsonForm3_tel" type="text" >
+					<span class="dn errzs "></span>
+				</div>
+				<div class=" col s12">
+					<label for="jsonForm3_message">Сообщение *</label>
+        			<textarea id="jsonForm3_message" class="ft materialize-textarea" name="message" required placeholder="Подробно опишите Ваш вопрос. "></textarea>
+        			<span class="dn errzs error"></span>
+       			 </div>
+				<div class=" col s12 center-align">
+					<input class="submit_form_button" type="submit" value="Отправить" />
+					<input  type="hidden" name="formheader" value="Задали вопрос" />
+					<input  type="hidden" class="ip" name="ip" value="5.140.89.91" />
+					<input  type="hidden" name="page_title" value="Главная" />
+					<input type="hidden" name="form_number" value="3" />
+					<input  type="hidden" name="link" value="http://xn----8sbxvlnb2a.xn--p1ai/" />
+				</div>
+
+			</form>
+		</div>
+		
+	</div>
+	
+</div>
+
+			<a href="#nav_wrapp" class="toper"></a>
+		
+		<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter45996966 = new Ya.Metrika({
+                    id:45996966,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "watch.js"/*tpa=https://mc.yandex.ru/metrika/watch.js*/;
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="45996966" tppabs="https://mc.yandex.ru/watch/45996966" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+	</body>
+
+</html>
+

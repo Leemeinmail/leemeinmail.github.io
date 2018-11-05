@@ -1,0 +1,154 @@
+@media only screen and (min-width: 993px){
+	.container {
+	  width: 95% !important;
+	}
+}
+@media only screen and (min-width: 601px){
+	.container {
+	  width: 95% !important;
+	}
+}
+.menu ul{
+	display: none;
+	top: auto !important;
+	width: 350px !important;
+}
+ul.dropdown-content{
+	  overflow: visible;
+}
+.menu ul li>ul{
+	min-width: 100%;
+}
+.menu ul ul{
+	margin-left: 100%;
+	top: 0;
+}
+.menu ul li:hover>ul{
+	position: absolute;
+	display: block;
+	top: 0 !important;
+}
+
+/*Меню*/
+.side-nav a {
+    height: auto;
+   	line-height: 20px;
+   	margin: 20px 0;
+}
+.side-nav a.sel {
+    background: #DADADA;
+}
+.side-nav .collapsible-body li a {
+    padding: 1rem 1rem 1rem 2rem;
+    display: block;
+}
+.side-nav ul ul ul{
+	margin-left: 2rem;
+}
+/*
+
+.menu{
+	padding: 0;
+	margin: 0;
+	z-index: 30;
+	display: table;
+	width: 100%;
+}
+.menu>li{
+	display: table-cell;
+}
+
+.menu ul{
+	display: none;
+	position: absolute;
+	width: 240px;
+	padding: 0;
+}
+.menu>li>ul{
+	min-width: 100%;
+}
+.menu ul ul{
+	left: 100%;
+	top: 0;
+}
+.menu>li>a{
+	display: block;
+	padding: 5px 11px 9px;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+.menu li:hover>ul{
+	display: block;
+}
+.menu li{
+	position: relative;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+.menu li li>a{
+	display: block;
+	padding: 5px 11px 7px;
+}
+.menu>li:last-child>ul {
+	right: 0;
+}
+
+*/
+ul.vmenu{
+	padding: 0;
+	margin:0;
+}
+.vmenu li{
+	list-style: none;
+	padding: 0;
+}
+.vmenu li a.sel{
+	
+	text-decoration: none;
+}
+.vmenu li a{
+	display: block;
+	padding: 5px 10px 5px 20px;
+	position: relative;
+	text-decoration: none;
+}
+.vmenu li a:hover{
+	text-decoration: none;
+	
+}
+
+.vmenu li li a:before{
+	font-family: 'FontAwesome';
+	display: block;
+	content: "\f054";
+	position: absolute;
+	font-size: 10px;
+	top: 30%;
+	left: 11px;
+}
+.vmenu li:after{
+	display: block;
+	content: '';
+	position: relative;
+	border-bottom: 1px solid #EEEEEE;
+}
+.vmenu li:last-child:after{
+	display: none;
+}
+
+
+.vmenu ul{
+	padding-left: 15px;
+	background: #F8F8F8;
+}
+
+.footer_menu ul{
+	display: none;
+}
+.footer_menu li{
+	margin: 3px 0;
+}
