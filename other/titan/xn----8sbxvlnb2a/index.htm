@@ -150,8 +150,8 @@ $(function(){
 		
       	<div class="right col s12 m12 offset-m1 l4 valign-wrapper va-header hide-on-med-and-down">
       		<div class="valign center-align" style="width:100%;text-align: right;">
-			    <span style='display:block;' class="slogan" >Консультация Бесплатно Анонимно</span>
-	      	 	<span style='display:block;' class="tel">+7 (342) 288-01-41 </span>
+			    <span class="slogan" >Консультация Бесплатно Анонимно</span>
+	      	 	<span class="tel">+7 (342) 288-01-41 </span>
       			
       		</div>
       	</div>
@@ -162,14 +162,13 @@ $(function(){
 
 <a href="#" class="toper"></a>
 
-<div id='homePageSlider' class='home-page-slider'>
-			    
-			        
+                <div id='homePageSlider' class='home-page-slider'>
+
 					<div class='home-page-slider__item'>
 				        <div class='ttn-director home-page-slider__el'>
 					        
 							<div class='ttn-director__photo'>
-						        <img src='img/urij-vagin.png' class=''/>
+						        <img src='../themes/defaul/images/urij-vagin.png' class=''/>
 						    </div>
 							
 						    <div class='ttn-director__descr'>
@@ -209,7 +208,8 @@ $(function(){
 						</div>
 				    </div>
 			</div><!-- end slider -->
-               <script>
+        
+	<script>
 	    $('#homePageSlider').slick({
 		    arrows : false,
 			dots: true,
@@ -752,6 +752,12 @@ style="border:0;" height="31" width="88" alt="Рейтинг@Mail.ru" /></a>
 <noscript><div><img src="45996966" tppabs="https://mc.yandex.ru/watch/45996966" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 	        
+			<style>
+			    .ttn-popup__succes{
+				    display:none;
+					padding:100px 0;}
+			</style>
+			
 			<div id='ttnMessage' class='ttn-popup ttn-popup-message'>
 			    <div id='ttnMessageOverlay' class='ttn-popup__overlay'></div>
 			    <div id='ttnMessageBox' class='ttn-popup__box'>
@@ -775,8 +781,16 @@ style="border:0;" height="31" width="88" alt="Рейтинг@Mail.ru" /></a>
 					    <div class='ttn-popup__field-container'>
 					        <input type='submit' class='ttn-btn ttn-popup__btn popup__btn--send' name='' value='Отправить заявку'>
 					    </div>
+						
 					
 				    </form>
+					<div class='ttn-popup__field-container' id='eee'>
+					        <input type='submit' class='ttn-btn ttn-popup__btn popup__btn--send' name='' value='тест'>
+					    </div>
+					<div class='ttn-popup__succes'>
+					    <div class='ttn-popup__title'>Заявка отправлена</div>
+					</div>
+					
 			    </div>
 			</div>
 			
@@ -784,7 +798,7 @@ style="border:0;" height="31" width="88" alt="Рейтинг@Mail.ru" /></a>
 			    <div id='ttnSendOverlay' class='ttn-popup__overlay'></div>
 			    <div id='ttnSendBox' class='ttn-popup__box'>
 				    
-					<form class='ttn-popup__container' action='' method='post' name='' >
+					<form id='ajaxFormCallback' class='ttn-popup__container' action='' method='post' name='' >
 				        
 						<span class='ttn-popup__title'>Перезвоните мне сейчас!</span>
 					    
@@ -797,15 +811,40 @@ style="border:0;" height="31" width="88" alt="Рейтинг@Mail.ru" /></a>
 					    </div>
 						
 					    <div class='ttn-popup__field-container'>
-					        <input type='submit' class='ttn-btn ttn-popup__btn popup__btn--send' name='ttnSendSubmit' value='Отправить заявку'>
+					        <input type='submit' class='ttn-btn ttn-popup__btn 
+							popup__btn--send' name='ttnSendSubmit' value='Отправить заявку'>
 					    </div>
-					
+						
+						
+					    
 				    </form>
+					<div class='ttn-popup__field-container' id='eee'>
+					        <input type='submit' class='ttn-btn ttn-popup__btn 
+							popup__btn--send' name='ttnSendSubmit' value='течт'>
+					    </div>
+					<div class='ttn-popup__succes' >
+					    <div class='ttn-popup__title' id='eee'>Мы вам перезвоним</div>
+					</div>
+                    
 			    </div>
 			</div>
+				 
 			<script src='jquery.maskedinput.min.js'></script>
 			<script>
-			    {
+			    {   
+                    
+					
+				    function closedForm(form){
+				       
+					    form.animate({
+					        opacity:0,
+				        }, 500,
+				        function(){
+					        form.css('display','none');
+					        form.css('opacity','0');
+				        });
+			        }
+					
 		            var ttnMessageOn = $('#ttnMessageOn');
 			        var ttnMessage = $('#ttnMessage');
 			        var ttnMessageBox = $('#ttnMessageBox');
@@ -853,6 +892,8 @@ style="border:0;" height="31" width="88" alt="Рейтинг@Mail.ru" /></a>
 					    );
 				    }   
 			        });
+					
+					
 		        }
 			</script>
 	</body>

@@ -83,39 +83,222 @@
 			</nav>
 			
 		</header><!-- end header -->
-	
-        <div class='single-slider'>
+		
+		<style>
+			/* треугольник блоками
+			.rectangle-arrow{
+			    position:relative;
+			    -ms-flex-item-align:center;
+                -ms-grid-row-align:center;
+                        align-self:center;	
+                width:100%;					
+			    height:100%;
+				color:#fff;}	
+			@media(min-width:768px){
+			    .rectangle-arrow{
+			        position:relative;
+			        -ms-flex-item-align:center;
+                     -ms-grid-row-align:center;
+                             align-self:center;
+					
+                    width:580px;				
+			        height:90px;}}	
+
+				
+			.rectangle-arrow__triagle{
+			    display:none;}
+			@media(min-width:750px){
+			.rectangle-arrow__triagle{
+			    display:block;
+			    position:absolute;
+				width:45px;
+				height:90px;
+				right:-45px;top:0;
+				overflow:hidden;}}
+			
+            .rectangle-arrow:before{
+			    }
+			.rectangle-arrow__triagle:after{
+				content:none;}			
+			@media(min-width:750px){
+			    .rectangle-arrow::before,
+			    .rectangle-arrow__triagle:after{
+			        position:absolute;
+				    display:block;
+				    content:'';
+					background:rgba(0,183,244,0.7);
+				    background:#00b7f4;
+					opacity:0.7;
+					z-index:-1;}
+					
+				.rectangle-arrow__triagle:after{
+				    top:50%;left:-31px;
+				    width:64px;height:64px;
+					margin-top:-32px;
+				    -webkit-transform:rotate(45deg);
+					        transform:rotate(45deg);
+					-webkit-box-shadow: 1px 3px 8px 1px rgba(0, 0, 0,0.83);
+                       -moz-box-shadow: 1px 3px 8px 1px rgba(0, 0, 0,0.83);
+                            box-shadow: 1px 3px 8px 1px rgba(0, 0, 0,0.83);}
+				
+				.rectangle-arrow:before{
+				    top:0;left:0;right:0;bottom:0;
+				    z-index:-1;}}	
+					
+			.rectangle-arrow__shadow{
+			    position:absolute;
+				bottom:0;
+				width:100%;
+				height:1px;
+			    
+			    -webkit-box-shadow:3px 1px 8px 0px rgba(0, 0, 0,0.83);
+                   -moz-box-shadow:3px 1px 8px 0px rgba(0, 0, 0,0.83);
+                        box-shadow:3px 1px 8px 0px rgba(0, 0, 0,0.83);
+				z-index:-1;}
+				
+			.rectangle-arrow .cln-slide__title{
+			    display:block;}
+			@media(min-width:768px){
+			    .rectangle-arrow .cln-slide__title{
+				    font-size:23px;
+					max-width:none;
+					padding:10px 15px 0 0;
+					text-align:right;}}
+					
+			@media(min-width:768px){
+			    .rectangle-arrow .cln-slide__descr{
+				    display:block;
+					padding:10px 15px 0 0;
+					text-align:right;}}
+			*/		
+		    
+			
+		</style>
+		 
+		
+		<div class='single-slider'>
 			    
 				<div class='single-slider__body' id='single-slider__body'>
-				    
+					
 					<div class='single-slider__item'>
-					    <span class='single-slider__descr'>
-						    из каждых 100 человек обратившихся к нам
-							по поводу наркомании, алкоголизма или 
-							таксикомании, 90 человек вышли из стен клиники
-							свободными от зависимости
-						</span>
+					    <div class='cln-slide'>
+						    <div class='cln-slide__bck cln-slide__bck--margin-left' style="background-image:url('img/da/wer.jpg');" ></div>
+							<div class='cln-slide__content'>
+							    
+								<div class='figure-rectangular-trapezium'>
+								    <div class='figure-rectangular-trapezium__title'>
+									    <span class='figure-rectangular-trapezium__text' >
+										    Крупнейший негосударственный
+										</span> 
+									    <span class='figure-rectangular-trapezium__text' >
+										    наркологический стационар в Пермском крае
+										</span>
+									</div>
+									<div class='figure-rectangular-trapezium__descr'>
+									    <span class='figure-rectangular-trapezium__text' >
+										    Анонимное лечение алкоголизма и наркомании:
+										</span>
+									    <span class='figure-rectangular-trapezium__text' >
+										    конфиденциальность информации о клиентах и проводимой терапии
+										</span>
+									</div>
+								</div>
+								
+							</div><!-- end cln-slide__content -->
+						</div><!-- end cln-slide -->
+					</div><!-- end single-slider__item -->
+					
+					<div class='single-slider__item'>
+					    <div class='cln-slide'>
+						    <div class='cln-slide__bck' style="background-image:url('img/cabinet.jpg');" ></div>
+							<div class='cln-slide__content'>
+								
+								<div class='slider-figure' >
+								    <div class='slider-figure__box slider-figure__box--position-left'>
+									    <div class='slider-figure__text'>
+									        <span class='slider-figure__title' >Комфортные условия пребывания в клинике:</span>
+									        <span class='slider-figure__descr' >палаты оборудованы кондиционером и телевизором</span>
+								        </div>
+									    
+										<div class='slider-figure__triagle'>
+									        <svg width="47px" height="120px" >
+									            <defs>
+									                <filter id="myfilter" x="0" y="0" width="45" height="120">
+                                                        <feOffset result="offOut" in="SourceAlpha" dx="1" dy="2" />
+                                                        <feGaussianBlur result="blurOut" in="offOut" stdDeviation="2" />
+                                                        <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+                                                    </filter>
+									            </defs>
+									            <polygon points="0 0,45 60, 0 120" filter="url(#myfilter)" />
+									        </svg>
+										</div>
+										<div class='slider-figure__bottom-shadow'></div>
+										
+									</div><!-- end slider-figure__box -->
+								</div><!-- end slider-figure -->
+								
+							</div><!-- end cln-slide__content -->
+						</div><!-- end cln-slide -->
+					</div><!-- end single-slider__item -->
+					
+					<div class='single-slider__item'>
+					    <div class='cln-slide'>
+						    <div class='cln-slide__bck'  ></div>
+							<div class='cln-slide__content'>
+								
+								<div class='slider-figure' >
+								    <div class='slider-figure__box slider-figure__box--position-right'>
+									    <div class='slider-figure__text'>
+									        <span class='slider-figure__title' >Рациональная фармакотерапия:</span>
+									        <span class='slider-figure__descr' >использование современных препаратов и передовых методик</span>
+								        </div>
+									    
+										<div class='slider-figure__triagle'>
+									        <svg width="47px" height="120px" >
+									            <defs>
+									                <filter id="myfilter" x="0" y="0" width="45" height="120">
+                                                        <feOffset result="offOut" in="SourceAlpha" dx="1" dy="2" />
+                                                        <feGaussianBlur result="blurOut" in="offOut" stdDeviation="2" />
+                                                        <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+                                                    </filter>
+									            </defs>
+									            <polygon points="47 0,2 60, 47 120" filter="url(#myfilter)" />
+									        </svg>
+										</div>
+										<div class='slider-figure__bottom-shadow'></div>
+										
+									</div><!-- end slider-figure__box -->
+								</div><!-- end slider-figure -->
+								
+							</div><!-- end cln-slide__content -->
+						</div><!-- end cln-slide -->
+					</div><!-- end single-slider__item -->
+					
+					<div class='single-slider__item'>
+					    <div class='cln-slide'>
+						    <div class='cln-slide__bck' style="background-image:url('img/family.png');" ></div>
+							<div class='cln-slide__content figure-rectangle-box figure-rectangle--content-center'>
+							    <div class='rectangle-fill'>
+								    <span>Индивидуальная программа диагностики и лечения</span>
+								</div>
+							</div>
+						</div>
 					</div>
 					
 					<div class='single-slider__item'>
-					    <span class='single-slider__descr'>
-						    из каждых 100 человек обратившихся к нам
-							по поводу наркомании, алкоголизма или 
-							таксикомании, 90 человек вышли из стен клиники
-							свободными от зависимости
-						</span>
-					</div>
-					
-					<div class='single-slider__item'>
-					    <span class='single-slider__descr'>
-						    из каждых 100 человек обратившихся к нам
-							по поводу наркомании, алкоголизма или 
-							таксикомании, 90 человек вышли из стен клиники
-							свободными от зависимости
-						</span>
+					    <div class='cln-slide'>
+						    <div class='cln-slide__bck' style="background-image:url('img/family.png');" ></div>
+							<div class='cln-slide__content figure-rectangle-box figure-rectangle--content-center'>
+							    <div class='single-slider__descr figure-rectangle-opacity__item'>
+						        <span >из каждых 100 человек обратившихся к нам
+							    по поводу наркомании, алкоголизма или 
+							    таксикомании, 90 человек вышли из стен клиники
+							    свободными от зависимости</span></div>
+							</div>
+						</div>
 					</div>
 				
-				</div>
+				</div> <!-- end slider-body -->
 			    
 				<div class='single-slider__control'>
 				    <div class='single-slider__arrow-left'></div>
@@ -190,413 +373,9 @@
 				
 			</div><!-- end service -->
 			
-			<div class='description'>
-			
-			    <div class='main-section'>
-			        <span class='description__title page__title' >наркологическая помощь в Перми</span>
-				    <p class='description__text'>
-				        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				        Aliquam eu lorem tortor. Duis porttitor libero ante, vel
-				        condimentum libero ultrices sollicitudin. Proin ligula neque,
-				        fringilla et commodo a, mollis vitae mauris. Maecenas vel tempus
-				        nibh. Sed vitae ex semper ipsum mollis venenatis ut vitae ex. 
-				        Donec eleifend rhoncus mi, at luctus dolor euismod sed. 
-				        Maecenas metus nunc, rutrum sit amet porttitor eu, varius 
-				        sit amet sapien.Integer eget dolor massa. Sed mauris erat, 
-				        suscipit sed nibh et, sodales faucibus tellus. Pellentesque erat
-				        mauris, dapibus eu lorem in, dictum dignissim purus. Nulla a dolor
-				        vitae nisi varius commodo eu blandit lorem. Nullam eget magna eget 
-				        dolor placerat tincidunt. In mattis rhoncus lectus non convallis. 
-				        Fusce a viverra risus. Vivamus mattis vel felis a feugiat. Suspendisse
-				        quis convallis nisl, quis efficitur nisi. Vivamus id tristique ante.
-				    </p>
-				</div><!-- end main-section -->
-				
-			</div><!-- end description -->
-			
-		    <div class='advantages'> 
-			    <span class='advantages__title page__title' >
-				    Почему выбирают нашу клинику?
-				</span>
-				
-			    <div class='advantages__body main-section'>
-				
-				
-				    <div class='advantages__logo'>
-				        
-						<img src='img/hospital.png' class='advantages__icon' alt=''>
-					    <span class='advantages__text advantages__text--blue' >
-					        Комплексное решение проблем:
-					    </span>
-					    <span class='advantages__text' >
-					        Клиника и реабилитация в одном здании
-					    </span>
-				    </div>
-				
-				    <div class='advantages__descr'>
-				        
-						<div class='advantages__item'>
-						    <div class='advantages__img'>
-							    <img src='img/secure-shield.png'/>
-							</div>
-					 	    <span>Полностью анонимно<span>
-					    </div>
-						
-					    <div class='advantages__item'>
-						    <div class='advantages__img'>
-					            <img src='img/doctor.png'/>
-							</div>
-						    <span>Выезд врача на дом 24/7<span>
-					    </div>
-					    
-						<div class='advantages__item'>
-					        <div class='advantages__img'>
-							    <img src='img/ambulance.png'/>
-							</div>
-						    <span>Возможна доставка с водителем<span>
-					    </div>
-					
-					    <div class='advantages__item'>
-					        <div class='advantages__img'>    
-								<img src='img/medical-history.png'/>
-							</div>
-						    <span>Современные методы лечения<span>
-					    </div>
-						
-					    <div class='advantages__item'>
-					        <div class='advantages__img'>    
-								<img src='img/quality.png'/>
-							</div>
-						    <span>Опыт работы больше 15 лет<span>
-					    </div>
-						
-					    <div class='advantages__item'>
-					        <div class='advantages__img'>    
-								<img src='img/chemical.png'/>
-							</div>
-						    <span>
-						        Сдача анализов (гепатит, ВИЧ) Медицинское обследование
-						    <span>
-					    </div>
-					
-				    </div><!-- end advantages__descr-->
-			    </div><!-- end advantages__wr-->
-			</div><!-- end advantages -->
-			
-		    <div class='personal'>
-			    <div class='main-section personal__body'>
-				    <span class='personal__title page__title'>
-				        наши специалисты
-				    </span>
-				
-				    <p class='personal__descr'>
-				        наши врачи - это опытные психологи, которые могут 
-					    замотивировать больного на лечение ипациент захочет
-					    продолжить путь изличения самостоятельно. Не пытайтесь
-					    отстраться от проблемы, иначе она поглотит вас еще больше
-					    и еще сильнее
-				    </p>
-				
-				    
-					    <div class='personal__slider' id='personal__slider'>
-					    
-						    <div class='personal__item'>
-						        <img src='img/imnotsupermane.png' alt='наши специалисты'/>
-							    <span class='personal__name'>
-							        Иванов Иван Иванович
-							    </span>
-							    <span class='personal__profession'>
-							        врач-реаниматолог, нарколог, психиатр, трансфузиолог
-							    </span>
-						    </div>
-						
-						    <div class='personal__item'>
-						        <img src='img/imnotsupermane.png' alt='наши специалисты'/>
-							    <span class='personal__name'>
-							        Иванов Иван Иванович
-							    </span>
-							    <span class='personal__profession'>
-							        врач-реаниматолог, нарколог, психиатр, трансфузиолог
-							    </span>
-						    </div>
-							
-							<div class='personal__item'>
-						        <img src='img/imnotsupermane.png' alt='наши специалисты'/>
-							    <span class='personal__name'>
-							        Иванов Иван Иванович
-							    </span>
-							    <span class='personal__profession'>
-							        врач-реаниматолог, нарколог, психиатр, трансфузиолог
-							    </span>
-						    </div>
-							
-							<div class='personal__item'>
-						        <img src='img/imnotsupermane.png' alt='наши специалисты'/>
-							    <span class='personal__name'>
-							        Иванов Иван Иванович
-							    </span>
-							    <span class='personal__profession'>
-							        врач-реаниматолог, нарколог, психиатр, трансфузиолог
-							    </span>
-						    </div>
-						
-					    </div><!-- end personal-slider -->
-					
-					    <div class='personal__control'>
-					        <div class='personal__arrow-left'></div>
-                            <div class='personal__arrow-right'></div>						
-					    </div>
-					
-				</div><!-- main-section -->
-			</div><!-- end personal -->
-			
-			<div class='step'>
-		        <div class='step__wr'>
-			        <span class='step__title'>этапы лечения от зависимости</span>
-			    
-				    <div class='accord-tabs' id ='accord-tabs'>
-				    
-				        <div id='tab0' class='tab0' >
-					    
-					        <div class='accord-tabs__card' >
-					            <p class='accord-tabs__content' >
-				                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-						            Aliquam eu lorem tortor. Duis porttitor libero ante, vel 
-						            condimentum libero ultrices sollicitudin. Proin ligula neque,
-						        fringilla et commodo a, mollis vitae mauris. Maecenas vel 
-						        tempus nibh. Sed vitae ex semper ipsum mollis venenatis ut
-						        vitae ex. Donec eleifend rhoncus mi, at luctus dolor 
-						        euismod sed. Maecenas metus nunc, rutrum sit amet porttitor 
-						        eu, varius sit amet sapien.
-						    </p>
-						    <a href='#'>подробнее...</a>
-				        </div> 
-					    <div class='accord-tabs__icon'>
-					        <img src='img/puzzle.png'/ alt=''>
-					    </div>
-					
-					</div>
-                    
-				    <div id='tab1' class='tab1'>
-					    
-					    <div class='accord-tabs__card' >
-					        <p class='accord-tabs__content' >
-				                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-						        Aliquam eu lorem tortor. Duis porttitor libero ante, vel 
-						        condimentum libero ultrices sollicitudin. Proin ligula neque,
-						        fringilla et commodo a, mollis vitae mauris. Maecenas vel 
-						        tempus nibh. Sed vitae ex semper ipsum mollis venenatis ut
-						        vitae ex. Donec eleifend rhoncus mi, at luctus dolor 
-						        euismod sed. Maecenas metus nunc, rutrum sit amet porttitor 
-						        eu, varius sit amet sapien.
-						    </p>
-						    <a href='#'>подробнее...</a>
-				        </div> 
-					    <div class='accord-tabs__icon'>
-					        <img src='img/heart.png'/ alt=''>
-					    </div>
-					
-					</div>
-					
-					<div id='tab2' class='tab2'>
-					    
-					    <div class='accord-tabs__card' >
-					        <p class='accord-tabs__content' >
-				                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-						        Aliquam eu lorem tortor. Duis porttitor libero ante, vel 
-						        condimentum libero ultrices sollicitudin. Proin ligula neque,
-						        fringilla et commodo a, mollis vitae mauris. Maecenas vel 
-						        tempus nibh. Sed vitae ex semper ipsum mollis venenatis ut
-						        vitae ex. Donec eleifend rhoncus mi, at luctus dolor 
-						        euismod sed. Maecenas metus nunc, rutrum sit amet porttitor 
-						        eu, varius sit amet sapien.
-						    </p>
-						    <a href='#'>подробнее...</a>
-				        </div> 
-					    <div class='accord-tabs__icon'>
-					        <img src='img/transfusion.png'/ alt=''>
-					    </div>
-					
-					</div>
-					
-					<div id='tab3' class='tab3' >
-					    
-					    <div class='accord-tabs__card' >
-					        <p class='accord-tabs__content' >
-				                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-						        Aliquam eu lorem tortor. Duis porttitor libero ante, vel 
-						        condimentum libero ultrices sollicitudin. Proin ligula neque,
-						        fringilla et commodo a, mollis vitae mauris. Maecenas vel 
-						        tempus nibh. Sed vitae ex semper ipsum mollis venenatis ut
-						        vitae ex. Donec eleifend rhoncus mi, at luctus dolor 
-						        euismod sed. Maecenas metus nunc, rutrum sit amet porttitor 
-						        eu, varius sit amet sapien.
-						    </p>
-						    <a href='#'>подробнее...</a>
-				        </div> 
-					    <div class='accord-tabs__icon'>
-					        <img src='img/nurse.png'/ alt=''>
-					    </div>
-					
-					</div>
-					
-				</div><!-- end accord-tabs -->  
-			</div><!-- end step wr -->
-		</div><!-- end step  -->
-			
-			<div class='feedback feedback--home'>
-			    <div class='feedback__body main-section'>
-				    
-					<div class='feedback__descr'>
-					    <span class='feedback__title' > 
-                            Уговорим лечиться!
-						</span>
-						<p class='feedback__text'>
-						    наш специалист с помощью эффективной методики уговорит
-							вашего родственника или друга пройти лечение от зависимости
-						</p>
-					</div>
-					
-					<form class='feedback__form' action='feedback__form.php' name='feedback__form' >
-					    <label for="name" class='feedback__label' >Ваше имя:</label>
-                        <input type="text" class="feedback__input" name="name" placeholder='Ваше имя'/>
-						<label for="phone" class='feedback__label' >Номер телефона:</label>
-                        <input type="text" class="feedback__input feedback__phone" name="phone" id='phone' placeholder='+7 932 333 33 33' />
-						<input type="button" class="btn btn__bg-1 feedback__btn" value='Заказать звонок' />
-					</form>
-				</div><!-- end body -->
-			</div><!-- end feedback -->
-			
-			<div class='reviews'>
-			    <span class='reviews__title'>
-				    Отзывы о лечении в Да-Clinic
-				</span>
-				<div class='reviews__body' id='reviews__body'>
-				    
-					<div class='reviews__item'>
-					    <p class='reviews__text'>
-						    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				            Aliquam eu lorem tortor. Duis porttitor libero ante, vel
-				            condimentum libero ultrices sollicitudin. Proin ligula neque,
-				            fringilla et commodo a, mollis vitae mauris. Maecenas vel tempus
-				            nibh. Sed vitae ex semper ipsum mollis venenatis ut vitae ex. 
-				            Donec eleifend rhoncus mi, at luctus dolor euismod sed. 
-				            Maecenas metus nunc, rutrum sit amet porttitor eu, varius 
-				            sit amet sapien.Integer eget dolor massa. Sed mauris erat, 
-				            suscipit sed nibh et, sodales faucibus tellus. Pellentesque erat
-				            mauris, dapibus eu lorem in, dictum dignissim purus. Nulla a dolor
-				            vitae nisi varius commodo eu blandit lorem
-						</p>
-					</div>
-					
-					<div class='reviews__item'>
-					    <p class='reviews__text'>
-						    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				            Aliquam eu lorem tortor. Duis porttitor libero ante, vel
-				            condimentum libero ultrices sollicitudin. Proin ligula neque,
-				            fringilla et commodo a, mollis vitae mauris. Maecenas vel tempus
-				            nibh. Sed vitae ex semper ipsum mollis venenatis ut vitae ex. 
-				            Donec eleifend rhoncus mi, at luctus dolor euismod sed. 
-				            Maecenas metus nunc, rutrum sit amet porttitor eu, varius 
-				            sit amet sapien.Integer eget dolor massa. Sed mauris erat, 
-				            suscipit sed nibh et, sodales faucibus tellus. Pellentesque erat
-				            mauris, dapibus eu lorem in, dictum dignissim purus. Nulla a dolor
-				            vitae nisi varius commodo eu blandit lorem
-						</p>
-					</div>
-					
-					<div class='reviews__item'>
-					    <p class='reviews__text'>
-						    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				            Aliquam eu lorem tortor. Duis porttitor libero ante, vel
-				            condimentum libero ultrices sollicitudin. Proin ligula neque,
-				            fringilla et commodo a, mollis vitae mauris. Maecenas vel tempus
-				            nibh. Sed vitae ex semper ipsum mollis venenatis ut vitae ex. 
-				            Donec eleifend rhoncus mi, at luctus dolor euismod sed. 
-				            Maecenas metus nunc, rutrum sit amet porttitor eu, varius 
-				            sit amet sapien.Integer eget dolor massa. Sed mauris erat, 
-				            suscipit sed nibh et, sodales faucibus tellus. Pellentesque erat
-				            mauris, dapibus eu lorem in, dictum dignissim purus. Nulla a dolor
-				            vitae nisi varius commodo eu blandit lorem
-						</p>
-					</div>
-					
-					<div class='reviews__item'>
-					    <p class='reviews__text'>
-						    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				            Aliquam eu lorem tortor. Duis porttitor libero ante, vel
-				            condimentum libero ultrices sollicitudin. Proin ligula neque,
-				            fringilla et commodo a, mollis vitae mauris. Maecenas vel tempus
-				            nibh. Sed vitae ex semper ipsum mollis venenatis ut vitae ex. 
-				            Donec eleifend rhoncus mi, at luctus dolor euismod sed. 
-				            Maecenas metus nunc, rutrum sit amet porttitor eu, varius 
-				            sit amet sapien.Integer eget dolor massa. Sed mauris erat, 
-				            suscipit sed nibh et, sodales faucibus tellus. Pellentesque erat
-				            mauris, dapibus eu lorem in, dictum dignissim purus. Nulla a dolor
-				            vitae nisi varius commodo eu blandit lorem
-						</p>
-					</div>
-					
-					<div class='reviews__item'>
-					    <p class='reviews__text'>
-						    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				            Aliquam eu lorem tortor. Duis porttitor libero ante, vel
-				            condimentum libero ultrices sollicitudin. Proin ligula neque,
-				            fringilla et commodo a, mollis vitae mauris. Maecenas vel tempus
-				            nibh. Sed vitae ex semper ipsum mollis venenatis ut vitae ex. 
-				            Donec eleifend rhoncus mi, at luctus dolor euismod sed. 
-				            Maecenas metus nunc, rutrum sit amet porttitor eu, varius 
-				            sit amet sapien.Integer eget dolor massa. Sed mauris erat, 
-				            suscipit sed nibh et, sodales faucibus tellus. Pellentesque erat
-				            mauris, dapibus eu lorem in, dictum dignissim purus. Nulla a dolor
-				            vitae nisi varius commodo eu blandit lorem
-						</p>
-					</div>
-					
-				</div><!-- end reviews__body -->
-				
-				<div class='reviews__control'>
-				    <div class='reviews__arrow-left'></div>
-					<div class='reviews__arrow-right'></div>
-				</div>
-				
-			</div><!-- end reviews -->
-			
+
 		</div><!-- end main -->
-		
-	    <footer class='footer' >
-		    <div class='footer__wr main-section'>
-			    
-				<div class='logo'>
-					    <a href='index.html'>
-						    <img src='img/logo.svg' alt='да clinic'>
-						</a>
-					</div>	
-					 
-				<div class='footer__phone'>
-				    <span class='phone phone--color-type1' >+7(988)45 445 45</span>
-				    <span class='work' >круглосуточно</span>
-				</div>
-				<div class='footer__email'>
-				    <span class='email email--color-type1' >
-					    clinica@mail.com
-				    </span>
-				</div>
-				<div class='footer__adress'>
-				    
-					<span class='city city--color-type1' >
-					    г. Пермь, ул.Ленина д.25
-				    </span>
-					
-					<span class='email email--color-type1 footer__e' >
-					    clinica@mail.com
-				    </span>
-					
-				</div>
-				
-			</div>
-		</footer><!-- end footer -->
-		
+			
     </body><!-- end body -->
 	<script src="extern/jquery/jquery-3.3.1.js"></script>
 	<script src="extern/jquery/jquery-ui.js"></script>

@@ -110,14 +110,15 @@
         .ui-accordion-header-active{
 				outline:none;
 				color:#7fdbf9;}	     
-	    .ui-accordion-header-active .ui-icon{
-				border:3px solid #7fdbf9;}
 		
             .ui-icon{
 		        left:15px;top:12px;
 			    width:15px;
 			    height:15px;
 			    border:3px solid #747474;}
+				
+			.ui-accordion-header-active .ui-icon{
+				border:3px solid #7fdbf9;}
 		
 		.ui-accordion-content{
 			font-size:1.07em;
