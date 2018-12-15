@@ -1,9 +1,0 @@
-@media only screen and (max-width: 601px) {
-	.flat_view li{
-		width: 100%;
-		height: 300px;
-	}
-	.va-header {
-		min-height: 0;
-	}
-}
