@@ -65,19 +65,45 @@ html, body{
 	
 .header__rectagle{
 	position: absolute;
-    top: 0;left: 44px;
-    width: 611px;height: 160px;
-    -webkit-transform: rotate(53deg);
-        -ms-transform: rotate(53deg);
-            transform: rotate(53deg);
-    background: #fbaf38;}
+    top: 110px;
+    left: 58px;
+    width: 701px;
+    height: 160px;
+    -webkit-transform: rotate(56deg);
+        -ms-transform: rotate(56deg);
+            transform: rotate(56deg);
+    background: #fbaf38;
+	z-index: 12;
+    opacity: .8;}
+	
+.header__socials{
+	position:absolute;
+	display:flex;
+	justify-content:space-between;
+	top:20px;left:930px;
+	width:120px;
+	height:55px;}	
+	
+.header__telegram,
+.header__insta{
+	width:55px;
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:50px 50px;
+	cursor:pointer;}	
+	
+.header__telegram{
+	background-image:url(../img/telegram-app.png);}
+.header__insta{
+	background-image:url(../img/insta-app.png);}
 	
 .header__logo{
 	position:absolute;
 	left:220px;
 	width:120px;
 	height:120px;
-	background:#010101;}
+	background:#010101;
+	z-index:13;}
 	
 .logo{
 	display:block;
@@ -110,7 +136,8 @@ html, body{
 	color:#010101;
 	font-size:40px;
 	font-weight: bold;
-    line-height: 1;}	
+    line-height: 1;
+	text-decoration:none;}	
 	
 .product-1{
 	left:455px; top:40px;
@@ -165,9 +192,12 @@ html, body{
 	background:transparent;
 	cursor:pointer;}	
 	
+.product-btn--big-font{
+	font-size:18px;}	
+	
 .product-btn,
 .product-btn span{
-	text-decoration:underline;}
+	text-decoration:none;}
 
 .product-btn--dark{
 	background:#000000;
@@ -488,7 +518,7 @@ html, body{
 	margin-top:20px;
 	margin-left:210px;
 	padding:15px 5px 6px 0;
-	font-size:20px;
+	font-size:18px;
 	font-weight:bold;
 	text-align:right;
 	text-transform:uppercase;
@@ -502,11 +532,12 @@ html, body{
 	margin:120px 0 65px 35px;
 	padding: 8px 30px 8px 0px;
 	background: #fbaf38;
+	text-decoration:none;
 	color:#010101;}	
 	
 .feedback-descr__btn span{
 	margin-left:-22px;
-	font-size:20px;
+	font-size:18px;
 	font-weight:bold;
 	text-transform:uppercase;
 	color:#010101;}
