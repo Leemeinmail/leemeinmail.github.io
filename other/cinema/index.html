@@ -311,7 +311,7 @@
 			
 			<script>
 			
-            function init(){ 
+			function init(){ 
                 var myMap = new ymaps.Map("myMap", {
                     center: [55.648321, 37.501941],
                     zoom:17
@@ -323,7 +323,10 @@
  
 	            myMap.geoObjects.add(myPlacemark);
             }
-            ymaps.ready(init);
+			
+			window.onload = function(){
+                ymaps.ready(init);
+			}
 			</script>
 			
 		</footer>

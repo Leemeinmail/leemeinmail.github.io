@@ -81,15 +81,15 @@ html, body{
 	display:flex;
 	justify-content:space-between;
 	top:20px;left:930px;
-	width:120px;
-	height:55px;}	
+	width:100px;
+	height:40px;}	
 	
 .header__telegram,
 .header__insta{
-	width:55px;
+	width:40px;
 	background-position:center center;
 	background-repeat:no-repeat;
-	background-size:50px 50px;
+	background-size:40px 40px;
 	cursor:pointer;}	
 	
 .header__telegram{
