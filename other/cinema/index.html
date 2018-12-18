@@ -14,7 +14,8 @@
 	<body>
 	   
 		<header class='header' >
-		    <nav id='navMobile' class='nav-mobile nav-mobile--hidden header__nav-mobile' >
+		    <div id='navMobileOverlay' class='nav-mobile__overlay'></div>
+			<nav id='navMobile' class='nav-mobile nav-mobile--hidden header__nav-mobile' >
 				<ul class='nav-mobile__list' >
 				
 					<li class='nav-mobile__item' >
@@ -47,8 +48,10 @@
 					<a href='' class='header__insta'></a>
 					<a href='' class='header__telegram'></a>
 				</div>
-								
+				
 			</nav>
+			
+			
 			
 		    <div class='header__box'>
 			    
@@ -549,8 +552,8 @@
 			</div>
 		
 		</footer>
-		
     </body><!-- end body -->
+	
 	<script src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU" type="text/javascript"></script>
     <script>
 	    
@@ -560,25 +563,60 @@
                 zoom:17
             });
 			
-		var myPlacemark = new ymaps.Placemark(
+		    var myPlacemark = new ymaps.Placemark(
 		            [55.648321, 37.501941]       
-	            );
- 
-	            myMap.geoObjects.add(myPlacemark);
-            }
-            
+	        );
+            myMap.geoObjects.add(myPlacemark);
+        }
+		 
 	    window.onload = function(){
-	    $('#navMobileBtn').click(function(){
-		    $('#navMobile').toggleClass('nav-mobile--hidden');
-		});
+		    var navMobile = $('#navMobile');
+			var navMobileBtn = $('#navMobileBtn');
+	        var navMobileOverlay = $('#navMobileOverlay');
+			
+			navMobileBtn.click(function(){
+			    if(navMobile.hasClass('nav-mobile--hidden')){
+				    $('html,body').css('overflow','hidden');
+					navMobileOverlay.css('display','block');
+					navMobile.removeClass('nav-mobile--hidden');
+					
+					navMobileOverlay.animate({
+					    opacity: 0.3
+                    }, 200, function() {});
+				     
+					navMobile.animate({
+					    opacity: 1
+                    }, 200, function() {}); 
+				}
+				
+				navMobileOverlay.click(function(){
+				    if(!navMobile.hasClass('nav-mobile--hidden')){
+					    $('html,body').css('overflow','visible');
+						navMobileOverlay.animate({
+					        opacity: 0
+                        }, 200, function() {
+						    navMobile.addClass('nav-mobile--hidden');
+						});
+				     
+					    navMobile.animate({
+					        opacity: 0
+                        }, 200, function() {
+						    navMobileOverlay.css('display','none');
+						}); 
+
+					}
+					
+				});
+		    });
+			
+			
 		
-		$('#mainMenuAccordion').accordion({
-		    active: false,
-            collapsible: true
-		});
+		    $('#mainMenuAccordion').accordion({
+		        active: false,
+                collapsible: true
+		    });
 		
-		ymaps.ready(init);
-		
+		    ymaps.ready(init);
 		}
 	</script>
 </html><!-- end html -->
