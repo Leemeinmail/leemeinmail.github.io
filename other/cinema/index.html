@@ -5,16 +5,100 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	    <meta charset="UTF-8"/>
 	    <title>Прокат оборудования</title>
+		<link rel="stylesheet" type="text/css" href="extern/jquery-ui/jquery-ui.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<script src="extern/jquery-3.3.1.js"></script>
+		<script src="extern/jquery-ui/jquery-ui.js"></script>
     </head>
     
 	<body>
 	   
 		<header class='header' >
-		
+		    <nav id='navMobile' class='nav-mobile nav-mobile--hidden header__nav-mobile' >
+				<ul class='nav-mobile__list' >
+				
+					<li class='nav-mobile__item' >
+						<a href='' class='nav-mobile__link' >
+										    аренда alex
+						</a>
+					</li>
+					
+					<li class='nav-mobile__item' >
+						<a href='' class='nav-mobile__link' >
+							аренда red
+						</a>
+					</li>
+					
+					<li class='nav-mobile__item' >
+						<a href='' class='nav-mobile__link' >
+							Забронировать оборудование
+						</a>
+					</li>
+					
+					<li class='nav-mobile__item' >
+						<a href='' class='nav-mobile__link' >
+							контакты
+						</a>
+					</li>
+				
+				</ul>
+								
+				<div class='header__socials header__socials--mobile'>
+					<a href='' class='header__insta'></a>
+					<a href='' class='header__telegram'></a>
+				</div>
+								
+			</nav>
+			
 		    <div class='header__box'>
 			    
+				<div class='header__top'>
+				    
+				    <a href='' class='header__logo logo'>
+				        
+						<div class='logo__triangle'></div>
+				        
+						<div class='logo__triangle'></div>
+				        
+						<span class='logo__text' >
+					        московский 
+					    </span>
+				    	
+						<span class='logo__text' >
+					        кино 
+					    </span>
+					    
+						<span class='logo__text' >
+					        прокат
+					    </span>
+				    </a>
+				 
+				    <div class='navigation header__navigation'>
+					    
+						<div class='navigation__top'>
+						    <span class='navigation__title' >аренда alex</span>
+							
+							<div id='navMobileBtn' class='navigation__btn'></div>
+							
+							<a href='tel:' class='navigation__call-back'></a>
+						    
+						</div>
+						
+						<div class='navigation__bottom'>
+						    
+							<a href='' class=''>
+							    аренда Red
+							</a>
+							
+					        <a href='' class=''>
+							    контакты
+							</a>
+						
+						</div>
+					</div>
+				
+				</div><!-- end of header__top -->
+				
 				<div class='header__rectagle'></div>
 				
 				<div class='header__socials'>
@@ -22,31 +106,19 @@
 					<a href='' class='header__telegram'></a>
 				</div>
 				
-				<div class='header__product product-1'>
-				    <a class='header__product-link product-1__link' href=''>
-					    аренда alexa
-					</a>
+				<div class='header__products-box'>
+				    <div class='header__product product-2'>
+				        <a class='header__product-link product-2__link' href=''>
+					        <span>аренда red</span>
+					    </a>
+				    </div>
+					
+					<div class='header__product product-1'>
+				        <a class='header__product-link product-1__link' href=''>
+					        <span>аренда alexa</span>
+					    </a>
+				    </div>
 				</div>
-				
-				<div class='header__product product-2'>
-				    <a class='header__product-link product-2__link' href=''>
-					    аренда red
-					</a>
-				</div>
-				
-				<a href='' class='header__logo logo'>
-				    <div class='logo__triangle'></div>
-				    <div class='logo__triangle'></div>
-				    <span class='logo__text' >
-					    московский 
-					</span>
-					<span class='logo__text' >
-					    кино 
-					</span>
-					<span class='logo__text' >
-					    прокат
-					</span>
-				</a>
 				
 			    <div class='circle'>
 				    <div class='circle__content'>
@@ -70,7 +142,7 @@
 				
 				<div class='header__decoration'></div>
 				
-				<div class='phone-form'>
+				<div class='phone-form header__phone-form'>
 				    
 					<a class='phone-form__link' href=''>alexared.com</a>
 					
@@ -113,62 +185,88 @@
 					
 				</div><!-- end of phone-form -->
 				
-				<div class='header__product product-3'>
-				    
-					<a href='' class='product-3__photo'>
-					    <img src='img/camera-3.png' />
-					</a>
-					
-					<div class='product-3__intro'>
-					    
-						<div class='product-3__logo'>
-						    <img src='img/camera-logo-3.png'/>
-						</div>
-						
-						<span>
-							<b>ALEXA mini</b> аренда камеры c которой вы откроете для себя мир.
-						</span>
-						
-					</div><!-- end of product-3__intro-->
-					
-					<button class='product-btn product-btn--dark product-btn--text-bottom' >забронировать камеру</button>
-					
-					<div class='product-descr'>
-						<span class='product-descr__name' >Alexa mini от 18.000 руб/смена</span>
-						<span class='product-descr__title' >В комплекте:<span>
-						<span class='product-descr__value'>Камера с монитором накамерным — Tvlogic</span>
-						<span class='product-descr__value'>Верхняя ручка </span>
-						<span class='product-descr__value'>Система суппортов 19/15дюймов</span>
-						<span class='product-descr__value'>Фоллоуфокус</span>
-						<span class='product-descr__value'>Компендиум</span>
-						<span class='product-descr__value'>Батареи от 4шт</span>
-						<span class='product-descr__value'>Зарядное устройство</span>
-						<span class='product-descr__value'>Режиссерский монитор</span>
-						<span class='product-descr__value'>Штатив</span>
-						<span class='product-descr__value'>Вся необходимая коммутация</span>
-						<span class='product-descr__value'>Ноутбук</span>
-						<span class='product-descr__value'>Карты памяти не менее 2 шт по 256 гб</span>
-						<span class='product-descr__value'>Картридер</span>
-						<span>Оптика в комплект не входит!</span>
-					</div> <!-- end of product-3__descr-->
-						
-					<button class='product-btn product-btn--big-font' >
-						<span class='product-btn--light product-btn--text-top' >добавить оборудование в</span> комплект
-					</button>
-						
-					</div><!-- end of product-3__descr-->
-			    </div><!-- end of product-3-->
-				
 			</div><!-- end of header-box -->
 		
 		</header>
 		
 		<div class='main'>
-		
-		    <div class='main-gallery'>
+		    
+			<div id='mainMenuAccordion' class='main-menu section'>
+			    
+				<h3>доп.оборудование</h3>
+				<div><p></p></div>
+				
+				<h3>аренда камер дешевле</h3>
+				<div><p></p></div>
+				
+			</div>
+			
+			<div class='main-contacts'>
+				<a href='tel:88007778707' class='main-contacts__phone'>8 800 777 87 07</a>
+				<span class='main-contacts__text'>Бесплатный номер</span>
+			</div>
+			
+			<div class='product-3 section'>
+				    
+				<a href='' class='product-3__photo'>
+					<img src='img/camera-3.png' />
+					<button class='product-btn product-btn-mobile product-3__btn-mobile' >
+				        <span>забронировать</span>
+				    </button>
+				</a>
+					
+			    <div class='product-3__intro'>
+					    
+					<div class='product-3__logo'>
+						<img src='img/camera-logo-3.png'/>
+					</div>
+						
+					<span class='product-3__intro-descr' >
+						<span class='product-3__name'><b>ALEXA mini</b></span> 
+						<span class='product-3__action'>аренда камеры</span>
+						<span class='product-3__descr'>c которой вы откроете для себя мир.</span>
+					</span>
+						
+				</div><!-- end of product-3__intro-->
+					
+				<button class='product-3__btn product-btn product-btn--dark product-btn--text-bottom' >
+				    забронировать камеру
+				</button>
+					
+				<div class='product-descr'>
+					<span class='product-descr__name' >
+					    <span class='product-descr__mark'>Alexa mini</span> 
+						<span class='product-descr__cost'>от 18.000 руб/смена</span>
+					</span>
+					<span class='product-descr__title' >В комплекте:</span>
+					<span class='product-descr__value'>Камера с монитором накамерным — Tvlogic</span>
+					<span class='product-descr__value'>Верхняя ручка </span>
+					<span class='product-descr__value'>Система суппортов 19/15дюймов</span>
+					<span class='product-descr__value'>Фоллоуфокус</span>
+					<span class='product-descr__value'>Компендиум</span>
+					<span class='product-descr__value'>Батареи от 4шт</span>
+					<span class='product-descr__value'>Зарядное устройство</span>
+					<span class='product-descr__value'>Режиссерский монитор</span>
+					<span class='product-descr__value'>Штатив</span>
+					<span class='product-descr__value'>Вся необходимая коммутация</span>
+					<span class='product-descr__value'>Ноутбук</span>
+					<span class='product-descr__value'>Карты памяти не менее 2 шт по 256 гб</span>
+					<span class='product-descr__value'>Картридер</span>
+					<span>Оптика в комплект не входит!</span>
+				</div> <!-- end of product-3__descr-->
+						
+				<button class='product-btn' >
+					<span class='product-btn--light product-btn--big-font product-btn--text-bottom-top' >добавить оборудование в</span> комплект
+				</button>
+				
+			</div><!-- end of product-3-->
+			
+			<div class='main-gallery section'>
+			
 			    <div class='main-gallery__title'>
 				    <a href='' class='' >#MOSCOWfilmRENTAL</a>
 				</div>
+				
 				<div class='main-gallery__body'>
 				    <a href='' class='main-gallery__item'>
 					    <img src='img/gallery-img-1.png'/>    
@@ -210,14 +308,43 @@
 					    <img src='img/product-logo.png'/>
 					</div>
 					<span class='intro__text'>
-					    аренда камеры <b>RED</b> мир профессионального кинимотографа
+					    
+						<span class='intro__action'>
+						    аренда камеры 
+						</span>
+						
+						<span class='intro__name'>
+						    <b>RED</b>
+						</span> 
+						
+						<span class='intro__descr'>
+						    мир профессионального кинимотографа
+						</span>
+						
 					</span>
-					<button class='product-btn product-btn--dark product-btn--text-bottom' >забронировать камеру</button>
+					
+					<button class='main-product__btn product-btn product-btn--dark product-btn--text-bottom' >
+					    забронировать камеру
+					</button>
+					
+                    <button class="product-btn product-btn-mobile main-product__btn-mobile">
+				        <span>забронировать</span>
+				    </button>
+					
 				</div>
 				
 				<div class='product-descr main-product__descr'>
-					<span class='product-descr__name' ><b>RED EPIC</b> от 15.000 руб/смена</span>
-					<span class='product-descr__title' >В комплекте:<span>
+					<span class='product-descr__name' >
+					    <span class='product-descr__mark'>
+						    <b>RED EPIC</b>
+						</span>
+						<span class='product-descr__cost main-product__cost'>
+						    от 15.000 руб/смена
+						</span>
+					</span>
+					<span class='product-descr__title' >
+					    В комплекте
+					</span>
 					<span class='product-descr__value'>амера с монитором накамерным — Tvlogic</span>
 					<span class='product-descr__value'>Верхняя ручка </span>
 					<span class='product-descr__value'>Система суппортов 19/15дюймов</span>
@@ -234,27 +361,64 @@
 					<span>Оптика в комплект не входит!</span>
 				</div> <!-- end of product-3__descr-->
 				
-				<button class='product-btn main-product__light-btn product-btn--big-font' >
+				<button class='product-btn main-product__light-btn main-product__btn' >
 				    <span class='product-btn--light product-btn--text-top' >добавить оборудование в</span> комплект
+				</button>
+				
+				<button class='product-btn main-product__light-btn product-btn--light main-product__btn-mobile-2' >
+				    добавить в комплект
 				</button>
 				
 			</div><!-- main-product -->
 			
 			<div class='main-bottom section'>
-			    <div class='main-bottom__title'>
+			    
+				<div class='main-bottom__title'>
 				    КАК АРЕНДОВАТЬ ОБОРУДОВАНИЕ ДЕШЕВЛЕ?
 				</div>
-				<ul class='list' >
-				    <li class='list__item' >Вы благотворительная некоммерческая организация</li>
-                    <li class='list__item' >Учащийся творческих высших учебных заведений</li>
-                    <li class='list__item' >Вы оформили заказ заблаговременно (от 30 дней)</li>
-                    <li class='list__item' >Оформив заказ заблаговременно вы внесли предоплату</li>
-                    <li class='list__item' >Внося предоплату вы оплатили всю работу полностью</li>
-                    <li class='list__item' >Ваш проект потребует длительной аренды</li>
-                    <li class='list__item' >Наконец если ваш проект сильно впечатлит нас</li>
+				
+				<div class='main-bottom__mobile-block'>
+				    <img src='img/inventar-mobile.png'/>
+					
+					<a href='' class='main-bottom__mobile-btn'>
+						<span> посмотреть все оборудование </span>
+					</a>
+					
+				</div>
+				
+				<div class='main-bottom__title main-bottom__title--mobile'>
+                    АРЕНДА ВИДЕОКАМЕР ДЕШЕВЛЕ, ПРИ УСЛОВИИ:
+				</div>
+				
+				<ul class='list-mobile' >
+				    <li class='list-mobile__item list-mobile__item--full-color' >Вы благотворительная</li>
+					<li class='list-mobile__item'>некоммерческая организация</li>
+                    <li class='list-mobile__item list-mobile__item--full-color' >Учащийся творческих высших</li>
+					<li class='list-mobile__item'>учебных заведений</li>
+                    <li class='list-mobile__item list-mobile__item--full-color' >Вы оформили заказ </li>
+                    <li class='list-mobile__item' >заблаговременно (от 30 дней)</li>
+					<li class='list-mobile__item list-mobile__item--full-color' >Оформив заказ заблаговременно </li>
+					<li class='list-mobile__item' >вы внесли предоплату</li>
+					<li class='list-mobile__item list-mobile__item--full-color' >Внося предоплату вы оплатили</li>
+					<li class='list-mobile__item' >всю работу полностью</li>
+					<li class='list-mobile__item list-mobile__item--full-color' >Ваш проект потребует</li>
+					<li class='list-mobile__item' >длительной аренды</li>
+					<li class='list-mobile__item list-mobile__item--full-color' >Наконец если ваш проект</li>
+					<li class='list-mobile__item' >сильно впечатлит нас!</li>
+				</ul>
+				
+				<ul class='list-desktop' >
+				    <li class='list-desktop__item' >Вы благотворительная некоммерческая организация</li>
+                    <li class='list-desktop__item' >Учащийся творческих высших учебных заведений</li>
+                    <li class='list-desktop__item' >Вы оформили заказ заблаговременно (от 30 дней)</li>
+                    <li class='list-desktop__item' >Оформив заказ заблаговременно вы внесли предоплату</li>
+                    <li class='list-desktop__item' >Внося предоплату вы оплатили всю работу полностью</li>
+                    <li class='list-desktop__item' >Ваш проект потребует длительной аренды</li>
+                    <li class='list-desktop__item' >Наконец если ваш проект сильно впечатлит нас</li>
 				</ul>
 				
 				<div class='feedback-wr'>
+				
 				    <form class='feedback' name='feedback' action='' >
 					    <span class='feedback__title'>напишите нам</span>
 						<label for="feedback-callback">Как с вами связаться</label>
@@ -279,13 +443,87 @@
 						   которою <span class='feedback-descr__mark' >выбирают лучшие</span> операторские группы в Мире!</p>
 						
 					</div>
+					
+					<div class='feedback-mobile'>
+					    
+						<span class='main-bottom__title main-bottom__title--mobile' > напишите нам </span>
+						<div class='feedback-mobile__wr'>
+						
+						
+					    <div class='phone-form'>
+				    
+					        <a class='phone-form__link' href=''>alexared.com</a>
+					
+					        <div class='phone-form__title phone-form__item'>
+					            <span class='phone-form__title-mark' >Online чат</span>
+						        <span>проката</span>
+					        </div>
+					
+					        <div class='message phone-form__message phone-form__item'>
+					            
+								<div class='message__icon'>
+						            <div class='message__arrow'></div>
+							        <div class='message__arrow'></div>
+						        </div>
+								
+						        <div class='message__field'>
+						            <span>Здравствуйте</span>
+						        </div>
+					        </div>
+					
+					        <div class='message phone-form__message phone-form__item'>
+					            
+								<div class='message__icon'>
+						            <div class='message__arrow'></div>
+							        <div class='message__arrow'></div>
+						        </div>
+								
+						        <div class='message__field'>
+						            <span>Пишите, мы онлайн</span>
+						        </div>
+					        </div>
+					
+					        <form action='' name='header-social' class='social-form phone-form__social-form phone-form__item'>
+						        <input type='text' class='social-form__field' placeholder='Введите сообщение...' />
+					 	            <p class='social-form__state state state--activ' >
+						                <span class='state__indicator state__indicator--active' ></span>
+							            <span class='state__text' >online</span>
+						            </p>
+						            <p class='social-form__controlls'>
+						                <input type='submit' class='social-form__btn social-form__btn--social-1' name='social-1' value='' />
+						                <input type='submit' class='social-form__btn social-form__btn--social-2' name='social-2' value='' />
+						            </p>
+					        </form>
+					        
+				        </div><!-- end of phone-form -->
+						
+						<p class='feedback-mobile__descr' >
+						    <span class='feedback-mobile__mark'>Мы делаем недоступную</span>
+							технику <span class='feedback-mobile__mark'>доступной каждому.</span> 
+                            Потому что, когда-то, мы сами хотели снимать на 
+							<span class='feedback-mobile__mark'>камеры мирового уровня,</span> 
+							но не могли это себе позволить.
+						</p>
+						</div>
+						
+						<div class='feedback-mobile__btn-wr'>
+						<button class='feedback-mobile__btn' >
+						    <span class='feedback-mobile__btn-text' >
+							забронировать обор
+							<span class='feedback-mobile__mark--dark' >удование<span>
+							</span>
+						</button>
+						</div>
+						
+					</div><!-- end of feedback-mobile -->
+					
 				</div>
 				
-			</div>
+			</div> <!-- end bottom-section -->
 			
 		</div><!-- main-->
 		
-	    <footer class='footer' >
+		<footer class='footer' >
 		    <div class='footer__top'>
 			
 			    <div class='footer__item footer__adress'>
@@ -305,32 +543,42 @@
 				<div class='footer__figure'></div>
 				
 			</div><!-- footer__top -->
+		
+		    <div class='map-container'>
+			    <div id='myMap' class='map' ></div>
+			</div>
+		
+		</footer>
+		
+    </body><!-- end body -->
+	<script src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU" type="text/javascript"></script>
+    <script>
+	    
+		function init(){ 
+            var myMap = new ymaps.Map("myMap", {
+                center: [55.648321, 37.501941],
+                zoom:17
+            });
 			
-			<script src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU" type="text/javascript"></script>
-			<div id='myMap' class='map-container'></div>
-			
-			<script>
-			
-			function init(){ 
-                var myMap = new ymaps.Map("myMap", {
-                    center: [55.648321, 37.501941],
-                    zoom:17
-                });
-				
-	            var myPlacemark = new ymaps.Placemark(
+		var myPlacemark = new ymaps.Placemark(
 		            [55.648321, 37.501941]       
 	            );
  
 	            myMap.geoObjects.add(myPlacemark);
             }
-			
-			window.onload = function(){
-                ymaps.ready(init);
-			}
-			</script>
-			
-		</footer>
+            
+	    window.onload = function(){
+	    $('#navMobileBtn').click(function(){
+		    $('#navMobile').toggleClass('nav-mobile--hidden');
+		});
 		
-    </body><!-- end body -->
-
+		$('#mainMenuAccordion').accordion({
+		    active: false,
+            collapsible: true
+		});
+		
+		ymaps.ready(init);
+		
+		}
+	</script>
 </html><!-- end html -->
