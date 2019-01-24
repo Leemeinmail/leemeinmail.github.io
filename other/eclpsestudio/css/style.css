@@ -1529,23 +1529,26 @@ html,body{
 @media(min-width:768px){	
 .footer__anim{
 	display: block;
-    top: 20%;
-    left: 40%;
+    top: 14%;
+    left: 45%;
     position: absolute;
     width: 160px;
     height: 200px;}}
 @media(min-width:992px){	
 .footer__anim{
-	top:150px; left:510px;
+	top:20px; left:510px;
 	position:absolute;
 	width:250px;
     height:280px;}}	
 @media(min-width:1200px){	
 .footer__anim{
-	top:100px; left:610px;
+	top:-10px; left:550px;
 	position:absolute;
 	width:350px;
     height:350px;}}	
+	
+.footer__relative{
+	position:relative;}
 /*------anim-circle-------*/	
 	
 .contacts{
