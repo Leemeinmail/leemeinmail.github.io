@@ -1,18 +1,7 @@
 /*==============header__animation==============*/
-/*=============================================================================*/	
-/* Smooth Trail
-/*=============================================================================*/
-var smoothTrail = function(c, cw, ch){
-/*=============================================================================*/	
-/* Initialize
-/*=============================================================================*/
-  this.init = function(){
-    this.loop();
-  };		
+var smoothTrail = function(c, cw, ch){		
   
-/*=============================================================================*/	
-/* Variables
-/*=============================================================================*/
+/*Variables*/
   var _this = this;
   this.c = c;
   this.ctx = c.getContext('2d');
@@ -30,25 +19,23 @@ var smoothTrail = function(c, cw, ch){
   this.ctx.lineWidth = .1;
   this.ctx.lineJoin = 'round';
   
-  //this.radius = 1;
-  this.radius = 50;
-  this.speed = 0.4;
+  //this.radius = 350;
+  this.radius = 1;
+  this.speed = 0.014;
   this.angle = 0;
   this.arcx = 0;
   this.arcy = 0;
   this.growRadius = true;
   this.seconds = 0;
-  this.milliseconds = 0;
+  this.milliseconds = 1000;
+  //добавил
+  this.size;
   
-/*=============================================================================*/	
-/* Utility Functions
-/*=============================================================================*/				
+/*Utility Functions*/				
   this.rand = function(rMi, rMa){return ~~((Math.random()*(rMa-rMi+1))+rMi);};
   this.hitTest = function(x1, y1, w1, h1, x2, y2, w2, h2){return !(x1 + w1 < x2 || x2 + w2 < x1 || y1 + h1 < y2 || y2 + h2 < y1);};
   
-/*=============================================================================*/	
-/* Create Point
-/*=============================================================================*/
+/*Create Point*/
   this.createPoint = function(x, y){					
     this.trail.push({
       x: x,
@@ -56,9 +43,7 @@ var smoothTrail = function(c, cw, ch){
     });
   };
   
-/*=============================================================================*/	
-/* Update Trail
-/*=============================================================================*/
+/*Update Trail*/
   this.updateTrail = function(){					
     
     if(this.trail.length < this.maxTrail){
@@ -70,21 +55,23 @@ var smoothTrail = function(c, cw, ch){
     }					
   };
   
-/*=============================================================================*/	
-/* Update Arc
-/*=============================================================================*/
+/*Update Arc*/
   this.updateArc = function(){
     this.arcx = (this.cw/2) + Math.sin(this.angle) * this.radius;
-    this.arcy = (this.ch/2) + Math.cos(this.angle) * this.radius;					
+    this.arcy = (this.ch/2) + Math.cos(this.angle) * this.radius;	
     var d = new Date();
     this.seconds = d.getSeconds();
     this.milliseconds = d.getMilliseconds();
     this.angle += this.speed*(this.seconds+1+(this.milliseconds/1000));
-    
+	if(this.angle > 0.79 && this.angle < 0.84){
+		this.angle = 0.1;
+	}
+    //this.angle = rand(1,50);
+	console.log(this.angle);
     if(this.radius <= 1){
       this.growRadius = true;
     } 
-    if(this.radius >= 200){
+    if(this.radius >= this.size){
       this.growRadius = false;
     }
     
@@ -95,9 +82,7 @@ var smoothTrail = function(c, cw, ch){
     }
   };
   
-/*=============================================================================*/	
-/* Render Trail
-/*=============================================================================*/
+/*Render Trail*/
   this.renderTrail = function(){
     var i = this.trail.length;					
     
@@ -113,53 +98,58 @@ var smoothTrail = function(c, cw, ch){
       
       
     };
-    this.ctx.strokeStyle = 'hsla('+this.rand(170,300)+', 100%, '+this.rand(50, 75)+'%, 1)';	
+    this.ctx.strokeStyle = 'hsla('+this.rand(300,350)+', 100%, '+this.rand(40,60)+'%, 1)';	
     this.ctx.stroke();
     this.ctx.closePath();
     
-  };			
- 
+  };
   
-/*=============================================================================*/	
-/* Clear Canvas
-/*=============================================================================*/
+/*Clear Canvas*/
+
   this.clearCanvas = function(){
     //this.ctx.globalCompositeOperation = 'source-over';
     //this.ctx.clearRect(0,0,this.cw,this.ch);
-    
     this.ctx.globalCompositeOperation = 'destination-out';
     this.ctx.fillStyle = 'rgba(0,0,0,.1)';
     this.ctx.fillRect(0,0,this.cw,this.ch);					
     this.ctx.globalCompositeOperation = 'lighter';
   };
   
-/*=============================================================================*/	
-/* Animation Loop
-/*=============================================================================*/
+/*Animation Loop*/
+
   this.loop = function(){
     var loopIt = function(){
-      requestAnimationFrame(loopIt, _this.c);
-      _this.clearCanvas();
-      _this.updateArc();
-      _this.updateTrail();
-      _this.renderTrail();							
+		    //console.log(cosmosIsActiv);
+            requestAnimationFrame(loopIt, _this.c);
+		if(cosmosIsActiv === true){
+            _this.clearCanvas();
+            _this.updateArc();
+            _this.updateTrail();
+            _this.renderTrail();			
+		}
+       };
+        loopIt();		
     };
-    loopIt();					
-  };
+  
+    this.init = function(){
+        this.loop();
+    };
+  
+    this.stop = function(){
+	  
+    }
   
 };
 
-/*=============================================================================*/	
-/* Check Canvas Support
-/*=============================================================================*/
+/*Check Canvas Support*/
+
 var isCanvasSupported = function(){
   var elem = document.createElement('canvas');
   return !!(elem.getContext && elem.getContext('2d'));
 };
+	
+/* Setup requestAnimationFrame*/
 
-/*=============================================================================*/	
-/* Setup requestAnimationFrame
-/*=============================================================================*/
 var setupRAF = function(){
   var lastTime = 0;
   var vendors = ['ms', 'moz', 'webkit', 'o'];
@@ -184,46 +174,91 @@ var setupRAF = function(){
     };
   };
 };			
-
-/*=============================================================================*/	
-/* Define Canvas and Initialize
-/*=============================================================================*/
-  if(isCanvasSupported){
-	var c = document.getElementById('headerAnimation');
-	var container = $('.header__animation');
-	c.width = container.width();
-	c.height = container.height();
-	var cl = new smoothTrail(c, c.width, c.height);
+var cosmosIsActiv = true;
+/*Define Canvas and Initialize*/
+function cosmos(){
+	
+	var cosmosWinWidth;
+    var scrollTopAnim;
+	var cosmosBox = $('#cosmosAnimationBox')
+    var cosmosBottom = cosmosBox.offset().top + cosmosBox.height();
+	var c;
+	var container;
+	
+	function initCanvas(){
+		c = document.getElementById('headerAnimation');
+	    container = $('.header__animation');
+		c.width = container.width();
+	    c.height = container.height();
+	}
+	
+	if(isCanvasSupported){
+		initCanvas(); 
+		var cl = new smoothTrail(c, c.width, c.height);
+	}
+	
+	function determineWindow(cl){
+		cosmosWinWidth = $(window).width();
+		var size;
+	    if(cosmosWinWidth < 767){
+		    return false;
+	    }
+	    if(cosmosWinWidth > 767 && cosmosWinWidth < 991){
+		   cl.size = 350;
+	    }
+	    if(cosmosWinWidth > 991 && cosmosWinWidth < 1199){
+			cl.size = 420;
+	    }
+	    if(cosmosWinWidth > 1199){
+		    cl.size = 500;
+	    }
+	}
+	
+	function cosmosEvent(cl){
+        scrollTop = $(window).scrollTop();
+		console.log('top'+scrollTop);
+		console.log('cosmos'+cosmosBottom);
+		    if(scrollTop > cosmosBottom ){
+	            cosmosIsActiv = false;
+		    }else{
+				cosmosIsActiv = true;
+			}
+	}
+	
+	function cosmosResize(){
+		initCanvas();
+		cl = new smoothTrail(c, c.width, c.height);
+		determineWindow(cl);
+		console.log(cl.size);
+	}
+	
+	function startCosmos(cl){
+	    determineWindow(cl);
+	    cl.init();	
+	}
+	
+	
 	setupRAF();
-    cl.init();
-	/*
-    var c = document.createElement('canvas');
-    c.width = 600;
-    c.height = 600;			
-    var cw = c.width;
-    var ch = c.height;	
-    document.body.appendChild(c);	
-    var cl = new smoothTrail(c, cw, ch);				
+	startCosmos(cl);
+	
+	window.addEventListener( 'resize', cosmosResize );
+	window.addEventListener( 'scroll', cosmosEvent );
     
-    setupRAF();
-    cl.init();*/
-  }
- 
-//=================================Анимация проекты======================================	
-/*
-	click to clear and change hue
+}
+//=================================Анимация проекты(звезда)======================================	
+{
 
-	don't look at or judge this code
-	I just kept tweaking values and
-	adding random things in a messy way
+var starCanvas = document.getElementById( 'starAnim' );	
 	
-	it's full of magic numbers
+if(starCanvas != undefined){
+    var starCtx = starCanvas.getContext( '2d' );
+	if(starCtx != undefined){
+        var starW,starH,starCx,starCy,
+		    StarBranches,startHue, starTick,starWinWidth,starCoef,
+	        starIsActiv,starScrollBottom,starCanvasBox;
+	}
+}	
 	
-	скорее всего vel - длинна веток
-
-
-var c,ctx,w,h,cx,cy,branches,startHue,tick,winWidth,coef,isActiv = false;
-
 function rand( min, max ) {
 	return Math.random() * ( max - min ) + min;
 }
@@ -240,7 +275,7 @@ function Branch( hue, x, y, angle, vel ) {
 	this.angle = angle != undefined ? angle : rand( 0, Math.PI * 1 );
 	this.vel = vel != undefined ? vel : rand( -4, 4 );
 	this.spread = 0;
-	this.tick = 0;
+	this.starTick = 0;
 	this.hue = hue != undefined ? hue : 200;
 	this.life = 1;
 	this.decay = 0.0015;
@@ -267,12 +302,12 @@ Branch.prototype.step = function(i) {
 		});
 		this.angle += rand( -this.spread, this.spread );
 		//this.vel *= 0.99;
-		this.vel *= coef;
+		this.vel *= starCoef;
 		this.spread = this.vel * 0.04;
-		this.tick++;
+		this.starTick++;
 		this.hue += 0.3;
 	} else {
-		branches.splice( i, 1 );
+		StarBranches.splice( i, 1 );
 	}
 };
 
@@ -289,103 +324,124 @@ Branch.prototype.draw = function() {
 		//jitter = 8;
 	if( lastPoint ) {
 		var jitter = 2 + this.life * 6;
-		ctx.beginPath();
-		ctx.moveTo( lastPoint.x, lastPoint.y );
-		ctx.lineTo( point.x + rand( -jitter, jitter ), point.y + rand( -jitter, jitter ) );
-		ctx.lineWidth = 1;
+		starCtx.beginPath();
+		starCtx.moveTo( lastPoint.x, lastPoint.y );
+		starCtx.lineTo( point.x + rand( -jitter, jitter ), point.y + rand( -jitter, jitter ) );
+		starCtx.lineWidth = 1;
 		var alpha = this.life * 0.075;
-		ctx.strokeStyle = 'hsla(' + ( this.hue + rand( -10, 10 ) ) + ', 70%, 40%, ' + alpha + ')';
-		ctx.stroke();
+		starCtx.strokeStyle = 'hsla(' + ( this.hue + rand( -10, 10 ) ) + ', 70%, 40%, ' + alpha + ')';
+		starCtx.stroke();
 	}
 }
 
-function reset() {
-	winWidth = $(window).width();
-	if(winWidth < 767){
-		return false;
-	}
-	if(winWidth > 767 && winWidth < 991){
-		console.log(winWidth);
-		w = 1000;
-	    h = 1000;
-		coef = 0.991;
-	}
-	if(winWidth > 991 && winWidth < 1199){
-		console.log(winWidth);
-		w = 1000;
-	    h = 1100;
-		coef = 0.993;
-	}
-	if(winWidth > 1199){
-		console.log(winWidth);
-		w = 1200;
-	    h = 1200;
-		coef = 0.9935;
-	}
-	cx = w / 2;
-	cy = h / 2;
-	branches.length = 0;
-	c.width = w;
-	c.height = h;
-	tick = 0;
+function star() {
 	
-	for( var i = 0; i < 500; i++ ) {		
-		branches.push( new Branch( startHue, cx, cy) );
-	}
-}
+	starCanvasBox = $('#differentPrjAnim');
+    starBottomAnim = $('#differentPrjAnim').offset().top;
+	starIsActiv = false;
+	
+	function step() {
+	    var i = StarBranches.length;
+	    while( i-- ) { StarBranches[ i ].step( i ) }
+	    starTick++;
+    }
 
-function step() {
-	var i = branches.length;
-	while( i-- ) { branches[ i ].step( i ) }
-	tick++;
-}
-
-//рисует фон и ветки
-function draw() {
-	var i = branches.length;
-	if( tick < 450 ) {
-		ctx.save();
-		ctx.globalCompositeOperation = 'lighter';
-		ctx.globalAlpha = 0.002;
-		ctx.translate( cx, cy );
-		var scale = 1 + tick * 0.00025 ;
-		ctx.scale( scale, scale );
-		ctx.translate( -cx, -cy );
-		ctx.drawImage( c, rand( -150, 150 ), rand( -150, 150 ) );
-		ctx.restore();
+    //рисует фон и ветки
+    function draw() {
+	    var i = StarBranches.length;
+	    if( starTick < 450 ) {
+		    starCtx.save();
+		    starCtx.globalCompositeOperation = 'lighter';
+		    starCtx.globalAlpha = 0.002;
+		    starCtx.translate( starCx, starCy );
+		    
+			var scale = 1 + starTick * 0.00025 ;
+		    
+			starCtx.scale( scale, scale );
+		    starCtx.translate( -starCx, -starCy );
+		    starCtx.drawImage( starCanvas, rand( -150, 150 ), rand( -150, 150 ) );
+		    starCtx.restore();
+	    }	
+	    starCtx.globalCompositeOperation = 'lighter';
+		    while( i-- ) { StarBranches[ i ].draw() }
+    } 
+	
+	function initVariables(width,height,coef){
+		starW = width;
+	    starH = height;
+	 	starCoef = coef;
 	}
 	
-	ctx.globalCompositeOperation = 'lighter';
-		while( i-- ) { branches[ i ].draw() }
-}
-
-function loop() {
-	requestAnimationFrame( loop );
-	step();
-	draw();
-	step();
-	draw();
-}
-
-//window.addEventListener( 'resize', reset );
-window.addEventListener( 'click', function() {
-	startHue += 60;
-	reset();
-});
-
-function star(isActiv) {
-	if(isActiv === false){
-	    c = document.getElementById( 'differentPrjAnim' );
-	    ctx = c.getContext( '2d' );
+	function determineWindow(){
+		starWinWidth = $(window).width();
+	    if(starWinWidth < 767){
+		    return false;
+	    }
+	    if(starWinWidth > 767 && starWinWidth < 991){
+		    initVariables(1000,1000,0.991);
+	    }
+	    if(starWinWidth > 991 && starWinWidth < 1199){
+			initVariables(1000,1100,0.993);
+	    }
+	    if(starWinWidth > 1199){
+		    initVariables(1200,1200,0.9935);
+	    }
+	}
+	
+	function reset() {
+		determineWindow();
+		StarBranches = [];
+	    starCx = starW / 2;
+	    starCy = starH / 2;
+	    StarBranches.length = 0;
+	    starCanvas.width = starW;
+	    starCanvas.height = starH;
+	    starTick = 0;
+	
+	    for( var i = 0; i < 500; i++ ) {		
+		    StarBranches.push( new Branch( startHue, starCx, starCy) );
+	    }
+    }
+	
+	function loop() {
+		
+		if(starCtx === undefined){
+			console.log('контекст холста не найден');
+			return false;
+		}
+	    requestAnimationFrame( loop );
+	    step();
+	    draw();
+	    step();
+	    draw();
+    }
+	
+	function starOn(){
 	    startHue = 220;
-	    branches = [];
+	    StarBranches = [];
 		reset();
 	    loop();
-        isActiv = true;
 	}
+	
+	function startEvent(){
+		scrollBottom = $(window).scrollTop() + $(window).height();
+		if(starBottomAnim < scrollBottom){
+	        if(starIsActiv === false){
+			    starOn(); 
+                starIsActiv = true; 				
+			}
+		}
+	}
+	
+	//window.addEventListener( 'resize', reset );
+	window.addEventListener( 'scroll', startEvent );
+    window.addEventListener( 'click', function() {
+	    startHue += 60;
+	    reset();
+    });
 }
 	
-}*/
+}
 //=================================Анимация футер======================================//
 /*
     1.При загрузке определяю разрешение
@@ -395,7 +451,7 @@ function star(isActiv) {
 {
 var bottomCanvas = document.getElementById('square');
 var bottomCanvasBox = $('#footerAnim');
-var starBottomAnim;
+var squareBottomAnim;
 //проверяю найден ли холст
 if(bottomCanvas != undefined){
 	//задаю контекст, создаю переменные если он поддерживается
@@ -490,7 +546,7 @@ function square(){
 	*/
 	//расчитываю удаленность от верхна страницы при первой инициализации
     //что бы включить по достижении	
-	starBottomAnim = bottomCanvasBox.offset().top + 100;
+	squareBottomAnim = bottomCanvasBox.offset().top + 100;
 	var scrollBottom;
 	squareIsActiv = false;
 	squarePause = false;
@@ -530,12 +586,10 @@ function square(){
 	    }
     }
 	
-	function controllAnimation(){}
-	
 	function initAnimation(){
 		//расчитываю размер окна, запускаю анимацию
 		//расчитываю удаленность от верха страницы при каждой инициализации
-        starBottomAnim = bottomCanvasBox.offset().top + 100;
+        squareBottomAnim = bottomCanvasBox.offset().top + 100;
 		determineWindow();
 		squareAnimLoop();
 	}
@@ -549,17 +603,17 @@ function square(){
 			то, если не пауза ставлю на паузу
  		*/ 
 		scrollBottom = $(window).scrollTop() + $(window).height();
-		if(starBottomAnim < scrollBottom){
+		if(squareBottomAnim < scrollBottom){
 	        if(squareIsActiv === false){
 			    initAnimation();
                 squareIsActiv = true;	
                 squarePause = false;				
 			}else{
 				squarePause = false;
-				squareAnimLoop();
+				//squareAnimLoop();
 			}
 		}
-		if(starBottomAnim > scrollBottom){
+		if(squareBottomAnim > scrollBottom){
 			if(squarePause === false){
 			    squarePause = true;
 		    }

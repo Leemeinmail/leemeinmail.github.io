@@ -15,8 +15,8 @@
 	   
 		<header class='header' >
 		    
-			<div class='header__animation'>
-			    <canvas class='canvas' id="headerAnimation"></canvas>
+			<div id='cosmosAnimationBox' class='header__animation'>
+			    <canvas class='' id="headerAnimation"></canvas>
 			</div><!-- end header__animation -->
 			
 		    <div class='header__top header__section'>
@@ -49,8 +49,12 @@
 			    <div class='slogan'>
 			        <span class='slogan__item' >Мы</span> 
 				    <span class='slogan__item' >делаем</span>
-				    <span class='slogan__item slogan__underline slogan__underline--item1 slogan__item--ligh underline' >хорошие</span>
-				    <span class='slogan__item slogan__underline slogan__underline--item2 slogan__item--dark underline' >вещи</span>
+				    <span class='slogan__item slogan__underline slogan__underline--item1 slogan__item--ligh underline' >
+					    хорошие
+					</span>
+				    <span class='slogan__item slogan__underline slogan__underline--item2 slogan__item--dark underline' >
+					    вещи
+					</span>
 			    </div>
 			</div>
 		
@@ -509,8 +513,8 @@
 					    Любим делать разные проекты
 					</span>
 					
-					<div class='different-prj__anim' >
-					    <canvas id='differentPrjAnim'></canvas>
+					<div id='differentPrjAnim' class='different-prj__anim' >
+					    <canvas id='starAnim'></canvas>
 					</div>
 					
 					<div class='different-prj__content'>
@@ -800,7 +804,8 @@
                 },
 			]
 		});
-		
+		cosmos();
+		star();
 		square();
 	}
 	</script>

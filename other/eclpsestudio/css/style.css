@@ -242,10 +242,11 @@ html,body{
 /*------header-------*/	
 .header{
 	background:#000;}
-@media(min-width:992px){
+@media(min-width:768px){
 .header{
 	position:relative;
-    background:#000;}}	
+    background:#000;
+	overflow:hidden;}}	
 
 .header__section{
 	width:290px;
@@ -259,6 +260,11 @@ html,body{
 	    max-width:1440px;}}
 @media(min-width:992px){	
     .header__section{}}
+
+.header__top,
+.header__slogan{
+	position:relative;
+	z-index:1;}
 	
 .header__top{
 	display: -webkit-box;
@@ -268,27 +274,39 @@ html,body{
 	-webkit-box-align:center;
 	   -ms-flex-align:center;
           align-items:center;	   
-		   
+
     flex-direction:column;}	
 @media(min-width:768px){	
-.header__top{		  
+.header__top{	
 	padding-top:26px;
-	
 	flex-direction:row;
-	
     	-webkit-box-pack:justify;
             -ms-flex-pack:justify;
     justify-content:space-between;}}
 
 .header__animation{
 	display:none;}		  
-@media(min-width:992px){		  
+@media(min-width:768px){		  
 .header__animation{
+	display:block;
 	position:absolute;
-	top:0;right:0;
+	top:40px;right:-270px;
 	width:700px;
 	height:700px;
     z-index:0;}}
+@media(min-width:992px){		  
+.header__animation{
+	top:80px;right:-300px;
+	width:850px;
+	height:850px;}}
+@media(min-width:1200px){		  
+.header__animation{
+	width:1100px;
+	height:1100px;
+	top:20px;right:-390px;}}
+@media(min-width:1440px){		  
+.header__animation{
+	top:30px;right:-300px;}}	
 	
 .logo{
 	width:200px;}
@@ -335,8 +353,7 @@ html,body{
 
 .navigation__link{}	
 @media(min-width:992px){	
-.navigation__link{}}
-	
+.navigation__link{}}	
 /*------slogan-------*/	
 .slogan{
 	font-size:50px;
@@ -366,11 +383,31 @@ html,body{
 	font-weight: 900;
 	letter-spacing:2.4px;}
 	
+@keyframes background {
+    0% {
+	    background-position:0 0;
+    }
+	
+	100%{
+        background-position:0 200%;   
+    }
+}	
+	
 .slogan__item--ligh{
-	color:#da0041;}
+	color: #da0041;
+	background-image:linear-gradient(0deg, #da0041 20%, #8000ff 40%, #8000ff 60%, #da0041 80%);
+	background-size:auto 200%;
+	-webkit-text-fill-color: transparent;
+           -webkit-background-clip: text;
+    animation: background 3s infinite linear;}   
 
 .slogan__item--dark{
-	color:#8000ff;}
+	color:#8000ff;
+	background-image:linear-gradient(0deg, #8000ff 20%, #da0041 40%, #da0041 60%,#8000ff 80%);
+	background-size:auto 200%;
+	-webkit-text-fill-color: transparent;
+           -webkit-background-clip: text;
+    animation: background 3s infinite linear;}
 
 .slogan__underline:after{
 	}	
@@ -385,6 +422,9 @@ html,body{
 .slogan__underline--item1,
 .slogan__underline--item2{
 	font-style:italic;}	
+	
+.slogan__underline--item2{
+	width:350px;}	
 	
 .slogan__underline--item1:after{
 	background:#da0041;}	
