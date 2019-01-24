@@ -208,3 +208,414 @@ var setupRAF = function(){
     setupRAF();
     cl.init();*/
   }
+ 
+//=================================Анимация проекты======================================	
+/*
+	click to clear and change hue
+
+	don't look at or judge this code
+	I just kept tweaking values and
+	adding random things in a messy way
+	
+	it's full of magic numbers
+	
+	скорее всего vel - длинна веток
+
+
+var c,ctx,w,h,cx,cy,branches,startHue,tick,winWidth,coef,isActiv = false;
+
+function rand( min, max ) {
+	return Math.random() * ( max - min ) + min;
+}
+
+function randInt( min, max ) {
+	return Math.floor( min + Math.random() * ( max - min + 1 ) );
+};
+
+function Branch( hue, x, y, angle, vel ) {
+	var move = 15;
+	this.x = x + rand( -move, move );
+	this.y = y + rand( -move, move );
+	this.points = [];
+	this.angle = angle != undefined ? angle : rand( 0, Math.PI * 1 );
+	this.vel = vel != undefined ? vel : rand( -4, 4 );
+	this.spread = 0;
+	this.tick = 0;
+	this.hue = hue != undefined ? hue : 200;
+	this.life = 1;
+	this.decay = 0.0015;
+	this.dead = false;
+	
+	this.points.push({
+		x: this.x,
+		y: this.y
+	});
+}
+
+//что то с ветками
+Branch.prototype.step = function(i) {
+	this.life -= this.decay;
+	if( this.life <= 0 ) {
+		this.dead = true;	
+	}
+	
+	if( !this.dead ) {
+		var lastPoint = this.points[ this.points.length - 1 ];
+		this.points.push({
+			x: lastPoint.x + Math.cos( this.angle ) * this.vel,
+			y: lastPoint.y + Math.sin( this.angle ) * this.vel
+		});
+		this.angle += rand( -this.spread, this.spread );
+		//this.vel *= 0.99;
+		this.vel *= coef;
+		this.spread = this.vel * 0.04;
+		this.tick++;
+		this.hue += 0.3;
+	} else {
+		branches.splice( i, 1 );
+	}
+};
+
+//рисует ветки
+Branch.prototype.draw = function() {
+	if( !this.points.length || this.dead ) {
+		return false;
+	}
+	
+	var length = this.points.length,
+		i = length - 1,
+		point = this.points[ i ],
+		lastPoint = this.points[ i - randInt( 5, 120 ) ];
+		//jitter = 8;
+	if( lastPoint ) {
+		var jitter = 2 + this.life * 6;
+		ctx.beginPath();
+		ctx.moveTo( lastPoint.x, lastPoint.y );
+		ctx.lineTo( point.x + rand( -jitter, jitter ), point.y + rand( -jitter, jitter ) );
+		ctx.lineWidth = 1;
+		var alpha = this.life * 0.075;
+		ctx.strokeStyle = 'hsla(' + ( this.hue + rand( -10, 10 ) ) + ', 70%, 40%, ' + alpha + ')';
+		ctx.stroke();
+	}
+}
+
+function reset() {
+	winWidth = $(window).width();
+	if(winWidth < 767){
+		return false;
+	}
+	if(winWidth > 767 && winWidth < 991){
+		console.log(winWidth);
+		w = 1000;
+	    h = 1000;
+		coef = 0.991;
+	}
+	if(winWidth > 991 && winWidth < 1199){
+		console.log(winWidth);
+		w = 1000;
+	    h = 1100;
+		coef = 0.993;
+	}
+	if(winWidth > 1199){
+		console.log(winWidth);
+		w = 1200;
+	    h = 1200;
+		coef = 0.9935;
+	}
+	cx = w / 2;
+	cy = h / 2;
+	branches.length = 0;
+	c.width = w;
+	c.height = h;
+	tick = 0;
+	
+	for( var i = 0; i < 500; i++ ) {		
+		branches.push( new Branch( startHue, cx, cy) );
+	}
+}
+
+function step() {
+	var i = branches.length;
+	while( i-- ) { branches[ i ].step( i ) }
+	tick++;
+}
+
+//рисует фон и ветки
+function draw() {
+	var i = branches.length;
+	if( tick < 450 ) {
+		ctx.save();
+		ctx.globalCompositeOperation = 'lighter';
+		ctx.globalAlpha = 0.002;
+		ctx.translate( cx, cy );
+		var scale = 1 + tick * 0.00025 ;
+		ctx.scale( scale, scale );
+		ctx.translate( -cx, -cy );
+		ctx.drawImage( c, rand( -150, 150 ), rand( -150, 150 ) );
+		ctx.restore();
+	}
+	
+	ctx.globalCompositeOperation = 'lighter';
+		while( i-- ) { branches[ i ].draw() }
+}
+
+function loop() {
+	requestAnimationFrame( loop );
+	step();
+	draw();
+	step();
+	draw();
+}
+
+//window.addEventListener( 'resize', reset );
+window.addEventListener( 'click', function() {
+	startHue += 60;
+	reset();
+});
+
+function star(isActiv) {
+	if(isActiv === false){
+	    c = document.getElementById( 'differentPrjAnim' );
+	    ctx = c.getContext( '2d' );
+	    startHue = 220;
+	    branches = [];
+		reset();
+	    loop();
+        isActiv = true;
+	}
+}
+	
+}*/
+//=================================Анимация футер======================================//
+/*
+    1.При загрузке определяю разрешение
+	2.При изменении монитора определяю разрешение
+	3.Выключаю на мобилках
+*/
+{
+var bottomCanvas = document.getElementById('square');
+var bottomCanvasBox = $('#footerAnim');
+var starBottomAnim;
+//проверяю найден ли холст
+if(bottomCanvas != undefined){
+	//задаю контекст, создаю переменные если он поддерживается
+    var BottomCtx = bottomCanvas.getContext('2d');
+	if(BottomCtx != undefined){
+        var /*dpr, devicePixelRatio,*/ bottomW, bottomH, bottomCX, bottomCY, count, coefRadius, squareIsActiv, squarePause;
+		/* 
+		dpr = devicePixelRatio не использую кооличество пикселей в единице чего? задается в мета initial-scale=1.0;
+        bottomW = ширина холста;
+        var bottomH = высота холста;
+        var bottomCX = координата x начала отрисовки?;
+        var bottomCY = координата y начала отрисовки?;
+        var count = колличесво колец;
+		coefRadius = кеф радиуса анимации
+		squareIsActiv = активация анимации по достижении контейнера родителя
+		squarePause = пауза анимации
+        //BottomCtx.scale(dpr, dpr); увелечение в зависимости от */
+	}
+}
+
+//функция анимации
+function squareAnimLoop() {
+    //ошибки холста
+	if(typeof bottomCanvas != 'object' || typeof BottomCtx != 'object'){
+        console.log('холст или контекст не верного типа');
+		return false;
+    }
+	//ошибки входящих данных
+	if(typeof bottomCX != 'number'){
+		console.log( ' неверный тип переменной bottomCX = ' + typeof bottomCount);
+		return false;
+	}
+	if(typeof bottomCY != 'number'){
+		console.log( ' неверный тип переменной bottomCY = ' + typeof bottomCount);
+		return false;
+	}
+	if(typeof coefRadius != 'number'){
+		console.log( ' неверный тип переменной coefRadius = ' + typeof bottomCount);
+		return false;
+	}
+	if(typeof bottomCount != 'number'){
+		console.log( ' неверный тип переменной bottomCount = ' + typeof bottomCount);
+		return false;
+	}
+	if(typeof squarePause != 'boolean'){
+		console.log( ' неверный тип переменной squarePause = ' + typeof bottomCount);
+	}
+	
+	
+        requestAnimationFrame(squareAnimLoop);
+	
+	if(squarePause === false){
+        BottomCtx.clearRect(0, 0, bottomW, bottomH);
+        var now = Date.now();
+        var mod = Math.sin(now * 0.002);
+        var modj = Math.sin(now * 0.004);
+        var countk = 1 + 7 + mod * 8;
+        var i = Math.ceil(countk);
+    
+	    while(i--) {
+            let segments = 3 + i;
+            BottomCtx.beginPath();
+        
+		    for(let j = 0; j < segments; j++) {
+                let a = (j / segments) * Math.PI * 2 - Math.PI * -0.5 + modj * 0.1;
+                a += (1 / segments) * Math.PI;
+			    //радиус
+                //let r = 45 + i * 11.5 + mod * 25;
+			    let r = coefRadius + i * 11.5 + mod * 25;
+                let x = bottomCX + Math.cos(a) * r;
+                let y = bottomCY + Math.sin(a) * r + (countk - segments) * 3.3 * mod;
+                BottomCtx[j === 0 ? 'moveTo' : 'lineTo'](x, y);
+            }
+        
+		    BottomCtx.closePath();
+            BottomCtx.lineWidth = 2 - (i / bottomCount) * 1.5;
+            BottomCtx.fillStyle = '#000';
+            BottomCtx.fill();
+            BottomCtx.strokeStyle = `hsla(0, 100%, 100%, ${0.02 + ((bottomCount - i) / bottomCount) * 0.98})`;
+            BottomCtx.stroke();
+        }
+	}	
+}
+
+//функция управления анимации
+function square(){
+	/*
+	    1. Определяю размер экрана
+		2. В зависимости от него инициализирую переменные 
+		3. запускаю цикл
+		4. При изменении размера начать с пункта 1
+	*/
+	//расчитываю удаленность от верхна страницы при первой инициализации
+    //что бы включить по достижении	
+	starBottomAnim = bottomCanvasBox.offset().top + 100;
+	var scrollBottom;
+	squareIsActiv = false;
+	squarePause = false;
+	
+	function initVariables(count, radius){
+		bottomW = bottomCanvasBox.innerWidth();
+        bottomH = bottomCanvasBox.innerHeight();
+        bottomCX = bottomW / 2;
+        bottomCY = bottomH / 2;
+        bottomCount = count;
+		coefRadius = radius;
+		bottomCanvas.width = bottomW; 
+        bottomCanvas.height = bottomH;
+	}
+	
+	function determineWindow(){
+	    var winWidth = $(window).width();
+
+	    if(winWidth < 767){
+		    //выключаю для телефонов
+		    return false;
+	    }
+		
+	    if(winWidth > 767 && winWidth < 991){
+            //средние разрешения
+		    initVariables(5, 0);
+	    }
+	    
+		if(winWidth > 991 && winWidth < 1199){
+            //средние разрешения
+			initVariables(10, 0);
+	    }  
+	    
+		if(winWidth > 1199){
+            //широкие экраны;
+			initVariables(14, 1);
+	    }
+    }
+	
+	function controllAnimation(){}
+	
+	function initAnimation(){
+		//расчитываю размер окна, запускаю анимацию
+		//расчитываю удаленность от верха страницы при каждой инициализации
+        starBottomAnim = bottomCanvasBox.offset().top + 100;
+		determineWindow();
+		squareAnimLoop();
+	}
+	
+	function test(){
+		/*
+		    если нижняя часть экрана достигла до верха контейнера анимации
+			то проверяю запущенна ли она, если нет, то запускаю
+			если да то, отжимаю паузу.
+			если анимация запущена но экран не достиг контейнера, 
+			то, если не пауза ставлю на паузу
+ 		*/ 
+		scrollBottom = $(window).scrollTop() + $(window).height();
+		if(starBottomAnim < scrollBottom){
+	        if(squareIsActiv === false){
+			    initAnimation();
+                squareIsActiv = true;	
+                squarePause = false;				
+			}else{
+				squarePause = false;
+				squareAnimLoop();
+			}
+		}
+		if(starBottomAnim > scrollBottom){
+			if(squarePause === false){
+			    squarePause = true;
+		    }
+		}
+	}
+	//изменяю при ресаизе
+    window.addEventListener( 'resize', initAnimation );
+    //включаю по скроллу
+	window.addEventListener( 'scroll', test );
+    //включение всегда
+	//initAnimation();	
+}
+
+}//ограничение области видимости
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

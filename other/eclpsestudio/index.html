@@ -509,6 +509,10 @@
 					    Любим делать разные проекты
 					</span>
 					
+					<div class='different-prj__anim' >
+					    <canvas id='differentPrjAnim'></canvas>
+					</div>
+					
 					<div class='different-prj__content'>
 					    <span class='second-title second-title--light different-prj__secondTitle' >
 						    Комплексные проеткы
@@ -692,7 +696,7 @@
 							<div class='slider__descr'>
 							
 							    <div class='slider__name'>
-								    Павел Воронин
+								    Павел<br/>Воронин
 								</div>
 								
 								<div class='slider__prof'>
@@ -724,6 +728,11 @@
 		
 	    <footer class='footer main__item' >
 		    <div class='section'>
+			
+			<div id='footerAnim' class='footer__anim'>
+			    <canvas id='square' class='' ></canvas>
+			</div>
+			
 			<div class='footer__top'>
 			    
 				<div class='footer__col-1'>
@@ -772,7 +781,9 @@
 		</footer>
 		
     </body><!-- end body -->
-	
+	<script src="extern/jquery-3.3.1.js"></script>
+	<script src="extern/slick/slick.js"></script>
+    <script src="js/common.js"></script>
 	<script>
 	window.onload = function(){
 	    $('#clientsSlider').slick({
@@ -789,10 +800,8 @@
                 },
 			]
 		});
+		
+		square();
 	}
 	</script>
-	
-	<script src="extern/jquery-3.3.1.js"></script>
-	<script src="extern/slick/slick.js"></script>
-    <script src="js/common.js"></script>
 </html><!-- end html -->

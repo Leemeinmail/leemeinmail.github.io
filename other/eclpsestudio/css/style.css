@@ -1120,7 +1120,8 @@ html,body{
 .different-prj{
 	position:relative;
 	background-color:#14141e;
-	padding:22px 0;}
+	padding:22px 0;
+	overflow:hidden;}
 @media(min-width:480px){
 	.different-prj{
 		padding:32px 0;}}
@@ -1191,6 +1192,28 @@ html,body{
 	.different-prj__secondTitle{
 		padding:55px 0 25px 0;}}
 
+.different-prj__anim{}	
+@media(min-width:768px){
+	.different-prj__anim{
+		display:flex;
+	    align-items:center;
+	    justify-content:center;
+	    position:absolute;
+		width:1000px;height:1000px;
+	    top:35px; right:-435px;
+        overflow:hidden;
+		cursor:pointer;}}	
+@media(min-width:992px){
+	.different-prj__anim{
+        height:1100px;
+		top:105;}}	
+@media(min-width:1200px){
+.different-prj__anim{
+	width:1200px;height:1200px;
+	top:55px; right:-410px;}}		
+		
+#differentPrjAnim{}		
+		
 /*------anim-circle-------*/		
 .clients{
 	}
@@ -1219,9 +1242,11 @@ html,body{
 		margin:0 0 0 0;}}
 @media(min-width:768px){
 	.clients__slider{
-		margin:46px 0 0 0;}}	
+		width:450px;
+		margin:46px auto 0 auto;}}	
 @media(min-width:992px){
 	.clients__slider{
+		width:100%;
 		margin:60px 0 0 0;}}
 @media(min-width:1200px){
 	.clients__slider{
@@ -1232,7 +1257,7 @@ html,body{
 		
 /*---------slider-----*/		
 .slider{}
-	
+			
 .slider__item{}
 @media(min-width:480px){
 	.slider__item{}}
@@ -1448,16 +1473,7 @@ html,body{
 @media(min-width:768px){
 	.footer__top{
 		flex-direction:row;
-		justify-content:space-between;}}	
-/*@media(min-width:992px){
-	.footer__top{
-		width:620px;}}
-@media(min-width:1200px){
-	.footer__top{
-		width:720px;}}	
-@media(min-width:1440px){
-	.footer__top{
-		width:860px;}}*/	
+		justify-content:space-between;}}		
 	
 .footer__col-1{}
 
@@ -1466,6 +1482,31 @@ html,body{
 .footer__bottom{
 	display:flex;
 	padding:7em 0 0 0;}
+	
+/*------anim-circle-------*/	
+.footer__anim{
+	display:block;}
+@media(min-width:768px){	
+.footer__anim{
+	display: block;
+    top: 20%;
+    left: 40%;
+    position: absolute;
+    width: 160px;
+    height: 200px;}}
+@media(min-width:992px){	
+.footer__anim{
+	top:150px; left:510px;
+	position:absolute;
+	width:250px;
+    height:280px;}}	
+@media(min-width:1200px){	
+.footer__anim{
+	top:100px; left:610px;
+	position:absolute;
+	width:350px;
+    height:350px;}}	
+/*------anim-circle-------*/	
 	
 .contacts{
 	padding-top:1.5em;
