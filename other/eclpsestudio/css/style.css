@@ -1744,11 +1744,22 @@ html,body{
 	width:100%;}	
 	
 .form__input{
-	border-top:1px solid #c4c4c4;
-	border-bottom:1px solid #c4c4c4;
-	color:#cccccc;}
+	border-top:1px solid;
+	border-bottom:1px solid;
+	border-color:#4c4c4c;
+	color:#000;}
 
-.form__input::placeholder {
+.form__wrong{
+	border-color:red;
+	color:red;}
+
+.form__input--wrong:before{
+	top:0;}
+
+.form__input--wrong:after{
+	bottom:0;}
+	
+.form__input:placeholder {
   color:#cccccc;}
 	
 .form__label{

@@ -811,7 +811,7 @@
 						
 						<div class='form__section'>
 						    <label class='callback__label form__label' for=''>Мой номер телефона</label>
-							<input class='input callback__input form__input' type='text' name='callbakPhone' placeholder='ваш номер телефона'/>
+							<input class='input phone callback__input form__input' type='text' name='callbakPhone' placeholder='ваш номер телефона'/>
 						</div>   
 						
 						<div class='form__section'>
@@ -830,7 +830,9 @@
 						</div>
 						
 						<div class='form__btn-box'>
-						    <input class='form__btn btn btn--dark input' type='submit' value='отправить письмо'>
+						    <button id='callBackSend' class='form__btn btn btn--dark input' value=''>
+							    отправить письмо
+							</button>
 					    </div>
 						
 					</div>
@@ -856,6 +858,7 @@
 	<script src="extern/slick/slick.js"></script>
     <script src="js/common.js"></script>
 	<script src="js/animation.js"></script>
+	<script src="extern/maskedinput/jquery.maskedinput.min.js"></script>
 	<script>
 	window.onload = function(){
 	    $('#clientsSlider').slick({
