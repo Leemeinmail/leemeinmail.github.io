@@ -471,6 +471,7 @@
 				
 			</div><!-- end working-process -->
 			
+			<!--
 			<div class='mobile-develop'>
 			
 			    <div class='mobile-develop__left'>
@@ -505,7 +506,9 @@
 				        <img class='img' src='img/develop-mobile-second.png' />
 					</div>
 				</div>
-			</div><!-- end mobile app -->
+			</div><!-- end mobile app 
+			
+			-->
 			
 			<div class='different-prj'>
 			    <div class='section'>
@@ -748,9 +751,9 @@
 					    мы знаем, как делать их хорошо
 					</span>
 					
-					<a href ='' class='footer__link footer__link--paddingTop footer__text' >
-					    запустить проект в работу
-					</a>
+					<span href ='' id='callbackBtn' class='footer__link footer__link--paddingTop footer__text' >
+					    Запустить проект в работу
+					</span>
 					
 			    </div>
 			
@@ -784,10 +787,75 @@
 			</div>
 		</footer>
 		
+		<div id='callBack' class='callback'>
+		
+		    
+			<div class='callback__content' >
+			    
+                <div id='callbackClosed' class='callback__closed'>
+			    
+			    </div>
+				
+			    <span class='callback__title' >
+				    Здравствуйте
+				</span>
+				
+				<form class='callback__form form' action='' >
+				    
+					<div class='form__col-1'>
+					    
+						<div class='form__section'>
+						    <label class='form__label callback__label' for='callbakName'>Мое имя</label>
+							<input class='input callback__input form__input' type='text' name='callbakName' placeholder='ваше имя'/>
+						</div>    
+						
+						<div class='form__section'>
+						    <label class='callback__label form__label' for=''>Мой номер телефона</label>
+							<input class='input callback__input form__input' type='text' name='callbakPhone' placeholder='ваш номер телефона'/>
+						</div>   
+						
+						<div class='form__section'>
+						    <label class='callback__label form__label' for='callbakEmail'>Отправить ответ на почту</label>
+							<input class='input callback__input form__input' type='email' name='callbakEmail' placeholder='ваша электронная почта'/>
+						</div>
+						
+					</div>
+					
+					<div class='form__col-2'>
+					    
+						<div class='form__section'>
+						    <label class='callback__label form__label' for='callbakMessage'>Сообщение</label>
+							<textarea class='input form__input form__textarea callback__input' 
+							type='text' name='callbakMessage' placeholder='ваше сообщение '/></textarea>
+						</div>
+						
+						<div class='form__btn-box'>
+						    <input class='form__btn btn btn--dark input' type='submit' value='отправить письмо'>
+					    </div>
+						
+					</div>
+					
+					<div class='form__col-3'>
+					    <div class='form__section'>
+					        <span class='form__caption' >
+						        Мы свяжемся с вами в течение 
+							    одного рабочего дня, чтобы 
+							    договориться о звонке.
+						    </span>
+						<div>
+					</div>
+					
+				</form>
+				
+			</div>
+			
+		</div>
+		
     </body><!-- end body -->
 	<script src="extern/jquery-3.3.1.js"></script>
 	<script src="extern/slick/slick.js"></script>
     <script src="js/common.js"></script>
+	<script src="js/animation.js"></script>
 	<script>
 	window.onload = function(){
 	    $('#clientsSlider').slick({
@@ -804,9 +872,36 @@
                 },
 			]
 		});
-		cosmos();
+		//cosmos();
 		star();
 		square();
 	}
 	</script>
 </html><!-- end html -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
