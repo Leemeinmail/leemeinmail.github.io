@@ -581,7 +581,11 @@ html,body{
 .portfolio__caption span{
 	display:block;
 	background:#fff;}
-		
+	
+.rais-convers .portfolio__caption span{
+	display:block;
+	background:transparent;}
+	
 .portfolio__caption--light{
 	color:#fff;}
 	
