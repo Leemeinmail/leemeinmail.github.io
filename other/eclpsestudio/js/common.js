@@ -65,7 +65,7 @@ $('#callBackSend').click(function(e){
 		return false;
 	}
 	
-	if(!emailVal ||){
+	if(!emailVal){
 		wrong(email,1000);
 		return false;
 	}
