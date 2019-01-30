@@ -82,7 +82,7 @@ var smoothTrail = function(c, cw, ch){
   };
   
 /*Render Trail*/
-  this.renderTrail = function(){
+this.renderTrail = function(){
     var i = this.trail.length;					
     
     this.ctx.beginPath();
@@ -116,17 +116,14 @@ var smoothTrail = function(c, cw, ch){
   
 /*Animation Loop*/
 
-  this.loop = function(){
-    var loopIt = function(){
-		    //console.log(cosmosIsActiv);
-            requestAnimationFrame(loopIt, _this.c);
-		if(cosmosIsActiv === true){
+    this.loop = function(){
+        var loopIt = function(){
+			requestAnimationFrame(loopIt, _this.c);
             _this.clearCanvas();
             _this.updateArc();
             _this.updateTrail();
             _this.renderTrail();			
-		}
-       };
+        };
         loopIt();		
     };
   
@@ -213,10 +210,8 @@ function cosmos(){
 	    }
 	}
 	
-	function cosmosEvent(cl){
+	function cosmosEvent(){
         scrollTop = $(window).scrollTop();
-		console.log('top'+scrollTop);
-		console.log('cosmos'+cosmosBottom);
 		    if(scrollTop > cosmosBottom ){
 	            cosmosIsActiv = false;
 		    }else{
@@ -228,7 +223,7 @@ function cosmos(){
 		initCanvas();
 		cl = new smoothTrail(c, c.width, c.height);
 		determineWindow(cl);
-		console.log(cl.size);
+		//console.log(cl.size);
 	}
 	
 	function startCosmos(cl){
@@ -239,8 +234,10 @@ function cosmos(){
 	
 	setupRAF();
 	startCosmos(cl);
-	
-	window.addEventListener( 'resize', cosmosResize );
+	$(window).resize(function(cl){
+		
+	});
+	//window.addEventListener( 'resize', cosmosResize );
 	window.addEventListener( 'scroll', cosmosEvent );
     
 }
@@ -335,13 +332,15 @@ Branch.prototype.draw = function() {
 
 function star() {
 	
+	this.start = true;
+	
 	starCanvasBox = $('#differentPrjAnim');
     starBottomAnim = $('#differentPrjAnim').offset().top;
 	starIsActiv = false;
 	
 	function step() {
 	    var i = StarBranches.length;
-	    while( i-- ) { StarBranches[ i ].step( i ) }
+	    while( i-- ) {StarBranches[ i ].step( i ) }
 	    starTick++;
     }
 
@@ -361,8 +360,14 @@ function star() {
 		    starCtx.drawImage( starCanvas, rand( -150, 150 ), rand( -150, 150 ) );
 		    starCtx.restore();
 	    }	
-	    starCtx.globalCompositeOperation = 'lighter';
-		    while( i-- ) { StarBranches[ i ].draw() }
+	    
+		starCtx.globalCompositeOperation = 'lighter';
+		if(i > 0){
+		    while( i-- ) {StarBranches[ i ].draw() }
+	    }else{
+			//console.log('end');
+			this.start = false;
+		}
     } 
 	
 	function initVariables(width,height,coef){
@@ -388,6 +393,7 @@ function star() {
 	}
 	
 	function reset() {
+		this.start = true;
 		determineWindow();
 		StarBranches = [];
 	    starCx = starW / 2;
@@ -400,6 +406,8 @@ function star() {
 	    for( var i = 0; i < 500; i++ ) {		
 		    StarBranches.push( new Branch( startHue, starCx, starCy) );
 	    }
+		
+		loop();
     }
 	
 	function loop() {
@@ -408,11 +416,16 @@ function star() {
 			console.log('контекст холста не найден');
 			return false;
 		}
-	    requestAnimationFrame( loop );
-	    step();
-	    draw();
-	    step();
-	    draw();
+		if(this.start){
+	        requestAnimationFrame( loop );
+	        step();
+	        draw();
+	        step();
+	        draw();
+		}else{
+			//console.log('end loop');
+			return false;
+		}
     }
 	
 	function starOn(){
@@ -432,7 +445,7 @@ function star() {
 		}
 	}
 	
-	//window.addEventListener( 'resize', reset );
+	window.addEventListener( 'resize', reset );
 	window.addEventListener( 'scroll', startEvent );
     window.addEventListener( 'click', function() {
 	    startHue += 60;
@@ -499,10 +512,9 @@ function squareAnimLoop() {
 		console.log( ' неверный тип переменной squarePause = ' + typeof bottomCount);
 	}
 	
-	
-    requestAnimationFrame(squareAnimLoop);
-	    
 	if(squarePause === false){
+        requestAnimationFrame(squareAnimLoop);
+	    
         BottomCtx.clearRect(0, 0, bottomW, bottomH);
         var now = Date.now();
         var mod = Math.sin(now * 0.002);
@@ -524,12 +536,15 @@ function squareAnimLoop() {
                 let y = bottomCY + Math.sin(a) * r + (countk - segments) * 3.3 * mod;
                 BottomCtx[j === 0 ? 'moveTo' : 'lineTo'](x, y);
             }
-        
+            
+			var color = 0.02 + ((bottomCount - i) / bottomCount) * 0.98;
+			
 		    BottomCtx.closePath();
             BottomCtx.lineWidth = 2 - (i / bottomCount) * 1.5;
             BottomCtx.fillStyle = '#000';
             BottomCtx.fill();
-            BottomCtx.strokeStyle = `hsla(0, 100%, 100%, ${0.02 + ((bottomCount - i) / bottomCount) * 0.98})`;
+			BottomCtx.strokeStyle = 'hsla(0, 100%, 100%,'+color+')';
+            //BottomCtx.strokeStyle = `hsla(0, 100%, 100%, ${0.02 + ((bottomCount - i) / bottomCount) * 0.98})`;
             BottomCtx.stroke();
         }
 	}	
@@ -588,7 +603,7 @@ function square(){
 	function initAnimation(){
 		//расчитываю размер окна, запускаю анимацию
 		//расчитываю удаленность от верха страницы при каждой инициализации
-        squareBottomAnim = bottomCanvasBox.offset().top + 100;
+        squareBottomAnim = bottomCanvasBox.offset().top;
 		determineWindow();
 		squareAnimLoop();
 	}
@@ -609,7 +624,7 @@ function square(){
                 squarePause = false;				
 			}else{
 				squarePause = false;
-				//squareAnimLoop();
+				squareAnimLoop();
 			}
 		}
 		if(squareBottomAnim > scrollBottom){

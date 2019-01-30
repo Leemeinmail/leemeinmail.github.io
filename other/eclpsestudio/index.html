@@ -9,7 +9,15 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="extern/slick/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="extern/slick/slick-theme.css"/>
-    </head>
+        <!--[if IE 11]>
+            <style type="text/css">
+                .slogan__item--dark{
+				    color:#9000ff;
+					background-image:#000;
+					animation:none;}
+            </style>
+        <![endif]-->
+	</head>
     
 	<body>
 	   
@@ -26,8 +34,23 @@
 				</div>
 				
 				<nav class='header__menu'>
-				    <ul class='navigation' >
+				    
+				    <div id='mobileMenuBtn' class='header__mobileBtn'>
+					    <span>меню</span>
+					</div>    
+				
+				    <ul id='mobileMenuBody' class='navigation' >
 					    
+						<li class='navigation__item  navigation__item--mobileClosed' >
+						    <div class='logo'>
+				                <img class='img' src='img/logo/logo.svg' />
+				            </div>
+							
+							<div id='mobileMenuClosed' class='navigation__closed' >
+							    <img class='img' src='img/icons/closed-white.svg'>
+							</div>
+						</li>
+						
 						<li class='navigation__item' >
 						    <a class='navigation__link link' href=''>наши работы</a>
 						</li>
@@ -46,8 +69,14 @@
 			</div><!-- end header__top -->
 			
 			<div class='header__slogan header__section'>
-			    <div class='slogan'>
-			        <span class='slogan__item' >Мы</span> 
+			    <div style='color:#fff;' id='slogan' class='slogan'>
+			        <span data-text='Мы делаем' class='slogan__item first' ></span>
+					<span data-text='хорошие' class='second-word slogan__item slogan__underline slogan__underline--hidden slogan__underline--item1 slogan__item--ligh underline' ></span>
+			        <span data-text='вещи' class='third-word slogan__item slogan__underline slogan__underline--hidden slogan__underline--item2 slogan__item--dark underline' ></span>
+				</div>
+				
+				<noscript>
+				    <span  class='slogan__item' >Мы</span> 
 				    <span class='slogan__item' >делаем</span>
 				    <span class='slogan__item slogan__underline slogan__underline--item1 slogan__item--ligh underline' >
 					    хорошие
@@ -55,7 +84,8 @@
 				    <span class='slogan__item slogan__underline slogan__underline--item2 slogan__item--dark underline' >
 					    вещи
 					</span>
-			    </div>
+				</noscript>
+				
 			</div>
 		
 		</header>
@@ -253,7 +283,21 @@
 							    </div>
 							
 						    </a>
-						
+						    
+							<div class='callbackBtn  develops__item portfolio anim-circle anim-circle__activ'>
+						   
+							    <div class='portfolio__photo anim-circle__position anim-circle__position--type1'>
+							        <img class='img' src='img/develops/mygarage.png' />
+								    <div class='anim-circle__item anim-circle__item--cross anim-circle__item--color14'></div>
+									<div class='anim-circle__cross anim-circle__visible'></div>
+							    </div>
+							
+							    <div class='portfolio__caption anim-circle__visible'>
+							        <span>готовы взяться за ваш проект</span>
+							    </div>
+							
+						    </div>
+							
 					    </div>
 						
 				    </div>
@@ -289,11 +333,11 @@
 									<div class='rais-caption rais-convers__caption'>
 									    в 
 										<span class='rais-caption__large' >
-										        1,5
-										    </span>
-										    <br/>
+										    1,5
+										</span>
+										<br>
 										    раза
-									    </div>
+									</div>
 									
 								</div>
 								
@@ -438,11 +482,11 @@
 							    Продумываем<br/>структуру<br/>и дизайн
 							</li>
 							
-							<li class='map__item map__item--box dotted-line__visible' >
-							    <div class='map__item map__item--inner'>
+							<li class='map__item map__item--box' >
+							    <div class='map__item dotted-line__visible map__item--inner'>
 								    Верстаем проект
 								</div>
-							    <div class='map__item map__item--inner map__item--marginTop'>
+							    <div class='map__item dotted-line__visible map__item--inner map__item--marginTop'>
 								    Пишем тексты
 								</div>
 						    </li>
@@ -451,16 +495,16 @@
 							    Подключаем<br/>скрипты
 							</li>
 							
-							<li class='map__item map__item--img map__item--marginTopLarge map__item--marginCust1 dotted-line__visible' >
+							<li class='map__item dotted-line__visible map__item--marginTopLarge map__item--marginCust2 dotted-line__visible' >
+							    Наполняем <br/>
+								и тестируем
+							</li>
+							
+							<li class='map__item dotted-line__visible map__item--img map__item--marginCust1 dotted-line__visible' >
 							    Сдаем работу
 								<div class='map__icon'>
 								    <img class='img' src='img/icons/finish.png' />
 								</div>
-							</li>
-							
-							<li class='map__item map__item--marginTopLarge dotted-line__visible' >
-							    Наполняем <br/>
-								и тестируем
 							</li>
 							
 						</ul>
@@ -751,7 +795,7 @@
 					    мы знаем, как делать их хорошо
 					</span>
 					
-					<span href ='' id='callbackBtn' class='footer__link footer__link--paddingTop footer__text' >
+					<span class='callbackBtn footer__link footer__link--paddingTop footer__text' >
 					    Запустить проект в работу
 					</span>
 					
@@ -826,7 +870,7 @@
 						<div class='form__section'>
 						    <label class='callback__label form__label' for='callbakMessage'>Сообщение</label>
 							<textarea class='input form__input form__textarea callback__input' 
-							type='text' name='callbakMessage' placeholder='ваше сообщение '/></textarea>
+							type='text' name='callbakMessage' placeholder='ваше сообщение '></textarea>
 						</div>
 						
 						<div class='form__btn-box'>
@@ -857,8 +901,10 @@
 	<script src="extern/jquery-3.3.1.js"></script>
 	<script src="extern/slick/slick.js"></script>
     <script src="js/common.js"></script>
-	<script src="js/animation.js"></script>
+	<!-- <script src="js/animation.js"></script> -->
+	<!--<script src="extern/typeIt/typeIt.js"></script> -->
 	<script src="extern/maskedinput/jquery.maskedinput.min.js"></script>
+	
 	<script>
 	window.onload = function(){
 	    $('#clientsSlider').slick({
@@ -866,18 +912,24 @@
 			mobileFirst:true,
 			slidesToShow: 1,
 			arrows:false,
+			adaptiveHeight: true,
 			responsive: [
                 {
                 breakpoint: 991,
                     settings: {
-                        slidesToShow: 2
+                        slidesToShow: 2,
+						adaptiveHeight: false
                     }
                 },
 			]
 		});
+		
+		var callbak = new callback(jQuery);
+        callbak.init();
+		textOn();
 		//cosmos();
-		star();
-		square();
+		//star();
+		//square();
 	}
 	</script>
 </html><!-- end html -->
