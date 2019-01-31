@@ -1,7 +1,19 @@
 /*==============header__animation==============*/
-var smoothTrail = function(c, cw, ch){		
+/*=============================================================================*/	
+/* Smooth Trail
+/*=============================================================================*/
+var smoothTrail = function(c, cw, ch){
   
-/*Variables*/
+/*=============================================================================*/	
+/* Initialize
+/*=============================================================================*/
+  this.init = function(){
+    this.loop();
+  };		
+  
+  /*=============================================================================*/	
+  /* Variables
+/*=============================================================================*/
   var _this = this;
   this.c = c;
   this.ctx = c.getContext('2d');
@@ -12,30 +24,30 @@ var smoothTrail = function(c, cw, ch){
   
   //trail
   this.trail = [];
-  //this.maxTrail = 200;
-  this.maxTrail = 500;
+  this.maxTrail = 200;
   this.mouseDown = false;
   
   this.ctx.lineWidth = .1;
   this.ctx.lineJoin = 'round';
   
-  //this.radius = 350;
   this.radius = 1;
-  this.speed = 0.014;
+  this.speed = 0.4;
   this.angle = 0;
   this.arcx = 0;
   this.arcy = 0;
   this.growRadius = true;
   this.seconds = 0;
-  this.milliseconds = 1000;
-  //добавил
-  this.size;
+  this.milliseconds = 0;
   
-/*Utility Functions*/				
+  /*=============================================================================*/	
+  /* Utility Functions
+/*=============================================================================*/				
   this.rand = function(rMi, rMa){return ~~((Math.random()*(rMa-rMi+1))+rMi);};
   this.hitTest = function(x1, y1, w1, h1, x2, y2, w2, h2){return !(x1 + w1 < x2 || x2 + w2 < x1 || y1 + h1 < y2 || y2 + h2 < y1);};
   
-/*Create Point*/
+  /*=============================================================================*/	
+  /* Create Point
+/*=============================================================================*/
   this.createPoint = function(x, y){					
     this.trail.push({
       x: x,
@@ -43,7 +55,9 @@ var smoothTrail = function(c, cw, ch){
     });
   };
   
-/*Update Trail*/
+  /*=============================================================================*/	
+  /* Update Trail
+/*=============================================================================*/
   this.updateTrail = function(){					
     
     if(this.trail.length < this.maxTrail){
@@ -55,22 +69,21 @@ var smoothTrail = function(c, cw, ch){
     }					
   };
   
-/*Update Arc*/
+  /*=============================================================================*/	
+  /* Update Arc
+/*=============================================================================*/
   this.updateArc = function(){
     this.arcx = (this.cw/2) + Math.sin(this.angle) * this.radius;
-    this.arcy = (this.ch/2) + Math.cos(this.angle) * this.radius;	
+    this.arcy = (this.ch/2) + Math.cos(this.angle) * this.radius;					
     var d = new Date();
     this.seconds = d.getSeconds();
     this.milliseconds = d.getMilliseconds();
     this.angle += this.speed*(this.seconds+1+(this.milliseconds/1000));
-	if(this.angle > 0.79 && this.angle < 0.84){
-		this.angle = 0.1;
-	}
-    //this.angle = rand(1,50);
+    
     if(this.radius <= 1){
       this.growRadius = true;
     } 
-    if(this.radius >= this.size){
+    if(this.radius >= 300){
       this.growRadius = false;
     }
     
@@ -81,8 +94,10 @@ var smoothTrail = function(c, cw, ch){
     }
   };
   
-/*Render Trail*/
-this.renderTrail = function(){
+  /*=============================================================================*/	
+  /* Render Trail
+/*=============================================================================*/
+  this.renderTrail = function(){
     var i = this.trail.length;					
     
     this.ctx.beginPath();
@@ -97,55 +112,53 @@ this.renderTrail = function(){
       
       
     };
-    this.ctx.strokeStyle = 'hsla('+this.rand(300,350)+', 100%, '+this.rand(40,60)+'%, 1)';	
+    this.ctx.strokeStyle = 'hsla('+this.rand(170,300)+', 100%, '+this.rand(50, 75)+'%, 1)';	
     this.ctx.stroke();
     this.ctx.closePath();
     
-  };
+  };			
+ 
   
-/*Clear Canvas*/
-
+  /*=============================================================================*/	
+  /* Clear Canvas
+/*=============================================================================*/
   this.clearCanvas = function(){
     //this.ctx.globalCompositeOperation = 'source-over';
     //this.ctx.clearRect(0,0,this.cw,this.ch);
+    
     this.ctx.globalCompositeOperation = 'destination-out';
     this.ctx.fillStyle = 'rgba(0,0,0,.1)';
     this.ctx.fillRect(0,0,this.cw,this.ch);					
     this.ctx.globalCompositeOperation = 'lighter';
   };
   
-/*Animation Loop*/
-
-    this.loop = function(){
-        var loopIt = function(){
-			requestAnimationFrame(loopIt, _this.c);
-            _this.clearCanvas();
-            _this.updateArc();
-            _this.updateTrail();
-            _this.renderTrail();			
-        };
-        loopIt();		
+  /*=============================================================================*/	
+  /* Animation Loop
+/*=============================================================================*/
+  this.loop = function(){
+    var loopIt = function(){
+      requestAnimationFrame(loopIt, _this.c);
+      _this.clearCanvas();
+      _this.updateArc();
+      _this.updateTrail();
+      _this.renderTrail();							
     };
-  
-    this.init = function(){
-        this.loop();
-    };
-  
-    this.stop = function(){
-	  
-    }
+    loopIt();					
+  };
   
 };
 
-/*Check Canvas Support*/
-
+/*=============================================================================*/	
+/* Check Canvas Support
+/*=============================================================================*/
 var isCanvasSupported = function(){
   var elem = document.createElement('canvas');
   return !!(elem.getContext && elem.getContext('2d'));
 };
-	
-/* Setup requestAnimationFrame*/
 
+/*=============================================================================*/	
+/* Setup requestAnimationFrame
+/*=============================================================================*/
 var setupRAF = function(){
   var lastTime = 0;
   var vendors = ['ms', 'moz', 'webkit', 'o'];
@@ -170,76 +183,24 @@ var setupRAF = function(){
     };
   };
 };			
-var cosmosIsActiv = true;
-/*Define Canvas and Initialize*/
-function cosmos(){
+
+/*=============================================================================*/	
+/* Define Canvas and Initialize
+/*=============================================================================*/
+function cosmos(){ 
+  if(isCanvasSupported){
+	var container = $('.header__animation');   
+    var c = document.getElementById('headerAnimation');
+    c.width = container.width();
+    c.height = container.height();			
+    var cw = c.width;
+    var ch = c.height;	
+    //document.body.appendChild(c);	
+    var cl = new smoothTrail(c, cw, ch);
 	
-	var cosmosWinWidth;
-    var scrollTopAnim;
-	var cosmosBox = $('#cosmosAnimationBox')
-    var cosmosBottom = cosmosBox.offset().top + cosmosBox.height();
-	var c;
-	var container;
-	
-	function initCanvas(){
-		c = document.getElementById('headerAnimation');
-	    container = $('.header__animation');
-		c.width = container.width();
-	    c.height = container.height();
-	}
-	
-	if(isCanvasSupported){
-		initCanvas(); 
-		var cl = new smoothTrail(c, c.width, c.height);
-	}
-	
-	function determineWindow(cl){
-		cosmosWinWidth = $(window).width();
-		var size;
-	    if(cosmosWinWidth < 767){
-		    return false;
-	    }
-	    if(cosmosWinWidth > 767 && cosmosWinWidth < 991){
-		   cl.size = 350;
-	    }
-	    if(cosmosWinWidth > 991 && cosmosWinWidth < 1199){
-			cl.size = 420;
-	    }
-	    if(cosmosWinWidth > 1199){
-		    cl.size = 500;
-	    }
-	}
-	
-	function cosmosEvent(){
-        scrollTop = $(window).scrollTop();
-		    if(scrollTop > cosmosBottom ){
-	            cosmosIsActiv = false;
-		    }else{
-				cosmosIsActiv = true;
-			}
-	}
-	
-	function cosmosResize(){
-		initCanvas();
-		cl = new smoothTrail(c, c.width, c.height);
-		determineWindow(cl);
-		//console.log(cl.size);
-	}
-	
-	function startCosmos(cl){
-	    determineWindow(cl);
-	    cl.init();	
-	}
-	
-	
-	setupRAF();
-	startCosmos(cl);
-	$(window).resize(function(cl){
-		
-	});
-	//window.addEventListener( 'resize', cosmosResize );
-	window.addEventListener( 'scroll', cosmosEvent );
-    
+    setupRAF();
+    cl.init();
+  }
 }
 //=================================Анимация проекты(звезда)======================================	
 {
@@ -251,7 +212,7 @@ if(starCanvas != undefined){
 	if(starCtx != undefined){
         var starW,starH,starCx,starCy,
 		    StarBranches,startHue, starTick,starWinWidth,starCoef,
-	        starIsActiv,starScrollBottom,starCanvasBox;
+	        starIsActiv,starScrollBottom,starCanvasBox, pause;
 	}
 }	
 	
@@ -331,12 +292,10 @@ Branch.prototype.draw = function() {
 }
 
 function star() {
-	
-	this.start = true;
-	
 	starCanvasBox = $('#differentPrjAnim');
     starBottomAnim = $('#differentPrjAnim').offset().top;
 	starIsActiv = false;
+	pause = false;
 	
 	function step() {
 	    var i = StarBranches.length;
@@ -366,7 +325,7 @@ function star() {
 		    while( i-- ) {StarBranches[ i ].draw() }
 	    }else{
 			//console.log('end');
-			this.start = false;
+			pause = true;
 		}
     } 
 	
@@ -379,21 +338,24 @@ function star() {
 	function determineWindow(){
 		starWinWidth = $(window).width();
 	    if(starWinWidth < 767){
-		    return false;
+			pause = true;
 	    }
 	    if(starWinWidth > 767 && starWinWidth < 991){
 		    initVariables(1000,1000,0.991);
+			starIsActiv = false;
 	    }
 	    if(starWinWidth > 991 && starWinWidth < 1199){
-			initVariables(1000,1100,0.993);
+			initVariables(1100,1100,0.993);
+			starIsActiv = false;
 	    }
 	    if(starWinWidth > 1199){
 		    initVariables(1200,1200,0.9935);
+			starIsActiv = false;
 	    }
 	}
 	
 	function reset() {
-		this.start = true;
+		pause = false;
 		determineWindow();
 		StarBranches = [];
 	    starCx = starW / 2;
@@ -413,10 +375,9 @@ function star() {
 	function loop() {
 		
 		if(starCtx === undefined){
-			console.log('контекст холста не найден');
 			return false;
 		}
-		if(this.start){
+		if(!pause){
 	        requestAnimationFrame( loop );
 	        step();
 	        draw();
@@ -439,7 +400,7 @@ function star() {
 		scrollBottom = $(window).scrollTop() + $(window).height();
 		if(starBottomAnim < scrollBottom){
 	        if(starIsActiv === false){
-			    starOn(); 
+				starOn();
                 starIsActiv = true; 				
 			}
 		}
@@ -447,10 +408,7 @@ function star() {
 	
 	window.addEventListener( 'resize', reset );
 	window.addEventListener( 'scroll', startEvent );
-    window.addEventListener( 'click', function() {
-	    startHue += 60;
-	    reset();
-    });
+    //window.addEventListener( 'click', function() {startHue += 60;reset();});
 }
 	
 }
@@ -460,228 +418,149 @@ function star() {
 	2.При изменении монитора определяю разрешение
 	3.Выключаю на мобилках
 */
-{
-var bottomCanvas = document.getElementById('square');
-var bottomCanvasBox = $('#footerAnim');
-var squareBottomAnim;
-//проверяю найден ли холст
-if(bottomCanvas != undefined){
-	//задаю контекст, создаю переменные если он поддерживается
-    var BottomCtx = bottomCanvas.getContext('2d');
-	if(BottomCtx != undefined){
-        var /*dpr, devicePixelRatio,*/ bottomW, bottomH, bottomCX, bottomCY, count, coefRadius, squareIsActiv, squarePause;
-		/* 
-		dpr = devicePixelRatio не использую кооличество пикселей в единице чего? задается в мета initial-scale=1.0;
-        bottomW = ширина холста;
-        var bottomH = высота холста;
-        var bottomCX = координата x начала отрисовки?;
-        var bottomCY = координата y начала отрисовки?;
-        var count = колличесво колец;
-		coefRadius = кеф радиуса анимации
-		squareIsActiv = активация анимации по достижении контейнера родителя
-		squarePause = пауза анимации
-        //BottomCtx.scale(dpr, dpr); увелечение в зависимости от */
-	}
-}
+function square(){
+    var canvasBox = $('#footerAnim');
+    var c = document.getElementById('square'); 
+    var ctx = c.getContext('2d');
+    var squareBottomAnim = canvasBox.offset().top
+    var scrollBottom;
 
-//функция анимации
-function squareAnimLoop() {
-    //ошибки холста
-	if(typeof bottomCanvas != 'object' || typeof BottomCtx != 'object'){
-        console.log('холст или контекст не верного типа');
-		return false;
-    }
-	//ошибки входящих данных
-	if(typeof bottomCX != 'number'){
-		console.log( ' неверный тип переменной bottomCX = ' + typeof bottomCount);
-		return false;
-	}
-	if(typeof bottomCY != 'number'){
-		console.log( ' неверный тип переменной bottomCY = ' + typeof bottomCount);
-		return false;
-	}
-	if(typeof coefRadius != 'number'){
-		console.log( ' неверный тип переменной coefRadius = ' + typeof bottomCount);
-		return false;
-	}
-	if(typeof bottomCount != 'number'){
-		console.log( ' неверный тип переменной bottomCount = ' + typeof bottomCount);
-		return false;
-	}
-	if(typeof squarePause != 'boolean'){
-		console.log( ' неверный тип переменной squarePause = ' + typeof bottomCount);
-	}
-	
-	if(squarePause === false){
-        requestAnimationFrame(squareAnimLoop);
-	    
-        BottomCtx.clearRect(0, 0, bottomW, bottomH);
-        var now = Date.now();
-        var mod = Math.sin(now * 0.002);
-        var modj = Math.sin(now * 0.004);
-        var countk = 1 + 7 + mod * 8;
-        var i = Math.ceil(countk);
+    var w = canvasBox.innerWidth();
+    var h = canvasBox.innerHeight();
+    c.width = w;
+    c.height = h;
+    var cx = w / 2;
+    var cy = h / 2;
+    var count = 15;
+	var color;
+
+    var off = true;
+    var pause = false;
+    var isActiv = false;
+
+    var now,mod,modj,countk,i,r,x,y,j,a,segments;
+
+function loop() {
+    if( pause != true && off != true){
+        requestAnimationFrame(loop);
+		ctx.clearRect(0, 0, w, h);
+        now = Date.now();
+        mod = Math.sin(now * 0.002);
+        modj = Math.sin(now * 0.004);
+        countk = 1 + 7 + mod * 8;
+        i = Math.ceil(countk);
     
 	    while(i--) {
-            let segments = 3 + i;
-            BottomCtx.beginPath();
+            segments = 3 + i;
+            ctx.beginPath();
         
-		    for(let j = 0; j < segments; j++) {
-                let a = (j / segments) * Math.PI * 2 - Math.PI * -0.5 + modj * 0.1;
+		    for(j = 0; j < segments; j++) {
+                a = (j / segments) * Math.PI * 2 - Math.PI * -0.5 + modj * 0.1;
                 a += (1 / segments) * Math.PI;
-			    //радиус
-                //let r = 45 + i * 11.5 + mod * 25;
-			    let r = coefRadius + i * 11.5 + mod * 25;
-                let x = bottomCX + Math.cos(a) * r;
-                let y = bottomCY + Math.sin(a) * r + (countk - segments) * 3.3 * mod;
-                BottomCtx[j === 0 ? 'moveTo' : 'lineTo'](x, y);
+                r = 0 + i * 11.5 + mod * 25;
+                x = cx + Math.cos(a) * r;
+                y = cy + Math.sin(a) * r + (countk - segments) * 3.3 * mod;
+                ctx[j === 0 ? 'moveTo' : 'lineTo'](x, y);
             }
-            
-			var color = 0.02 + ((bottomCount - i) / bottomCount) * 0.98;
-			
-		    BottomCtx.closePath();
-            BottomCtx.lineWidth = 2 - (i / bottomCount) * 1.5;
-            BottomCtx.fillStyle = '#000';
-            BottomCtx.fill();
-			BottomCtx.strokeStyle = 'hsla(0, 100%, 100%,'+color+')';
-            //BottomCtx.strokeStyle = `hsla(0, 100%, 100%, ${0.02 + ((bottomCount - i) / bottomCount) * 0.98})`;
-            BottomCtx.stroke();
+		    color = 0.02 + ((countk - i) / countk) * 0.98;
+            ctx.closePath();
+            ctx.lineWidth = 2 - (i / count) * 1.5;
+            ctx.fillStyle = '#000';
+            ctx.fill();
+            ctx.strokeStyle = 'hsla(0, 100%, 100%,'+color+')';
+            //ctx.strokeStyle = `hsla(0, 100%, 100%, ${0.02 + ((countk - i) / countk) * 0.98})`;
+            ctx.stroke();
         }
-	}	
+	}
 }
 
-//функция управления анимации
-function square(){
-	/*
-	    1. Определяю размер экрана
-		2. В зависимости от него инициализирую переменные 
-		3. запускаю цикл
-		4. При изменении размера начать с пункта 1
-	*/
-	//расчитываю удаленность от верхна страницы при первой инициализации
-    //что бы включить по достижении	
-	squareBottomAnim = bottomCanvasBox.offset().top + 100;
-	var scrollBottom;
-	squareIsActiv = false;
-	squarePause = false;
-	
-	function initVariables(count, radius){
-		bottomW = bottomCanvasBox.innerWidth();
-        bottomH = bottomCanvasBox.innerHeight();
-        bottomCX = bottomW / 2;
-        bottomCY = bottomH / 2;
-        bottomCount = count;
-		coefRadius = radius;
-		bottomCanvas.width = bottomW; 
-        bottomCanvas.height = bottomH;
-	}
-	
-	function determineWindow(){
-	    var winWidth = $(window).width();
+function initVariables(thisCount){
+	w = canvasBox.innerWidth();
+    h = canvasBox.innerHeight();
+    c.width = w;
+    c.height = h;
+    cx = w / 2;
+    cy = h / 2;
+    count = thisCount;
+}
 
-	    if(winWidth < 767){
-		    //выключаю для телефонов
-		    return false;
-	    }
+function resize(){
+	var winWidth = $(window).width();
+
+	if(winWidth < 767){
+		off = true;
+		//выключаю для телефонов
+	}
 		
-	    if(winWidth > 767 && winWidth < 991){
-            //средние разрешения
-		    initVariables(5, 0);
-	    }
-	    
-		if(winWidth > 991 && winWidth < 1199){
-            //средние разрешения
-			initVariables(10, 0);
-	    }  
-	    
-		if(winWidth > 1199){
-            //широкие экраны;
-			initVariables(14, 1);
-	    }
-    }
-	
-	function initAnimation(){
-		//расчитываю размер окна, запускаю анимацию
-		//расчитываю удаленность от верха страницы при каждой инициализации
-        squareBottomAnim = bottomCanvasBox.offset().top;
-		determineWindow();
-		squareAnimLoop();
-	}
-	
-	function test(){
-		/*
-		    если нижняя часть экрана достигла до верха контейнера анимации
-			то проверяю запущенна ли она, если нет, то запускаю
-			если да то, отжимаю паузу.
-			если анимация запущена но экран не достиг контейнера, 
-			то, если не пауза ставлю на паузу
- 		*/ 
-		scrollBottom = $(window).scrollTop() + $(window).height();
-		if(squareBottomAnim < scrollBottom){
-	        if(squareIsActiv === false){
-			    initAnimation();
-                squareIsActiv = true;	
-                squarePause = false;				
-			}else{
-				squarePause = false;
-				squareAnimLoop();
-			}
-		}
-		if(squareBottomAnim > scrollBottom){
-			if(squarePause === false){
-			    squarePause = true;
-		    }
+	if(winWidth > 767 && winWidth < 991){
+        //средние разрешения
+		initVariables(5);
+		if(off === true){
+			requestAnimationFrame(loop);
+		    off = false;
 		}
 	}
-	//изменяю при ресаизе
-    window.addEventListener( 'resize', initAnimation );
-    //включаю по скроллу
-	window.addEventListener( 'scroll', test );
-    //включение всегда
-	//initAnimation();	
+	    
+    if(winWidth > 991 && winWidth < 1199){
+        //средние разрешения
+		initVariables(9);
+		if(off === true){
+			requestAnimationFrame(loop);
+		    off = false;
+		}
+	}  
+	    
+	if(winWidth > 1199){
+        //широкие экраны;
+		initVariables(15);
+		if(off === true){
+			requestAnimationFrame(loop);
+		    off = false;
+		}
+	}
 }
 
-}//ограничение области видимости
+function scroll(){
+	scrollBottom = $(window).scrollTop() + $(window).height();
+	
+	if(scrollBottom > squareBottomAnim){
+		if(!isActiv){
+			init();
+			isActiv = true;
+		}
+		if(pause = true){
+		    pause = false;
+		    requestAnimationFrame(loop);	
+		}
+	}
+	if(scrollBottom < squareBottomAnim){
+		pause = true;
+	}
+	
+}
 
+function init(){
+    window.addEventListener( 'resize', resize );
+    resize();
+    loop();	
+}
 
+function start(){
+	//добавит паузу при скролле
+    //window.addEventListener( 'scroll', scroll );	
+	//без паузы только init(), с паузой только addEvenListener
+	init();
+}
 
+start();
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+var animationStart = function(){
+	cosmos();
+	star();
+	square();
+}
 
 
 

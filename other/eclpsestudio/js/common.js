@@ -216,7 +216,7 @@ function textOn(){
 }
 */
 
-function textOn(){
+function textOn(callback){
 	var typer,txt,tot,ch;
 	var delay = 150;
 	
@@ -245,6 +245,7 @@ function textOn(){
 	function typeIt3(){
 		if(ch > tot) {
 			typer.removeClass('slogan__underline--hidden');
+			if(callback){callback();}
 			return false;
 	    }else{
 		    typer.text( txt.substring(0, ch++) );

@@ -9,14 +9,6 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="extern/slick/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="extern/slick/slick-theme.css"/>
-        <!--[if IE 11]>
-            <style type="text/css">
-                .slogan__item--dark{
-				    color:#9000ff;
-					background-image:#000;
-					animation:none;}
-            </style>
-        <![endif]-->
 	</head>
     
 	<body>
@@ -901,7 +893,7 @@
 	<script src="extern/jquery-3.3.1.js"></script>
 	<script src="extern/slick/slick.js"></script>
     <script src="js/common.js"></script>
-	<!-- <script src="js/animation.js"></script> -->
+	<script src="js/animation.js"></script>
 	<!--<script src="extern/typeIt/typeIt.js"></script> -->
 	<script src="extern/maskedinput/jquery.maskedinput.min.js"></script>
 	
@@ -926,7 +918,7 @@
 		
 		var callbak = new callback(jQuery);
         callbak.init();
-		textOn();
+		textOn(animationStart);
 		//cosmos();
 		//star();
 		//square();
