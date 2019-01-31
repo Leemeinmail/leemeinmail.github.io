@@ -187,6 +187,16 @@ html,body{
 /*-------------bold---------------*/	
 .bold{
 	font-weight:bold;}
+	
+@media(min-width:480px){
+.first{ 
+    width:300px;}}
+@media(min-width:992px){
+.first{ 
+    width:400px;}}
+@media(min-width:1200px){
+.first{ 
+    width:450px;}}
 /*-------------list---------------*/	
 	
 .list{
@@ -372,8 +382,6 @@ html,body{
 	height:40px;}		
 		
 .header__slogan{}
-@media(min-width:992px){
-.header__slogan{}}
 /*------navigation-------*/
 .navigation{
 	display:none;
@@ -458,11 +466,7 @@ html,body{
 	display:block;
 	color:#fff;
 	font-weight: 900;
-	letter-spacing:2.4px;}
-	
-.third-word,
-.second-word{
-	display:none;}	
+	letter-spacing:2.4px;}	
 	
 @keyframes background {
     0% {
@@ -525,10 +529,11 @@ html,body{
 .slogan__underline--item2{}	
 	
 .slogan__underline--item1:after{
-	background:#da0041;}	
+	background:#da0041;
+	width:98%;}	
 @media(min-width:480px){
 	.slogan__underline--item1:after{
-		width:104%;}}
+		width:62%;}}
 @media(min-width:768px){
 	.slogan__underline--item1:after{
 		bottom:-4px;
@@ -546,10 +551,11 @@ html,body{
 		width:710px;}}	
 	
 .slogan__underline--item2:after{
-    background:#8000ff;}	
+    background:#8000ff;
+	width:60%;}	
 @media(min-width:480px){
 	.slogan__underline--item2:after{
-		width:104%;}}
+		width:37%;}}
 @media(min-width:768px){
 	.slogan__underline--item2:after{
 		bottom:-6px;
