@@ -46,11 +46,10 @@ function callback(jQuery){
 	closedOnOverlay = function(el,func){
 		var overley = el.attr('id');
 		var elEv;
-		
 		el.on('click',function(){
 		    elEv = jQuery(event.target).attr('id');
 			if( elEv == overley){
-		        func();
+				func();
 		    }
 		});
 		
@@ -101,7 +100,7 @@ function callback(jQuery){
 		
 		//clickEvent(callBackSend, send);
 		
-        closedOnOverlay(callBack, this.closedCallback);		
+        closedOnOverlay(callBack, closedCallback);		
 	}
 	
 }
