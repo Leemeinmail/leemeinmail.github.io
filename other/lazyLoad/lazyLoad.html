@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang='ru' class='page' x-ms-format-detection='none'> <!-- определение номеров телефона в ei -->
+    <head>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <meta charset="UTF-8"/>
+	    <title>Сетки</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="extern/jquery/jquery-3.3.1.js"></script>
+    </head>
+    
+	<body>
+		<header class='header'></header>
+		<!-- end header -->
+	
+	    <style>
+		    .lazy__item img{
+			    display:block;
+				width:100%;
+				height:auto;}
+			.msr123__item {
+			    height:auto;
+			}
+		</style>
+	
+		<div class='main section'>
+  		    <div class='msr123'>
+                
+                <div class='msr123__item lazy__item'>
+				    <img class='lazy' 
+					     src=''
+						 data-name = 'i-1.png'
+						 data-folder = 'img/imgTest/'/>
+				</div>
+				
+				<div class='msr123__item lazy__item'>
+				    <img class='lazy' 
+					     src=''
+						 data-name = 'i-2.png'
+						 data-folder = 'img/imgTest/'/>
+				</div>
+				
+				<div class='msr123__item lazy__item'>
+				    <img class='lazy' 
+					     src=''
+						 data-name = 'i-3.png'
+						 data-folder = 'img/imgTest/'/>
+				</div>
+				
+				<div class='msr123__item lazy__item'>
+				    <img class='lazy' 
+					     src=''
+						 data-name = 'i-4.png'
+						 data-folder = 'img/imgTest/'/>
+				</div>
+				
+				<div class='msr123__item lazy__item'>
+				    <img class='lazy' 
+					     src=''
+						 data-name = 'i-5.png'
+						 data-folder = 'img/imgTest/'/>
+				</div>
+				
+				<div class='msr123__item lazy__item'>
+				    <img class='lazy' 
+					     src=''
+						 data-name = 'i-6.png'
+						 data-folder = 'img/imgTest/'/>
+				</div>
+				
+				<div class='msr123__item lazy__item'>
+				    <img class='lazy' 
+					     src=''
+						 data-name = 'i-7.png'
+						 data-folder = 'img/imgTest/'/>
+				</div>
+				
+			</div>
+
+			<script>
+				
+				function lazyLoad(){
+				    imgs = $('.lazy');
+					folder = 0;
+					i = 0; d = 0;
+					storage = [];
+					presentWidth = 0;
+					windowWidth = 0;
+					elem = 0;
+					
+					function data(){
+					    this.obj = 0;
+						this.name = '';
+						this.folder = ''
+					}
+					
+					function loadImg(data){
+					    windowWidth = document.documentElement.clientWidth;
+						presentWidth = windowWidth;
+				        if(windowWidth > 319 && windowWidth < 760){
+					        var folder = data.folder+'min/' + data.name;
+                            data.obj.attr('src',folder);							
+					    }
+						
+					    if(windowWidth > 760 && windowWidth < 1200){
+					        var folder = data.folder+'mid/'+ data.name;
+                            data.obj.attr('src',folder);
+					    }
+					    
+						if(windowWidth > 1200){
+					        var folder = data.folder+'large/'+ data.name;
+                            data.obj.attr('src',folder);
+					    }
+					}
+					
+					function preLoad(){
+					    for(i = 0; i<imgs.length; i++){
+						    d = new data();
+					        d.obj = $(imgs[i]);
+						    d.name = d.obj.data("name");
+						    d.folder = d.obj.data("folder");
+							storage.push(d);
+							folder = d.folder+'mini/'+ d.name;
+							d.obj.attr('src',folder);
+					    }   
+					}
+					
+					this.resize = function(){
+					    windowWidth = document.documentElement.clientWidth;
+						if(windowWidth > presentWidth){
+						    for(i = 0; i<storage.length; i++){
+						        elem = storage[i];
+						        loadImg(storage[i])
+						    }
+						}
+					}
+					
+					this.start = function(){
+					    setTimeout(function(){
+						for(var i = 0; i<storage.length; i++){
+						    var elem = storage[i];
+						    loadImg(storage[i]);
+					    }},2000);
+					}
+					
+					this.init = function(){
+					    preLoad();
+					    window.addEventListener('load',this.start());
+                        window.addEventListener('resize',this.resize);						
+					}
+				}
+				
+				var lazyimg = new lazyLoad();
+				lazyimg.init();
+				
+			</script>
+			
+		</div><!-- end main -->
+		
+	    <footer class='footer' ></footer><!-- end footer -->	
+    </body><!-- end body -->
+	<script src="js/script.js"></script>
+</html>
