@@ -193,7 +193,7 @@ function cosmos(){
     var c = document.getElementById('headerAnimation');
 	var width = container.width();
 	var height = container.height()
-	console.log(width);
+	//console.log(width);
     if( width || height === 0 || width === undefined || height === undefined){
         width = 600;
         height = 600;			
@@ -346,6 +346,7 @@ function star() {
 		starWinWidth = $(window).width();
 	    if(starWinWidth < 767){
 			pause = true;
+			starIsActiv = true;
 	    }
 	    if(starWinWidth > 767 && starWinWidth < 991){
 		    initVariables(1000,1000,0.991);
@@ -362,7 +363,8 @@ function star() {
 	}
 	
 	function reset() {
-		if(starIsActiv === true ){
+		if(starIsActiv === false ){
+			console.log('work');
 		    pause = false;
 		    determineWindow();
 		    StarBranches = [];
@@ -372,7 +374,6 @@ function star() {
 	        starCanvas.width = starW;
 	        starCanvas.height = starH;
 	        starTick = 0;
-	        console.log('work');
 	        for( var i = 0; i < 500; i++ ) {		
 		        StarBranches.push( new Branch( startHue, starCx, starCy) );
 	        }

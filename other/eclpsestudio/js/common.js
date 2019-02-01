@@ -106,6 +106,44 @@ function callback(jQuery){
 	}
 	
 }
+
+function animateFadeIn(id){
+	obj = $(id);
+	var array = [];
+	elem = function(){
+		this.obj = 0;
+		this.top = 0;
+	} 
+			
+	animateOn = function(el){
+				
+	    function fadeIn(){
+		    scrollBottom = $(window).scrollTop() + $(window).height() - 100;
+		    if(scrollBottom > el.top){
+		        el.obj.animate(
+		            {opacity:1},600
+		        );
+		    }
+	    }
+				
+	    function init(){
+		    addEventListener('scroll',fadeIn);	
+	    }
+				
+	    init();
+    }
+			
+	this.init = function(){		
+		for(var i = 0; i < obj.length; i++){
+			array[i] = new elem;
+			array[i].obj = $(obj[i]);
+			array[i].top = array[i].obj.offset().top;
+			array[i].obj.css('opacity','0');
+			animateOn(array[i]);
+		}
+	}		
+}
+
 /*
 $('#callbackBtn').click(function(){
 	        $('#callBack').css('display','block');
