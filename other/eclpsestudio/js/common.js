@@ -66,7 +66,7 @@ function callback(jQuery){
 			},delay);
 	}
 	
-	send = function(){
+	send = function(e){
 		e.preventDefault();
 	
         var name = jQuery('#callBack input[name = callbakName]');
@@ -98,7 +98,9 @@ function callback(jQuery){
 		
 		clickEvent(callBackClosed, closedCallback);
 		
-		//clickEvent(callBackSend, send);
+		clickEvent(callBackSend, function(event){
+			send(event)
+		});
 		
         closedOnOverlay(callBack, closedCallback);		
 	}
@@ -138,7 +140,7 @@ $('#callbackClosed').click(function(){
 		});
 });
 
-*/
+
 function wrong(el,delay){
 	var label = el.siblings('label'); 
 		el.addClass('form__wrong');
@@ -149,6 +151,7 @@ function wrong(el,delay){
 				label.removeClass('form__wrong');
 			},delay);
 }
+
 
 $('#callBackSend').click(function(e){
 	e.preventDefault();
@@ -188,12 +191,8 @@ $('#callBackSend').click(function(e){
             alert(response);
        }
    });
-   return false;*/
-});
-
-jQuery(function(jQuery){
-    jQuery(".phone").mask("+7(999) 999-99 99");
-});
+   return false;
+});*/
 /*
 function textOn(){
 	var text = new TypeIt('#slogan', {
@@ -323,9 +322,6 @@ function mobileMenu(){
 	}
 	
 }
-
-var menu = new mobileMenu();
-menu.init();
 
 
 

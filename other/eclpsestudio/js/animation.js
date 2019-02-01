@@ -191,9 +191,16 @@ function cosmos(){
   if(isCanvasSupported){
 	var container = $('.header__animation');   
     var c = document.getElementById('headerAnimation');
-    c.width = container.width();
-    c.height = container.height();			
-    var cw = c.width;
+	var width = container.width();
+	var height = container.height()
+	console.log(width);
+    if( width || height === 0 || width === undefined || height === undefined){
+        width = 600;
+        height = 600;			
+    }
+    c.width = width;
+    c.height = width;    
+	var cw = c.width;
     var ch = c.height;	
     //document.body.appendChild(c);	
     var cl = new smoothTrail(c, cw, ch);
@@ -355,21 +362,23 @@ function star() {
 	}
 	
 	function reset() {
-		pause = false;
-		determineWindow();
-		StarBranches = [];
-	    starCx = starW / 2;
-	    starCy = starH / 2;
-	    StarBranches.length = 0;
-	    starCanvas.width = starW;
-	    starCanvas.height = starH;
-	    starTick = 0;
-	
-	    for( var i = 0; i < 500; i++ ) {		
-		    StarBranches.push( new Branch( startHue, starCx, starCy) );
-	    }
+		if(starIsActiv === true ){
+		    pause = false;
+		    determineWindow();
+		    StarBranches = [];
+	        starCx = starW / 2;
+	        starCy = starH / 2;
+	        StarBranches.length = 0;
+	        starCanvas.width = starW;
+	        starCanvas.height = starH;
+	        starTick = 0;
+	        console.log('work');
+	        for( var i = 0; i < 500; i++ ) {		
+		        StarBranches.push( new Branch( startHue, starCx, starCy) );
+	        }
 		
-		loop();
+		    loop();
+		}
     }
 	
 	function loop() {

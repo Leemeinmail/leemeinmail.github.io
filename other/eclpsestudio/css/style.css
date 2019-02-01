@@ -244,7 +244,9 @@ html,body{
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
 		
-	justify-content:space-between;}
+	justify-content:space-between;
+	align-items:flex-start;}
+
 .masonry__1-2{
 	flex:0 0 100%;}
 @media(min-width:768px){
@@ -320,7 +322,8 @@ html,body{
 	padding-top:25px;}}
 
 .header__animation{
-	display:none;}		  
+	display:none;
+	width:0;height:0;}		  
 @media(min-width:768px){		  
 .header__animation{
 	display:block;
@@ -334,10 +337,10 @@ html,body{
 	top:200px;right:-150px;}}
 @media(min-width:1200px){		  
 .header__animation{
-	top:270px;right:-160px;}}
+	top:130px;right:-20px;}}
 @media(min-width:1440px){		  
 .header__animation{
-	top:30px;right:-300px;}}	
+	top:190px;right:-30px;}}	
 	
 .logo{
 	width:90px;}

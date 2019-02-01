@@ -184,13 +184,9 @@
 				<div class='masonry develops__company masonry__1-2'>
 				    
 					<div class='masonry__1-1'>
-					    
-						<div class='masonry__1-1'>
-				            <span class='second-title second-title--italic second-title--color2 second-title--underline underline' >
-					            корпоративные сайты
-					        </span>
-				        </div>
-
+				        <span class='second-title second-title--italic second-title--color2 second-title--underline underline' >
+					        корпоративные сайты
+					    </span>
 				    </div>
 					
 					<div class='masonry__1-1'>
@@ -240,59 +236,55 @@
 				
 				<div class='masonry develops__lends masonry__1-2'>
 				    
-					<div class='masonry__1-1'>
-						
-						<div class='masonry__1-1'>
-				            <span class='second-title second-title--italic second-title--color3 second-title--underline underline' >
-					            лендинги
-					        </span>
-				        </div>
-						
-						<div class='masonry__1-1'>
-						
-					        <a href='#' class='develops__item portfolio anim-circle anim-circle__activ'>
-						   
-							    <div class='portfolio__photo anim-circle__position anim-circle__position--type1'>
-							        <img class='img' src='img/develops/webmonitoring.png' />
-								    <div class='anim-circle__item anim-circle__item--color9'></div>
-							    </div>
-							
-							    <div class='portfolio__caption anim-circle__visible'>
-							        <span>вебмониторинг.рф</span>
-							    </div>
-							
-						    </a>
-							
-							<a href='#' class='develops__item portfolio anim-circle anim-circle__activ'>
-						   
-							    <div class='portfolio__photo anim-circle__position anim-circle__position--type1'>
-							        <img class='img' src='img/develops/mygarage.png' />
-								    <div class='anim-circle__item anim-circle__item--color10'></div>
-							    </div>
-							
-							    <div class='portfolio__caption anim-circle__visible'>
-							        <span>mygarage.pro</span>
-							    </div>
-							
-						    </a>
-						    
-							<div class='callbackBtn  develops__item portfolio anim-circle anim-circle__activ'>
-						   
-							    <div class='portfolio__photo anim-circle__position anim-circle__position--type1'>
-							        <img class='img' src='img/develops/mygarage.png' />
-								    <div class='anim-circle__item anim-circle__item--cross anim-circle__item--color14'></div>
-									<div class='anim-circle__cross anim-circle__visible'></div>
-							    </div>
-							
-							    <div class='portfolio__caption anim-circle__visible'>
-							        <span>готовы взяться за ваш проект</span>
-							    </div>
-							
-						    </div>
-							
-					    </div>
-						
+				    <div class='masonry__1-1'>
+				        <span class='second-title second-title--italic second-title--color3 second-title--underline underline' >
+					        лендинги
+					    </span>
 				    </div>
+						
+				    <div class='masonry__1-1'>
+						
+						<a href='#' class='develops__item portfolio anim-circle anim-circle__activ'>
+						    
+							<div class='portfolio__photo anim-circle__position anim-circle__position--type1'>
+							    <img class='img' src='img/develops/webmonitoring.png' />
+								<div class='anim-circle__item anim-circle__item--color9'></div>
+							</div>
+							
+							<div class='portfolio__caption anim-circle__visible'>
+							    <span>вебмониторинг.рф</span>
+							</div>
+							
+						</a>
+							
+						<a href='#' class='develops__item portfolio anim-circle anim-circle__activ'>
+						   
+							<div class='portfolio__photo anim-circle__position anim-circle__position--type1'>
+							    <img class='img' src='img/develops/mygarage.png' />
+								<div class='anim-circle__item anim-circle__item--color10'></div>
+							</div>
+							
+							<div class='portfolio__caption anim-circle__visible'>
+							    <span>mygarage.pro</span>
+							</div>
+							
+						</a>
+						    
+						<div class='callbackBtn  develops__item portfolio anim-circle anim-circle__activ'>
+						   
+							<div class='portfolio__photo anim-circle__position anim-circle__position--type1'>
+							    <img class='img' src='img/develops/mygarage.png' />
+								<div class='anim-circle__item anim-circle__item--cross anim-circle__item--color14'></div>
+							    <div class='anim-circle__cross anim-circle__visible'></div>
+							</div>
+							
+							<div class='portfolio__caption anim-circle__visible'>
+							    <span>готовы взяться за ваш проект</span>
+							</div>
+							
+						</div>
+	
+					</div>
 					
 				</div>
 
@@ -916,6 +908,12 @@
 			]
 		});
 		
+		jQuery(function(jQuery){
+            jQuery(".phone").mask("+7(999) 999-99 99");
+        });
+		
+		var menu = new mobileMenu();
+        menu.init();
 		var callbak = new callback(jQuery);
         callbak.init();
 		textOn(animationStart);
